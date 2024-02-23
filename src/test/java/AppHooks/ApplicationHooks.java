@@ -47,7 +47,7 @@ public class ApplicationHooks {
 	prop = init_prop();
 			
 	}
-//	@Parameters("BrowserType")
+	
 	@Before(order = 1)
 	public void launchBrowser() {
 	String browserName = prop.getProperty("browser");
