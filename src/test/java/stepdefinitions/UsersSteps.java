@@ -58,7 +58,7 @@ public class UsersSteps {
 	   usersPage.searchUser(user);
 	}
 	
-	@And("user should be click on final check user")
+	@And("user should be click on Automate Test Admin user")
 	public void user_should_be_click_on_final_check_user() {
 	  usersPage.clickOnUserse();
 	}
@@ -67,10 +67,8 @@ public class UsersSteps {
 	@And("user clear the filed and enter the updates values in the fields")
 	public void user_clear_the_filed_and_enter_the_updates_values_in_the_fields(io.cucumber.datatable.DataTable dataTable)  {
 		List<Map<String, String>> companyInfo = dataTable.asMaps();
-		String title = companyInfo.get(0).get("Select a Title");
-		//String date = companyInfo.get(0).get("date");
 		String email = companyInfo.get(0).get("Email");
-		usersPage.enterUsersInfo(title, email);
+		usersPage.enterUsersInfo(email);
 	}
 	
 	@And("user click on update button at edit user popup")
@@ -300,21 +298,145 @@ public class UsersSteps {
 	 }
 	    
 
-	 @When("user should be able to create user")
-	 public void user_should_be_able_to_create_user(io.cucumber.datatable.DataTable dataTable) {
-		 List<Map<String, String>> userInfo = dataTable.asMaps();
-			String fn = userInfo.get(0).get("fullname");
-			String t = userInfo.get(0).get("title");
-			String bDate =  userInfo.get(0).get("date");
-			String r = userInfo.get(0).get("role");
-			String email =  userInfo.get(0).get("email");
-			String date =  userInfo.get(0).get("bdate");
-			usersPage.createUser(fn,t,bDate,r,email,date);
-	 }
-
 	 @Then("user should be able to delete compnay successfully{string}")
 	 public void user_should_be_able_to_delete_compnay_successfully_company_was_successfully_deleted(String ext) {
 	    String act = usersPage.getCompanyDeleteMSg();
 	    Assert.assertEquals(act, ext);
 	 }
+	 
+	 @When("user should be enter fields for adding user in the user page")
+	 public void user_should_be_enter_fields_for_adding_user_in_the_user_page(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+		 List<Map<String, String>> usersInfo = dataTable.asMaps();
+			String fn = usersInfo.get(0).get("fullname");
+			String t = usersInfo.get(0).get("title");
+			String date = usersInfo.get(0).get("bdate");
+			String role = usersInfo.get(0).get("role");
+			String email = usersInfo.get(0).get("email");
+			String sdate = usersInfo.get(0).get("sdate");
+			usersPage.enterFieldsForUsers(fn, t, date, role, email, sdate);
+	 }
+
+	 @Then("user should be able to see the user in the user page{string}")
+	 public void user_should_be_able_to_see_the_user_in_the_user_page_automate_test_admin(String ext) {
+			String act = usersPage.getAddUserStatus();
+			Assert.assertEquals(act, ext);
+	 }
+	 
+	 
+	 @When("user should be able to click on Settings for the user")
+	 public void user_should_be_able_to_click_on_settings_for_the_user() {
+	     usersPage.clickSettingTab();
+	 }
+
+	 @When("user should be able to click on add title button in staff title widget for the user")
+	 public void user_should_be_able_to_click_on_add_title_button_in_staff_title_widget_for_the_user() {
+	   usersPage.clickonAddTitleStaffTitleWidget();
+	 }
+
+	 @When("user should enter the title in add title popup of staff title widget for the user{string}")
+	 public void user_should_enter_the_title_in_add_title_popup_of_staff_title_widget_for_the_user_automate_admin(String title) {
+	   usersPage.enterTitleStaffTitleWidget(title);
+	 }
+
+	 @Then("user should be able to see the title on staff title widget for the user{string}")
+	 public void user_should_be_able_to_see_the_title_on_staff_title_widget_for_the_user_automate_admin(String ext) {
+		 String act = usersPage.getAddTitleStatusStaffTitleWidget();
+			Assert.assertEquals(act, ext);
+	 }
+
+	 @When("user should be able to select company in the company page for the user")
+	 public void user_should_be_able_to_select_company_in_the_company_page_for_the_user() {
+	    usersPage.clickOnCompany();
+	 }
+
+	 @When("user should be clicked on Details Tab for the user")
+	 public void user_should_be_clicked_on_details_tab_for_the_user() {
+	    usersPage.click_Detils_Tab();
+	 }
+
+	 @Then("staff member details should be displayed on staff detail section for the user{string}")
+	 public void staff_member_details_should_be_displayed_on_staff_detail_section_for_the_user_arjay_mc_cann(String ext) {
+	    String act = usersPage.getStaffMemeberStatus();
+	    Assert.assertEquals(act, ext);
+	 }
+
+
+	 @When("user should be click on tasks template tab for the user")
+	 public void user_should_be_click_on_tasks_template_tab_for_the_user() {
+	     usersPage.clickTasksTemplateTab();
+	 }
+
+	 @When("user should be click on create template button for the user")
+	 public void user_should_be_click_on_create_template_button_for_the_user() {
+	    usersPage.clickCreateTemplateBtn();
+	 }
+
+	 @When("user should be enter the {string} in the name field at add task template pop up for the user")
+	 public void user_should_be_enter_the_in_the_name_field_at_add_task_template_pop_up_for_the_user(String taskTemp) {
+	    usersPage.enterNameInCreateTemplatePopup(taskTemp);
+	 }
+
+	 @When("user should be click on add button of task template popup for the user")
+	 public void user_should_be_click_on_add_button_of_task_template_popup_for_the_user() {
+	    usersPage.clickAddBtnOfCreateTemplatePopup();
+	 }
+
+	 @Then("user should be able to see the template {string} at template page for the user")
+	 public void user_should_be_able_to_see_the_template_at_template_page_for_the_user(String actTempName) {
+		 String expTempName = usersPage.getActTempName();
+			Assert.assertEquals(expTempName, actTempName);
+
+	 }
+
+	 @Then("user should be able to see valdation message of created template for the user{string}")
+	 public void user_should_be_able_to_see_valdation_message_of_created_template_for_the_user_task_template_was_created_successfully(String ext) {
+		  String act = usersPage.getMsgAfterCreatedTaskTemplate();
+		   Assert.assertEquals(act, ext);
+	 }
+
+	 @When("user should be able to select user in the user for the user{string}")
+	 public void user_should_be_able_to_select_user_in_the_user_for_the_user_automate_test_admin(String user) throws InterruptedException {
+	     usersPage.selectUser(user);
+	 }
+
+	 @And("user should be click on edit button in the user page for the user")
+	 public void user_should_be_click_on_edit_button_in_the_user_page_for_the_user() throws InterruptedException {
+	    usersPage.clickEditbutton();
+	 }
+
+	 @And("user should be delete the user in the user page for the user")
+	 public void user_should_be_delete_the_user_in_the_user_page_for_the_user() throws InterruptedException {
+		 usersPage.clickDeleteButtonUser();
+	 }
+	 
+	 @When("User should be able to delete title in staff title widget for the user")
+	 public void user_should_be_able_to_delete_title_in_staff_title_widget_for_the_user() throws InterruptedException {
+	   usersPage.deleteTitleStaffTitleWidget();
+	 }
+
+	 @Then("user should be able to delete contact title successfully in the staff title widget for the user{string}")
+	 public void user_should_be_able_to_delete_contact_title_successfully_in_the_staff_title_widget_for_the_user_title_was_successfully_deleted(String ext) {
+		 String act = usersPage.deleteTitleSuccessfullyStaffTitleWidget();
+			Assert.assertEquals(act, ext);
+	 }
+	 
+	 @When("user should click on QA Automation Template link for the user")
+	 public void user_should_click_on_qa_automation_template_link_for_the_user() {
+	    usersPage.clickCreatedTemplateLink();
+	 }
+
+	 @When("user should click on delete button at the QA Automation Template Page to delete the template for the user")
+	 public void user_should_click_on_delete_button_at_the_qa_automation_template_page_to_delete_the_template_for_the_user() throws InterruptedException {
+	    usersPage.clickOnDeleteBtnOfTemplate();
+	    
+	 }
+
+	 @Then("user should able to delete QA Automation Template Successfully for the user{string}")
+	 public void user_should_able_to_delete_qa_automation_template_successfully_for_the_user_task_template_was_deleted_successfully(String ext) throws InterruptedException {
+		  String act = usersPage.getDeleteTaskTemplate();
+		   Assert.assertEquals(act, ext);
+	 }
+
+
+
 }

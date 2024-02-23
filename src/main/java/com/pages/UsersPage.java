@@ -16,7 +16,7 @@ public class UsersPage {
 	WebDriver driver;
 
 	private By UsersTabLink = By.xpath("//span[contains(text(),'Users')]");
-	private By selectTitle = By.xpath("//select[@id='user_title_id']");
+//	private By selectTitle = By.xpath("//select[@id='user_title_id']");
 	//private By dateselect = By.xpath("//input[@placeholder='Birth Date'][2]");
 	private By email = By.xpath("//input[@id='user_email']");
 	private By editBtn = By.xpath("//a[text()='Edit']");
@@ -78,22 +78,10 @@ public class UsersPage {
 		Thread.sleep(2000);
 	}
 
-	public void enterUsersInfo(String tl,String el) {
+	public void enterUsersInfo(String el) {
 		
 		try {
-		WebElement titleValue = driver.findElement(selectTitle);
-		Select objSelect = new Select(titleValue);
-		objSelect.selectByVisibleText(tl);
-//		driver.findElement(By.xpath("//h4[@id='newcontactModalLabel']")).click();
-//		driver.findElement(dateselect).click();
-//		driver.findElement(By.xpath("//input[@type='number'][1]")).sendKeys("2000");
-//		List<WebElement> selectRyaltyPaidDate = driver.findElements(By.xpath("//span[@aria-label='" + date + "']"));
-//		for (WebElement webElement : selectRyaltyPaidDate) {
-//			if (webElement.isDisplayed()) {
-//			
-//				webElement.click();
-//			} 
-//		}
+		
 		driver.findElement(email).clear();
 		driver.findElement(email).sendKeys(el);
 		Thread.sleep(1000);
@@ -286,7 +274,7 @@ public class UsersPage {
 	     }
 	     
 	  public void clickOnUser() {
-		  driver.findElement(By.xpath("//p[contains(text(),'Admin ontrack test')]")).click();
+		  driver.findElement(By.xpath("//p[contains(text(),'Arjay McCann')]")).click();
 	  }
 	  
 	  public void clickOnCollapseBtn() throws InterruptedException {
@@ -422,51 +410,168 @@ public class UsersPage {
 		 return driver.findElement(By.xpath("//body/div[1]/div[2]/div[1]/form[1]/a[1]/img[1]")).isDisplayed();
 	 }
 	 
-	 public void createUser(String fn, String title, String role, String email, String bdate, String date) {
-		 try {
-		 driver.findElement(By.xpath("//input[@placeholder='Full Name']")).sendKeys(fn);
-		 Select t = new Select(driver.findElement(By.xpath("//select[@id='user_title_id']")));
-		 t.selectByVisibleText(title);
-		 
-		 Thread.sleep(1000);
-		 driver.findElement(By.xpath("//input[@placeholder=\"Birth Date\"][2]")).click();
-			List<WebElement> selectDate = driver.findElements(By.xpath("//span[@aria-label='" + bdate + "']"));
-
-			for (WebElement webElement : selectDate) {
-				if (webElement.isDisplayed()) {
-
-					webElement.click();
+	 public void enterFieldsForUsers(String fn, String t, String bdate,String role,String email, String sdate) throws InterruptedException {
+			try {
+				
+				driver.findElement(By.xpath("//input[@id='user_full_name']")).sendKeys(fn);
+				Select title = new Select(driver.findElement(By.xpath("//select[@id='user_title_id']")));
+				Thread.sleep(1000);
+				title.selectByVisibleText(t);
+				Thread.sleep(1000);
+				driver.findElement(By.xpath("//input[@placeholder='Birth Date'][2]")).click();
+				Thread.sleep(1000);
+				List<WebElement> selectaDate = driver.findElements(By.xpath("//span[@aria-label='" + bdate + "']"));
+				for (WebElement webElement : selectaDate) {
+					if (webElement.isDisplayed()) {
+					
+						webElement.click();
+					} 
 				}
-			}
-		 Select r = new Select(driver.findElement(By.xpath("//select[@id='user_role']")));
-		 r.selectByVisibleText(role);
-		 driver.findElement(By.xpath("//input[@id='user_email']")).sendKeys(email);
-		 Thread.sleep(1000);
-		 driver.findElement(startDate).click();
-			List<WebElement> selectFiledDate = driver.findElements(By.xpath("//span[@aria-label='" + date + "']"));
-
-			for (WebElement webElement : selectFiledDate) {
-				if (webElement.isDisplayed()) {
-
-					webElement.click();
+				Select r = new Select(driver.findElement(By.xpath("//select[@id='user_role']")));
+				Thread.sleep(1000);
+				r.selectByVisibleText(role);
+				driver.findElement(By.xpath("//input[@id='user_email']")).sendKeys(email);
+				driver.findElement(By.xpath("//input[@id='user_image']")).sendKeys("E:\\Rahul Bhalla CIS\\OntrackProjectBDD\\OnTrack_BDD\\Image\\profile.jpg");
+				Thread.sleep(1000);
+				driver.findElement(By.xpath("//input[@placeholder='Start Date'][2]")).click();
+				Thread.sleep(1000);
+				List<WebElement> selectDate = driver.findElements(By.xpath("//span[@aria-label='" + sdate + "']"));
+				for (WebElement webElement : selectDate) {
+					if (webElement.isDisplayed()) {
+					
+						webElement.click();
+					} 
 				}
+				
+				driver.findElement(By.xpath("//input[@value='Add']")).click();
 			}
-//		driver.findElement(By.xpath("//input[@value='Add']")).click();
-			
-	 }
 			catch (InterruptedException e) {
-	 			// TODO Auto-generated catch block
-	 			e.printStackTrace();
-	 		}
-		 
-	 }
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	 
+		public String getAddUserStatus() {
+			return driver.findElement(By.xpath("//p[contains(text(),'Automate Test Admin')]")).getText();
+		}
+			
 	 
 	 public String getCompanyDeleteMSg() {
 		 return driver.findElement(By.xpath("//span[contains(.,'Company was successfully deleted.')]")).getText();
 	 }
 		 
 	 public void clickOnUserse() {
-		 driver.findElement(By.xpath("//p[contains(text(),'Final check')]")).click();
+		 driver.findElement(By.xpath("//p[contains(text(),'Automate Test Admin')]")).click();
 		 
 	 }
+	 
+		public void clickSettingTab() {
+			driver.findElement(By.xpath("//a[@href=\"/settings\"]")).click();
+		}
+		
+		public void clickonAddTitleStaffTitleWidget() {
+			driver.findElement(By.xpath("//div[@class='setting-box'][2]//a[contains(.,'New Title')]")).click();
+		}
+		
+		public void enterTitleStaffTitleWidget(String title) {
+			driver.findElement(By.xpath("//input[@placeholder='Title']")).sendKeys(title);
+			driver.findElement(By.xpath("//input[@value='Add']")).click();
+		}
+		
+
+		public String getAddTitleStatusStaffTitleWidget() {
+			return driver.findElement(By.xpath("//td[contains(text(),'Automate Admin')]")).getText();
+		}
+		
+		public void clickOnCompany() {
+			driver.findElement(By.xpath("//span[contains(text(),'Companies')]")).click();
+			driver.navigate().refresh();
+			WebElement clickOnCompany = driver.findElement(By.xpath("//a[contains(text(),'Test Company')]"));
+			clickOnCompany.click();
+			
+		}
+		
+		public void click_Detils_Tab()
+		{
+			driver.findElement(By.xpath("//a[contains(.,'Details')]")).click();
+		}
+		
+		public String getStaffMemeberStatus() {
+			return driver.findElement(By.xpath("//a[contains(text(),'Arjay McCann')]")).getText();
+					
+		}
+		public void clickTasksTemplateTab() {
+			driver.findElement(By.xpath("//ul[@id='tabs-nav']//a[@href='/task_templates']")).click();
+		}
+
+		public void clickCreateTemplateBtn() {
+			driver.findElement(By.xpath("//a[@class='btn-ed fl-btn']")).click();
+		}
+		
+		public void enterNameInCreateTemplatePopup(String str) {
+			driver.findElement(By.xpath("//input[@id='task_template_name']")).sendKeys(str);
+		}
+		public void clickAddBtnOfCreateTemplatePopup() {
+			driver.findElement(By.xpath("//input[@class='btn btn-primary']")).click();
+
+		}
+		
+		public String getActTempName() {
+
+			String str = driver.findElement(By.xpath("//a[text()='Qa automation template']")).getText();
+			return str;
+		}
+		
+		public String getMsgAfterCreatedTaskTemplate() {
+			return driver.findElement(By.xpath("//*[contains(text(),'Task Template was created successfully.')]")).getText();
+			
+		}
+		
+		public void selectUser(String user) throws InterruptedException {
+			driver.findElement(By.xpath("//input[@placeholder='Search user']")).sendKeys(user);
+			driver.findElement(By.xpath("//*[@id=\"tab1\"]/div[3]/div[1]/div/div[1]/form/div/button[2]/i")).click();
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//p[contains(text(),'Automate Test Admin')]")).click();
+		}
+		
+		public void clickEditbutton() throws InterruptedException {
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//a[contains(text(),'Edit')]")).click();
+		}
+		
+
+		public void clickDeleteButtonUser() throws InterruptedException {
+			driver.findElement(By.xpath("//a[contains(text(),'Delete')]")).click();
+			Thread.sleep(1000);
+			driver.switchTo().alert().accept();
+		}
+		
+		public void deleteTitleStaffTitleWidget() throws InterruptedException {
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[2]/div[2]/div[2]/table/tbody/tr[3]/td[4]/a")).click();
+			Thread.sleep(1000);
+			driver.switchTo().alert().accept();
+		}
+		public String deleteTitleSuccessfullyStaffTitleWidget() {
+			return driver.findElement(By.xpath("//span[contains(.,'Title was successfully deleted.')]")).getText();
+		}
+		
+		public void clickCreatedTemplateLink() {
+			driver.findElement(By.xpath("//a[text()='Qa automation template']")).click();
+
+		}
+		
+		public void clickOnDeleteBtnOfTemplate() throws InterruptedException {
+			driver.findElement(By.xpath("//a[@class='delete-btn']")).click();
+			Thread.sleep(1000);
+			driver.switchTo().alert().accept();
+
+		}
+		
+		public String getDeleteTaskTemplate() throws InterruptedException {
+			Thread.sleep(1000);
+		return driver.findElement(By.xpath("//span[text()='Task Template was deleted successfully.']")).getText();
+		}
+		
+
+		
 }

@@ -69,19 +69,20 @@ Background:
    	And  click on add contact button in the contact page
    	And User should be clicked on add button in the add contact popup of the contact
   	Then  User should see an validation message for Title Name for contact"Title must exist."
-  	
-  Scenario: Contact 14. User should see an validation message for Phone Number Name
- 		When user should be able to click on contact tab
-   	And  click on add contact button in the contact page
-   	And User should be clicked on add button in the add contact popup of the contact
- 	 	Then  User should see an validation message for Phone Number Name for contact"Phone number can't be blank."
   
-  
-  Scenario: Contact 15. User should see an validation message for Company Name
+  Scenario: Contact 14. User should see an validation message for Company Name
  		When user should be able to click on contact tab
    	And  click on add contact button in the contact page
    	And User should be clicked on add button in the add contact popup of the contact
   	Then  User should see an validation message for Company Name for contact"Company ids can't be blank."
+  	
+  	
+  	Scenario: 15. Validate user should be able to add title for contact title widget fot he contact
+ When user should be able to click on Settings fot the contact
+ And  user should be able to click on add title button in contact title widget for the contact
+ And  user should enter the title in add title popup of contact title widget for the contact"Automate Contact"
+ Then user should be able to see the title on contact title widget for the contact"Automate Contact"
+ 
    
    
    Scenario: Contact 16. validate user should be able to add contact in the contact page
@@ -105,15 +106,21 @@ Background:
     And user click on edit button for the contact
     And user clear the filed and enter the updates values in the fields for the contacts
       | Select a Title | Email                    |company|
-      | final check   | admin7758@mailinator.com |Test Company|
+      | Automate Contact  | admin7758@mailinator.com |Test Company|
     And user click on update button at edit contact popup
-   Then user should be able to see update contact details"contact1"
+   Then user should be able to see update contact details"Automate Contact"
  
   Scenario: Contact 19. user should be able to delete contact
   	When user should be able to click on contact tab
     And user click on edit button for the contact
     And click on delete button in the conatct popup
-    #Then user should be able to delete contact sucessfully"Contact was successfully deleted."
+    Then user should be able to delete contact sucessfully"Contact was successfully deleted."
+    
+    
+    Scenario: Contact 20. User should be able to delete title for contact title widget for the contact
+ When user should be able to click on Settings fot the contact
+ And 	User should be able to delete title in contact title widget for the contact
+ Then user should be able to delete contact title successfully in the contact title widget for the contacts"Title was successfully deleted."
     #
     #
    

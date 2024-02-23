@@ -22,30 +22,30 @@ public class SettingsPage {
     private By closeTitlePopup = By.xpath("//button[@id='close']");
     private By closeContactTitlePopup = By.xpath("//h6[contains(text(),'Contact Title')]");
     private By getTitleStatus= By.xpath("//td[contains(text(),'Auto Admin')]");
-    private By editButtonOfContactTitle = By.xpath("/html/body/div/div[2]/div/div[1]/div[2]/table/tbody/tr[7]/td[3]/form/button");
+    private By editButtonOfContactTitle = By.xpath("/html/body/div/div[2]/div[2]/div[1]/div[2]/table/tbody/tr[2]/td[3]/form/button/i");
     private By udatebtnTitlePopup = By.xpath("//input[@value='Update']");
     private By addBtnStaffTitle = By.xpath("//div[@class='header-btn']//a[@href=\"/titles/new?type=staff\"]");
     private By closeStaffTitlePopup =By.xpath("//h6[contains(text(),'Staff Title')]");
-    private By editBtnStaffTitle = By.xpath("/html/body/div/div[2]/div/div[2]/div[2]/table/tbody/tr[5]/td[3]/form");
-    private By getStaffTitleStatus= By.xpath("//td[text()='Automate QA']");
+    private By editBtnStaffTitle = By.xpath("/html/body/div/div[2]/div[2]/div[2]/div[2]/table/tbody/tr[3]/td[3]/form/button/i");
+    private By getStaffTitleStatus= By.xpath("//td[contains(text(),'Auto Admin')]");
     private By clickAddBtnEmailSignature = By.xpath("//a[contains(text(),'+ Add')]");
     private By clickCloseBtnEmailSignature = By.xpath("//button[@id='close']");
     private By closePopEmailSignaturePopup = By.xpath("//h6[contains(text(),'Email Signature')]");
     private By addBtnEmailSignaturePopup = By.xpath("//input[@name='commit']");
     private By validErrorMsgEmailSignatureName = By.xpath("//span[contains(text(),\"Name can't be blank.\")]");
     private By emailSignatureName = By.xpath("//input[@id='email_signature_name']");
-    private By messageEmailSignature = By.xpath("//trix-editor[@id='email_signature_detail']");
+    private By messageEmailSignature = By.xpath("//body[@aria-placeholder='Content']");
     private By getEmailSignatureStatus = By.xpath("//td[text()='Automate Email Signature']");
     private By editBtnEmailSignautre=By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/div/table/tbody/tr/td[3]/form/button");
     private By getUpdatedSignatureStatus= By.xpath("//td[text()='Automate Signature']");
-    private By getUpdatedEmailMessage = By.xpath("//div[contains(text(),'Automate New Message')]");
+    private By getUpdatedEmailMessage = By.xpath("//p[contains(text(),'Automate New Message')]");
     private By deleteEmailSignature = By.xpath("//div[3]/div[2]/div[1]/table/tbody/tr/td[4]/form/button");
     private By addBtnReport = By.xpath("//a[@data-turbo-frame=\"report_modal\"]");
     private By addBtnTitlePoupReport= By.xpath("//input[@value='Add']");
     private By closeReportsPopupStatus = By.xpath("//h6[contains(text(),'Reports')]");
-    private By editBtnReportsPopup= By.xpath("/html/body/div/div[2]/div[2]/div[4]/div[2]/table/tbody/tr[6]/td[2]/form/button");
+    private By editBtnReportsPopup= By.xpath("/html/body/div/div[2]/div[2]/div[4]/div[2]/table/tbody/tr[2]/td[2]/form/button");
     private By reportTitle = By.xpath("//input[@id='report_title']");
-    private By getReportStatus = By.xpath("//td[text()='Sanpshot Auto']");
+    private By getReportStatus = By.xpath("//td[text()='Auto Report']");
     
     
     
@@ -101,14 +101,6 @@ public String closeAddTitlePopupContactTitleSuccess() {
 		return str;
 	}
 	
-	public void changeContactTilte(String t) throws InterruptedException {
-	    driver.navigate().refresh();
-	    Thread.sleep(1000);
-		driver.findElement(editButtonOfContactTitle).click();
-		driver.findElement(title).clear();
-		driver.findElement(title).sendKeys(t);
-		driver.findElement(udatebtnTitlePopup).click();
-	}
 	
 	public void addBtnStaffTitleWidget() {
 		driver.findElement(addBtnStaffTitle).click();
@@ -140,12 +132,11 @@ public String closeAddTitlePopupContactTitleSuccess() {
 	driver.findElement(title).sendKeys(t);
 	driver.findElement(udatebtnTitlePopup).click();
 	driver.navigate().refresh();
-	WebDriverWait w = new WebDriverWait(driver,Duration.ofSeconds(20));
-    w.until(ExpectedConditions .visibilityOfElementLocated(getStaffTitleStatus));		
-    
+	
 	}
 
-	public String getStaffTitleStatus() {
+	public String getStaffTitleStatus() throws InterruptedException {
+		Thread.sleep(1000);
 	String str = driver.findElement(getStaffTitleStatus).getText();
 	return str;
 	}
@@ -185,8 +176,10 @@ public String closeAddTitlePopupContactTitleSuccess() {
 		js.executeScript("window.scrollBy(0, 50000)");
 		Thread.sleep(1000);
 		driver.findElement(emailSignatureName).sendKeys(s);
+		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='email_signature_detail_ifr']"))); 
 		driver.findElement(messageEmailSignature).sendKeys(message);
-		driver.findElement(addBtnEmailSignaturePopup).click();
+		driver.switchTo().defaultContent();
+		driver.findElement(addBtnEmailSignaturePopup).sendKeys(Keys.RETURN);
 		}
 	
 
@@ -204,8 +197,11 @@ public String closeAddTitlePopupContactTitleSuccess() {
 	public void editSignatureEmail(String s, String message) {
 		driver.findElement(emailSignatureName).clear();
 		driver.findElement(emailSignatureName).sendKeys(s);
-		driver.findElement(messageEmailSignature).clear();
-		driver.findElement(messageEmailSignature).sendKeys(message);
+		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='email_signature_detail_ifr']"))); 
+		driver.findElement(By.xpath("//body[@class='mce-content-body ']")).clear();
+		driver.findElement(By.xpath("//body[@class='mce-content-body ']")).sendKeys(message);
+		driver.switchTo().defaultContent();
+
 		driver.findElement(addBtnEmailSignaturePopup).click();
 		}
 	
@@ -214,7 +210,8 @@ public String closeAddTitlePopupContactTitleSuccess() {
 		return str;
 	}
 	
-	public String getUpdatedEmailSignatureMsgStatus() {
+	public String getUpdatedEmailSignatureMsgStatus() throws InterruptedException {
+		Thread.sleep(1000);
 		String str = driver.findElement(getUpdatedEmailMessage).getText();
 		return str;
 	}
@@ -290,4 +287,74 @@ public String closeAddTitlePopupContactTitleSuccess() {
 		driver.findElement(reportTitle).sendKeys(t);
 		driver.findElement(udatebtnTitlePopup).click();
 	}
+	
+	public void clickonAddTitleContactTitleWidget() {
+		driver.findElement(By.xpath("//div[@class='setting-box'][1]//a[contains(.,'New Title')]")).click();
+	}
+	
+	public void enterTitleContactTitleWidget(String title) {
+		driver.findElement(By.xpath("//input[@placeholder='Title']")).sendKeys(title);
+		driver.findElement(By.xpath("//input[@value='Add']")).click();
+	}
+	
+	public String getAddTitleStatusContactTitleWidget() {
+		return driver.findElement(By.xpath("//td[contains(text(),'Automate Admin')]")).getText();
+	}
+	
+	public void deleteTitleContactTitleWidget() throws InterruptedException {
+		driver.findElement(By.xpath("/html/body/div/div[2]/div[2]/div[1]/div[2]/table/tbody/tr[2]/td[4]/a")).click();
+		Thread.sleep(1000);
+		driver.switchTo().alert().accept();
+	}
+	
+	public String deleteTitleSuccessfullyContactTitleWidget() {
+		return driver.findElement(By.xpath("//span[contains(.,'Title was successfully deleted.')]")).getText();
+	}
+	
+	public void clickonAddTitleStaffTitleWidget() {
+		driver.findElement(By.xpath("//div[@class='setting-box'][2]//a[contains(.,'New Title')]")).click();
+	}
+	
+	public void enterTitleStaffTitleWidget(String title) {
+		driver.findElement(By.xpath("//input[@placeholder='Title']")).sendKeys(title);
+		driver.findElement(By.xpath("//input[@value='Add']")).click();
+	}
+	
+	public String getAddTitleStatusStaffTitleWidget() {
+		return driver.findElement(By.xpath("//td[contains(text(),'Automate Admin')]")).getText();
+	}
+	
+	public void deleteTitleStaffTitleWidget() throws InterruptedException {
+		driver.findElement(By.xpath("/html/body/div/div[2]/div[2]/div[2]/div[2]/table/tbody/tr[3]/td[4]/a")).click();
+		Thread.sleep(1000);
+		driver.switchTo().alert().accept();
+	}
+	
+	public String deleteTitleSuccessfullyStaffTitleWidget() {
+		return driver.findElement(By.xpath("//span[contains(.,'Title was successfully deleted.')]")).getText();
+	}
+	
+	public void clickReportBtn() {
+		driver.findElement(By.xpath("//a[contains(.,'New Report')]")).sendKeys(Keys.RETURN);
+	}
+	
+	public void enterReportFields(String title) {
+		driver.findElement(By.xpath("//input[@placeholder='Title']")).sendKeys(title);
+		driver.findElement(By.xpath("//input[@value='Add']")).click();
+	}
+	
+	public String getAddReportStatus() {
+		return driver.findElement(By.xpath("//td[contains(text(),'Automate Report')]")).getText();
+	}
+	
+	public void deleteReport() throws InterruptedException {
+		driver.findElement(By.xpath("/html/body/div/div[2]/div[2]/div[4]/div[2]/table/tbody/tr[2]/td[3]/a")).sendKeys(Keys.RETURN);
+		Thread.sleep(1000);
+		driver.switchTo().alert().accept();
+	}
+	
+	public String deleteReportSuccessfully() {
+		return driver.findElement(By.xpath("//span[contains(.,'Report was successfully deleted.')]")).getText();
+	}
+	
 }

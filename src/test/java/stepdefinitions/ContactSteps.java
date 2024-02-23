@@ -221,5 +221,38 @@ public void user_should_be_able_to_see_update_profile_image()  {
 	    Assert.assertEquals(act, ext);
 	}
 
+	
+	@When("user should be able to click on Settings fot the contact")
+	public void user_should_be_able_to_click_on_settings_fot_the_contact() {
+	    contactPage.clickSettingTab();
+	}
+
+	@When("user should be able to click on add title button in contact title widget for the contact")
+	public void user_should_be_able_to_click_on_add_title_button_in_contact_title_widget_for_the_contact() {
+	  contactPage.clickonAddTitleContactTitleWidget();
+	}
+
+	@When("user should enter the title in add title popup of contact title widget for the contact{string}")
+	public void user_should_enter_the_title_in_add_title_popup_of_contact_title_widget_for_the_contact_automate_contact(String title) {
+	    contactPage.enterTitleContactTitleWidget(title);
+	}
+
+	@Then("user should be able to see the title on contact title widget for the contact{string}")
+	public void user_should_be_able_to_see_the_title_on_contact_title_widget_for_the_contact_automate_contact(String ext) {
+		 String act = contactPage.getAddTitleStatusContactTitleWidget();
+		   Assert.assertEquals(act, ext);
+	}
+	@When("User should be able to delete title in contact title widget for the contact")
+	public void user_should_be_able_to_delete_title_in_contact_title_widget_for_the_contact() throws InterruptedException {
+	   contactPage.deleteTitleContactTitleWidget();
+	}
+
+	@Then("user should be able to delete contact title successfully in the contact title widget for the contacts{string}")
+	public void user_should_be_able_to_delete_contact_title_successfully_in_the_contact_title_widget_for_the_contacts_title_was_successfully_deleted(String ext) {
+		 String act = contactPage.deleteTitleSuccessfullyContactTitleWidget();
+		    Assert.assertEquals(act, ext);
+	}
+
+
 }
 

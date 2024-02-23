@@ -519,5 +519,126 @@ public class TasksSteps {
 	   String act = tasksPage.getUpdateRecurringTaskStatus();
 	   Assert.assertEquals(act, ext);
 	}
+	
+	@When("user should be able to edit sub task in the task page{string}")
+	public void user_should_be_able_to_edit_sub_task_in_the_task_page_task01(String subtask) {
+	  tasksPage.editsubtask(subtask);
+	}
+
+	@Then("user should be able to see update subtask in a task on task page{string}")
+	public void user_should_be_able_to_see_update_subtask_in_a_task_on_task_page_task01(String ext) {
+	    String act = tasksPage.getUpdateSubTaskStatus();
+	    Assert.assertEquals(act, ext);
+	}
+	
+	@When("user should be able to delete sub task in the task page")
+	public void user_should_be_able_to_delete_sub_task_in_the_task_page() throws InterruptedException {
+	    tasksPage.deleteSubTask();
+	}
+
+	@Then("user should able delete subtask successfully{string}")
+	public void user_should_able_delete_subtask_successfully_sub_task_was_successfully_deleted(String ext) {
+	   String act = tasksPage.getdeleteSubTaskStatus();
+	   Assert.assertEquals(act, ext);
+	}
+	
+	@When("user should be able to edit section{string}")
+	public void user_should_be_able_to_edit_task_qa_two(String task) {
+	   tasksPage.editTask(task);
+	}
+
+	@Then("user shoule be able to update section successfully{string}")
+	public void user_shoule_be_able_to_update_task_successfully_qa_two(String ext) {
+	   String act = tasksPage.updateTaskStatus();
+	   Assert.assertEquals(act, ext);
+	}
+	
+	@When("user should be able to delete section")
+	public void user_should_be_able_to_delete_task() throws InterruptedException {
+	    tasksPage.deleteTaskOfTaskTemplate();
+	}
+
+	@Then("user shoule be able to delete section successfully{string}")
+	public void user_shoule_be_able_to_delete_task_successfully(String ext) {
+	    String act = tasksPage.getDeleteSectionStatus();
+	    Assert.assertEquals(act, ext);
+	}
+
+	@When("user should be click on user link on sidebar for the task")
+	public void user_should_be_click_on_user_link_on_sidebar_for_the_task() {
+	    tasksPage.clickOnUserLink();
+	}
+
+	@When("user should be click on add user button in the user page for the task")
+	public void user_should_be_click_on_add_user_button_in_the_user_page_for_the_task() {
+		tasksPage.clickOnAddUserButton();
+	}
+
+	@When("user should be enter fields for adding user in the user page for the task")
+	public void user_should_be_enter_fields_for_adding_user_in_the_user_page_for_the_task(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+		List<Map<String, String>> usersInfo = dataTable.asMaps();
+		String fn = usersInfo.get(0).get("fullname");
+		String t = usersInfo.get(0).get("title");
+		String date = usersInfo.get(0).get("bdate");
+		String role = usersInfo.get(0).get("role");
+		String email = usersInfo.get(0).get("email");
+		String sdate = usersInfo.get(0).get("sdate");
+		tasksPage.enterFieldsForUsers(fn, t, date, role, email, sdate);
+	}
+
+	@Then("user should be able to see the user in the user page for the task{string}")
+	public void user_should_be_able_to_see_the_user_in_the_user_page_for_the_task_automate_test_admin(String ext) {
+		String act = tasksPage.getAddUserStatus();
+		Assert.assertEquals(act, ext);
+
+	}
+	@When("user should be able to click on Settings for the task")
+	public void user_should_be_able_to_click_on_settings_for_the_task() {
+	   tasksPage.clickSettingTab();
+	}
+
+	@When("user should be able to click on add title button in staff title widget for the task")
+	public void user_should_be_able_to_click_on_add_title_button_in_staff_title_widget_for_the_task() {
+	    tasksPage.clickonAddTitleStaffTitleWidget();
+	}
+
+	@When("user should enter the title in add title popup of staff title widget for the task{string}")
+	public void user_should_enter_the_title_in_add_title_popup_of_staff_title_widget_for_the_task_automate_admin(String title) {
+	   tasksPage.enterTitleStaffTitleWidget(title);
+	}
+
+	@Then("user should be able to see the title on staff title widget for the task{string}")
+	public void user_should_be_able_to_see_the_title_on_staff_title_widget_for_the_task_automate_admin(String ext) {
+		String act = tasksPage.getAddTitleStatusStaffTitleWidget();
+		Assert.assertEquals(act, ext);
+	}
+
+	@When("user should be able to select user in the user for the task{string}")
+	public void user_should_be_able_to_select_user_in_the_user_for_the_task_automate_test_admin(String user) throws InterruptedException {
+	    tasksPage.selectUser(user);
+	}
+
+	@When("user should be click on edit button in the user page for the task")
+	public void user_should_be_click_on_edit_button_in_the_user_page_for_the_task() throws InterruptedException {
+	    tasksPage.clickEditbutton();
+	}
+
+	@When("user should be delete the user in the user page for the task")
+	public void user_should_be_delete_the_user_in_the_user_page_for_the_task() throws InterruptedException {
+	    tasksPage.clickDeleteButtonUser();
+	}
+
+	@When("User should be able to delete title in staff title widget for the task")
+	public void user_should_be_able_to_delete_title_in_staff_title_widget_for_the_task() throws InterruptedException {
+	    tasksPage.deleteTitleStaffTitleWidget();
+	}
+
+	@Then("user should be able to delete contact title successfully in the staff title widget for the task{string}")
+	public void user_should_be_able_to_delete_contact_title_successfully_in_the_staff_title_widget_for_the_task_title_was_successfully_deleted(String ext) {
+		String act = tasksPage.deleteTitleSuccessfullyStaffTitleWidget();
+		Assert.assertEquals(act, ext);
+	}
+
+
 
 }

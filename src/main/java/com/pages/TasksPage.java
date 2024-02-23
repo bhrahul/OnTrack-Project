@@ -29,7 +29,7 @@ public class TasksPage {
 	private By nameFieldOfTaskTemplatePopUp = By.xpath("//input[@id='task_template_name']");
 	private By addBtnOfCreateTemplatePopup = By.xpath("//input[@class='btn btn-primary']");
 	private By newTemplateNameCreated = By.xpath("//a[text()='Qa automation template']");
-	private By newSectionNameCreated = By.xpath("//h3[text()='QA One']");
+	private By newSectionNameCreated = By.xpath("//span[text()='QA One']");
 	private By addSectionBtn = By.xpath("//a[@class='btn-ed'][1]");
 	private By detailFieldOfAddSectionPopUp = By.xpath("//input[@id='section_detail']");
 	private By deleteBtnTemplate = By.xpath("//a[@class='delete-btn']");
@@ -212,7 +212,7 @@ public class TasksPage {
 	}
 
 	public void selectCompany(String company) throws InterruptedException {
-		driver.findElement(By.xpath("//input[@placeholder='Search user']")).sendKeys("Test admin");
+		driver.findElement(By.xpath("//input[@placeholder='Search user']")).sendKeys("Arjay McCann");
 		driver.findElement(By.xpath("//*[@id=\"tab1\"]/div[3]/div[1]/div/div[1]/form/div/button[2]/i")).click();
 		Thread.sleep(1000);
 		Thread.sleep(1000);
@@ -465,7 +465,7 @@ public class TasksPage {
 		Select taskrepeat= new Select(driver.findElement(By.xpath("//select[@id='repeat_task']")));
 		taskrepeat.selectByIndex(1);
 		driver.findElement(By.xpath("//div[@class='form-control daily-weekly-repeat']")).click();
-		driver.findElement(By.xpath("//input[@value='Thursday']")).click();
+		driver.findElement(By.xpath("//input[@value='Friday']")).click();
 		driver.findElement(By.xpath("//div[@class='form-control daily-weekly-repeat']")).click();
 		driver.findElement(By.xpath("//input[@value='Add']")).click();
 		Thread.sleep(1000);
@@ -611,6 +611,157 @@ public class TasksPage {
 	public String getUpdateRecurringTaskStatus() {
 		return driver.findElement(By.xpath("//*[contains(text(),'Task was successfully updated.')]")).getText();
 	}
+	
+	
+	public void editsubtask(String subtask) {
+		driver.findElement(By.xpath("//label[contains(text(),'TASK01-01')]")).click();
+		driver.findElement(By.xpath("//*[@id=\"tab02\"]/div[2]/div/ul/li/div[2]/div/div/div/form/span/a[1]")).click();
+		driver.findElement(By.xpath("//input[@placeholder='Task Name']")).clear();
+		driver.findElement(By.xpath("//input[@placeholder='Task Name']")).sendKeys(subtask);
+		driver.findElement(By.xpath("//input[@value='Update']")).click();
+		
+	}
+		
+	
+	public String getUpdateSubTaskStatus() {
+		return driver.findElement(By.xpath("//label[contains(text(),'TASK01-00')]")).getText();
+	}
+	
+	
+	
+	public void deleteSubTask() throws InterruptedException {
+		driver.findElement(By.xpath("//label[contains(text(),'TASK01-00')]")).click();
+
+		driver.findElement(By.xpath("//*[@id=\"tab02\"]/div[2]/div/ul/li/div[2]/div/div/div/form/span/a[2]")).click();
+		Thread.sleep(1000);
+		driver.switchTo().alert().accept();
+	}
+	
+	
+	public String getdeleteSubTaskStatus() {
+		return driver.findElement(By.xpath("//span[contains(.,'Sub Task was successfully deleted.')]")).getText();
+	}
+	
+	public void editTask(String task) {
+		driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/div/ul/li/div[1]/span/a[1]")).click();
+		driver.findElement(By.xpath("//input[@placeholder='Detail']")).clear();
+		driver.findElement(By.xpath("//input[@placeholder='Detail']")).sendKeys(task);
+		driver.findElement(By.xpath("//input[@value='Update']")).click();
+	}
+	
+	public String updateTaskStatus() {
+		return driver.findElement(By.xpath("//span[contains(text(),'QA Two')]")).getText();
+	}
+	
+	public void deleteTaskOfTaskTemplate() throws InterruptedException {
+		driver.findElement(By.xpath("/html/body/div/div[2]/div/div/div[2]/div/ul/li/div[1]/span/a[2]")).click();
+		Thread.sleep(1000);
+		driver.switchTo().alert().accept();
+	}
+	
+	public String getDeleteSectionStatus() {
+		return driver.findElement(By.xpath("//span[contains(.,'Section was successfully deleted.')]")).getText();
+	}
+	
+	public void clickOnUserLink() {
+		driver.findElement(By.xpath("//span[contains(text(),'Users')]")).click();
+	}
+	
+	public void clickOnAddUserButton() {
+		driver.findElement(By.xpath("//a[contains(text(),'Add User')]")).click();
+	}
+	
+	public void enterFieldsForUsers(String fn, String t, String bdate,String role,String email, String sdate) throws InterruptedException {
+		try {
+			
+			driver.findElement(By.xpath("//input[@id='user_full_name']")).sendKeys(fn);
+			Select title = new Select(driver.findElement(By.xpath("//select[@id='user_title_id']")));
+			Thread.sleep(1000);
+			title.selectByVisibleText(t);
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//input[@placeholder='Birth Date'][2]")).click();
+			Thread.sleep(1000);
+			List<WebElement> selectaDate = driver.findElements(By.xpath("//span[@aria-label='" + bdate + "']"));
+			for (WebElement webElement : selectaDate) {
+				if (webElement.isDisplayed()) {
+				
+					webElement.click();
+				} 
+			}
+			Select r = new Select(driver.findElement(By.xpath("//select[@id='user_role']")));
+			Thread.sleep(1000);
+			r.selectByVisibleText(role);
+			driver.findElement(By.xpath("//input[@id='user_email']")).sendKeys(email);
+			driver.findElement(By.xpath("//input[@id='user_image']")).sendKeys("E:\\Rahul Bhalla CIS\\OntrackProjectBDD\\OnTrack_BDD\\Image\\profile.jpg");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//input[@placeholder='Start Date'][2]")).click();
+			Thread.sleep(1000);
+			List<WebElement> selectDate = driver.findElements(By.xpath("//span[@aria-label='" + sdate + "']"));
+			for (WebElement webElement : selectDate) {
+				if (webElement.isDisplayed()) {
+				
+					webElement.click();
+				} 
+			}
+			
+			driver.findElement(By.xpath("//input[@value='Add']")).click();
+		}
+		catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+		
+		public String getAddUserStatus() {
+			return driver.findElement(By.xpath("//p[contains(text(),'Automate Test Admin')]")).getText();
+		}
+		
+		public void clickSettingTab() {
+			driver.findElement(By.xpath("//a[@href=\"/settings\"]")).click();
+		}
+		public void clickonAddTitleStaffTitleWidget() {
+			driver.findElement(By.xpath("//div[@class='setting-box'][2]//a[contains(.,'New Title')]")).click();
+		}
+		
+		public void enterTitleStaffTitleWidget(String title) {
+			driver.findElement(By.xpath("//input[@placeholder='Title']")).sendKeys(title);
+			driver.findElement(By.xpath("//input[@value='Add']")).click();
+		}
+		
+
+		public String getAddTitleStatusStaffTitleWidget() {
+			return driver.findElement(By.xpath("//td[contains(text(),'Automate Admin')]")).getText();
+		}
+		
+		
+		public void selectUser(String user) throws InterruptedException {
+			driver.findElement(By.xpath("//input[@placeholder='Search user']")).sendKeys(user);
+			driver.findElement(By.xpath("//*[@id=\"tab1\"]/div[3]/div[1]/div/div[1]/form/div/button[2]/i")).click();
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//p[contains(text(),'Automate Test Admin')]")).click();
+		}
+		
+		public void clickEditbutton() throws InterruptedException {
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//a[contains(text(),'Edit')]")).click();
+		}
+		
+		public void clickDeleteButtonUser() throws InterruptedException {
+			driver.findElement(By.xpath("//a[contains(text(),'Delete')]")).click();
+			Thread.sleep(1000);
+			driver.switchTo().alert().accept();
+		}
+		
+		public void deleteTitleStaffTitleWidget() throws InterruptedException {
+			driver.findElement(By.xpath("/html/body/div/div[2]/div[2]/div[2]/div[2]/table/tbody/tr[3]/td[4]/a")).click();
+			Thread.sleep(1000);
+			driver.switchTo().alert().accept();
+		}
+		
+		public String deleteTitleSuccessfullyStaffTitleWidget() {
+			return driver.findElement(By.xpath("//span[contains(.,'Title was successfully deleted.')]")).getText();
+		}
+		
 }
 
 

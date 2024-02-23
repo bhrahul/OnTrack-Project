@@ -76,10 +76,6 @@ public class SettingsSteps {
 	    Assert.assertEquals(act, ext);
 	}
 	
-	@When("User should be able to change title for contact title widget{string}")
-	public void user_should_be_able_to_change_title_for_contact_title_widget_abhey(String t) throws InterruptedException {
-	    settingsPage.changeContactTilte(t);
-	}
 	
 	
 	@And("click on add button in the staff title widget")
@@ -115,7 +111,7 @@ public class SettingsSteps {
 	}
 
 	@Then("user should be able to see staff title in the staff title widget{string}")
-	public void user_should_be_able_to_see_staff_title_in_the_staff_title_widget(String ext) {
+	public void user_should_be_able_to_see_staff_title_in_the_staff_title_widget(String ext) throws InterruptedException {
 		String act = settingsPage.getStaffTitleStatus();
 	    Assert.assertEquals(act, ext);
 	}
@@ -174,7 +170,7 @@ public class SettingsSteps {
 	}
 
 	@Then("user should be able to see updated signature in the email signaturewidget{string},{string}")
-	public void user_should_be_able_to_see_updated_signature_in_the_email_signaturewidget_automate_signature(String ext, String extMsg) {
+	public void user_should_be_able_to_see_updated_signature_in_the_email_signaturewidget_automate_signature(String ext, String extMsg) throws InterruptedException {
 		String act = settingsPage.getUpdatedEmailSignatureStatus();
 	    Assert.assertEquals(act, ext);
 	    String actMsg = settingsPage.getUpdatedEmailSignatureMsgStatus();
@@ -228,6 +224,87 @@ public class SettingsSteps {
 	@And("User should be able to change report title for reports widget{string}")
 	public void user_should_be_able_to_change_report_title_for_reports_widget_automate_report(String r) throws InterruptedException {
 	   settingsPage.changeTitleReports(r);
+	}
+
+	@And("user should be able to click on add title button in contact title widget")
+	public void user_should_be_able_to_click_on_add_title_button_in_contact_title_widget() {
+	  settingsPage.clickonAddTitleContactTitleWidget();
+	}
+
+	@And("user should enter the title in add title popup of contact title widget{string}")
+	public void user_should_enter_the_title_in_add_title_popup_of_contact_title_widget_automate_admin(String title) {
+	   settingsPage.enterTitleContactTitleWidget(title);
+	}
+
+	@Then("user should be able to see the title on contact title widget{string}")
+	public void user_should_be_able_to_see_the_title_on_contact_title_widget_automate_admin(String ext) {
+	   String act = settingsPage.getAddTitleStatusContactTitleWidget();
+	   Assert.assertEquals(act, ext);
+	}
+
+
+	@And("User should be able to delete title in contact title widget")
+	public void user_should_be_able_to_click_on_delete_button_for_contact_title_widget() throws InterruptedException {
+	  settingsPage.deleteTitleContactTitleWidget();
+	}
+
+	@Then("user should be able to delete contact title successfully in the contact title widget{string}")
+	public void user_should_be_able_to_delete_contact_title_in_the_contact_title_widget_title_was_successfully_deleted(String ext) {
+	    String act = settingsPage.deleteTitleSuccessfullyContactTitleWidget();
+	    Assert.assertEquals(act, ext);
+	}
+	@When("user should be able to click on add title button in staff title widget")
+	public void user_should_be_able_to_click_on_add_title_button_in_staff_title_widget() {
+	  settingsPage.clickonAddTitleStaffTitleWidget();
+	}
+
+	@When("user should enter the title in add title popup of staff title widget{string}")
+	public void user_should_enter_the_title_in_add_title_popup_of_staff_title_widget_automate_admin(String title) {
+	  settingsPage.enterTitleStaffTitleWidget(title);
+	}
+
+	@Then("user should be able to see the title on staff title widget{string}")
+	public void user_should_be_able_to_see_the_title_on_staff_title_widget_automate_admin(String ext) {
+	    String act = settingsPage.getAddTitleStatusStaffTitleWidget();
+	    Assert.assertEquals(act, ext);
+	}
+
+	@When("User should be able to delete title in staff title widget")
+	public void user_should_be_able_to_delete_title_in_staff_title_widget() throws InterruptedException {
+	   settingsPage.deleteTitleStaffTitleWidget();
+	}
+
+	@Then("user should be able to delete contact title successfully in the staff title widget{string}")
+	public void user_should_be_able_to_delete_contact_title_successfully_in_the_staff_title_widget_title_was_successfully_deleted(String ext) {
+	   String act = settingsPage.deleteTitleSuccessfullyStaffTitleWidget();
+	   Assert.assertEquals(act, ext);
+	}
+	
+	@When("user should be able to click on new report button in report widget")
+	public void user_should_be_able_to_click_on_new_report_button_in_report_widget() {
+	    settingsPage.clickReportBtn();
+	}
+
+	@When("user should enter the title in add report popup of report widget{string}")
+	public void user_should_enter_the_title_in_add_report_popup_of_report_widget_automate_admin(String title) {
+	   settingsPage.enterReportFields(title);
+	}
+
+	@Then("user should be able to see the title on report widget{string}")
+	public void user_should_be_able_to_see_the_title_on_report_widget_automate_admin(String ext) {
+	 String act = settingsPage.getAddReportStatus();
+	 Assert.assertEquals(act, ext);
+	}
+	
+	@When("User should be able to delete report for report widget")
+	public void user_should_be_able_to_delete_report_for_report_widget() throws InterruptedException {
+	   settingsPage.deleteReport();
+	}
+
+	@Then("user should be able to delete report successfully{string}")
+	public void user_should_be_able_to_delete_report_successfully_report_was_successfully_deleted(String ext) {
+	   String act = settingsPage.deleteReportSuccessfully();
+	   Assert.assertEquals(act, ext);
 	}
 
 

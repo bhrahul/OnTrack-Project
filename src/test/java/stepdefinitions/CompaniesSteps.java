@@ -146,7 +146,7 @@ public class CompaniesSteps {
 		List<Map<String, String>> companyInfo = dataTable.asMaps();
 		String cName = companyInfo.get(0).get("companyname");
 		String pName = companyInfo.get(0).get("phonenumber");
-		// String ext = companyInfo.get(0).get("extention");
+		String ext = companyInfo.get(0).get("ext");
 		String ws = companyInfo.get(0).get("website");
 		String email = companyInfo.get(0).get("email");
 		String ad = companyInfo.get(0).get("address");
@@ -154,7 +154,7 @@ public class CompaniesSteps {
 		String state = companyInfo.get(0).get("state");
 		String zipCode = companyInfo.get(0).get("zipcode");
 		String date = companyInfo.get(0).get("sdate");
-		companiesPage.enterCompanyInfo(cName, pName, ws, email, ad, city, state, zipCode, date);
+		companiesPage.enterCompanyInfo(cName, pName, ext, ws, email, ad, city, state, zipCode, date);
 	}
 
 	@Then("User should be able to see the company from company list{string}")
@@ -246,7 +246,7 @@ public class CompaniesSteps {
 	}
 
 	@Then("User should see an validation message on address {string}")
-	public void user_should_see_an_validation_message_on_address(String errMsg) {
+	public void user_should_see_an_validation_message_on_address(String errMsg) throws InterruptedException {
 		String actErrMsg = companiesPage.getInvalidCredTextAddress();
 		Assert.assertEquals(actErrMsg, errMsg);
 	}
@@ -332,10 +332,11 @@ public class CompaniesSteps {
 		List<Map<String, String>> contactInfo = dataTable.asMaps();
 		String fName = contactInfo.get(0).get("firstname");
 		String lName = contactInfo.get(0).get("lastname");
+		String title = contactInfo.get(0).get("title");
 		String email = contactInfo.get(0).get("email");
 		String pn = contactInfo.get(0).get("phonenumber");
 		String company = contactInfo.get(0).get("company");
-		companiesPage.enterContactInfo(fName, lName, email, pn, company);
+		companiesPage.enterContactInfo(fName, lName, title, email, pn, company);
 		Thread.sleep(3000);
 	}
 
@@ -350,7 +351,7 @@ public class CompaniesSteps {
 		List<Map<String, String>> companyInfo = dataTable.asMaps();
 		String company = companyInfo.get(0).get("company");
 		String contact = companyInfo.get(0).get("contact");
-		companiesPage.fiteredCompany(company,contact);
+		companiesPage.fiteredCompany(company, contact);
 		Thread.sleep(1000);
 	}
 
@@ -641,7 +642,7 @@ public class CompaniesSteps {
 	}
 
 	@Then("user should be able to see the update Reconciled Dates record{string}")
-	public void user_should_be_able_to_see_the_update_reconciled_dates_record(String ext) {
+	public void user_should_be_able_to_see_the_update_reconciled_dates_record(String ext) throws InterruptedException {
 		String act = companiesPage.getEditReconciledDateRecordStatus();
 		Assert.assertEquals(act, ext);
 	}
@@ -824,12 +825,13 @@ public class CompaniesSteps {
 
 	@Then("user should be able to see the count of Unclreared Transactionsin statistics page{string}")
 	public void user_should_be_able_to_see_the_count_of_unclreared_transactionsin_statistics_page(String ext) {
-	    String act = companiesPage.getUnclearedTransaction();
-	    Assert.assertEquals(act, ext);
+		String act = companiesPage.getUnclearedTransaction();
+		Assert.assertEquals(act, ext);
 	}
-	
+
 	@Then("user should be able to  close New Payment popup in the account at daily reconciled page")
-	public void user_should_be_able_to_close_new_payment_popup_in_the_account_at_daily_reconciled_page() throws InterruptedException {
+	public void user_should_be_able_to_close_new_payment_popup_in_the_account_at_daily_reconciled_page()
+			throws InterruptedException {
 		companiesPage.getAddPaymentPoupCloseStatus();
 	}
 
@@ -849,7 +851,8 @@ public class CompaniesSteps {
 	}
 
 	@Then("user should be able to see the update Transaction at the account in the daily reconciled page{string}")
-	public void user_should_be_able_to_see_the_update_transaction_at_the_account_in_the_daily_reconciled_page(String ext) throws InterruptedException {
+	public void user_should_be_able_to_see_the_update_transaction_at_the_account_in_the_daily_reconciled_page(
+			String ext) throws InterruptedException {
 		String act = companiesPage.getUpdateTransactionStatus();
 		Assert.assertEquals(act, ext);
 	}
@@ -859,14 +862,13 @@ public class CompaniesSteps {
 			throws InterruptedException {
 		companiesPage.deletePayment();
 	}
-	
+
 	@Then("user should be able to see the count of Unclreared Transactions after delete in statistics page{string}")
-	public void user_should_be_able_to_see_the_count_of_unclreared_transactions_after_delete_in_statistics_page(String ext) {
+	public void user_should_be_able_to_see_the_count_of_unclreared_transactions_after_delete_in_statistics_page(
+			String ext) {
 		String act = companiesPage.getUnclearedTransaction();
-	    Assert.assertEquals(act, ext);
+		Assert.assertEquals(act, ext);
 	}
-
-
 
 	@And("user should be able to delete the account in the daily reconciled page")
 	public void user_should_be_able_to_delete_the_account_in_the_daily_reconciled_page() throws InterruptedException {
@@ -938,7 +940,7 @@ public class CompaniesSteps {
 
 	@Then("user should be able to see the count of Payment Not Received in statistics page{string}")
 	public void user_should_be_able_to_see_the_count_of_payment_not_received_in_statistics_page(String ext) {
-		String act =companiesPage.getPaymentNotRecievedStatus();
+		String act = companiesPage.getPaymentNotRecievedStatus();
 		Assert.assertEquals(act, ext);
 	}
 
@@ -960,7 +962,8 @@ public class CompaniesSteps {
 	}
 
 	@Then("user should be able to see updated record of the Payment Deposited but not Received widget{string}")
-	public void user_should_be_able_to_see_updated_record_of_the_payment_deposited_but_not_received_widget(String ext) throws InterruptedException {
+	public void user_should_be_able_to_see_updated_record_of_the_payment_deposited_but_not_received_widget(String ext)
+			throws InterruptedException {
 		String act = companiesPage.getUpdatedTransactionPaymentDeposited();
 		Assert.assertEquals(act, ext);
 	}
@@ -969,13 +972,13 @@ public class CompaniesSteps {
 	public void user_should_be_able_to_delete_payment_deposited_record() throws InterruptedException {
 		companiesPage.deletePaymentDeposted();
 	}
-	
+
 	@Then("user should be able to see the count of Payment Not Received in statistics page after delete{string}")
-	public void user_should_be_able_to_see_the_count_of_payment_not_received_in_statistics_page_After_delete(String ext) {
-		String act =companiesPage.getPaymentNotRecievedStatus();
+	public void user_should_be_able_to_see_the_count_of_payment_not_received_in_statistics_page_After_delete(
+			String ext) {
+		String act = companiesPage.getPaymentNotRecievedStatus();
 		Assert.assertEquals(act, ext);
 	}
-
 
 	@And("user should be able to click on add button in the Payment Received but not Deposited widget")
 	public void user_should_be_able_to_click_on_add_button_in_the_payment_received_but_not_deposited_widget() {
@@ -1033,7 +1036,7 @@ public class CompaniesSteps {
 
 	@Then("user should be able to see the count of Payment Not yet deposited in statistics page{string}")
 	public void user_should_be_able_to_see_the_count_of_payment_not_yet_deposited_in_statistics_page(String ext) {
-		String act= companiesPage.getPaymentNotYetDeposited();
+		String act = companiesPage.getPaymentNotYetDeposited();
 		Assert.assertEquals(act, ext);
 	}
 
@@ -1064,10 +1067,11 @@ public class CompaniesSteps {
 	public void user_should_be_able_to_delete_payment_recieved_record() throws InterruptedException {
 		companiesPage.deletePaymentRecived();
 	}
-	
+
 	@Then("user should be able to see the count of Payment Not yet deposited after delete transaction in statistics page{string}")
-	public void user_should_be_able_to_see_the_count_of_payment_not_yet_deposited_after_delete_transaction_in_statistics_page(String ext) {
-		String act= companiesPage.getPaymentNotYetDeposited();
+	public void user_should_be_able_to_see_the_count_of_payment_not_yet_deposited_after_delete_transaction_in_statistics_page(
+			String ext) {
+		String act = companiesPage.getPaymentNotYetDeposited();
 		Assert.assertEquals(act, ext);
 	}
 
@@ -1119,7 +1123,8 @@ public class CompaniesSteps {
 	}
 
 	@Then("user should be able to see record of the Unknown Transactions widget{string}")
-	public void user_should_be_able_to_see_record_of_the_unknown_transactions_widget(String ext) throws InterruptedException {
+	public void user_should_be_able_to_see_record_of_the_unknown_transactions_widget(String ext)
+			throws InterruptedException {
 		String act = companiesPage.getTransactionUnknownTransactions();
 		Assert.assertEquals(act, ext);
 	}
@@ -1157,14 +1162,13 @@ public class CompaniesSteps {
 	public void user_should_be_able_to_delete_unknown_transactions_widget_record() throws InterruptedException {
 		companiesPage.deleteUnknownTransactions();
 	}
-	
+
 	@Then("user should be able to see the count of unkown transactions after delete transaction in statistics page{string}")
-	public void user_should_be_able_to_see_the_count_of_unkown_transactions_after_delete_transaction_in_statistics_page(String ext) {
+	public void user_should_be_able_to_see_the_count_of_unkown_transactions_after_delete_transaction_in_statistics_page(
+			String ext) {
 		String act = companiesPage.getUnknownTransactions();
 		Assert.assertEquals(act, ext);
 	}
-
-
 
 /////////////////////////////BILLS.COM VS QBO/////////////////////////////////////////
 
@@ -1279,7 +1283,8 @@ public class CompaniesSteps {
 	}
 
 	@Then("user should be able to see the difference between bills.com and QBO{string}")
-	public void user_should_be_able_to_see_the_difference_between_bills_com_and_qbo(String ext) {
+	public void user_should_be_able_to_see_the_difference_between_bills_com_and_qbo(String ext)
+			throws InterruptedException {
 		String act = companiesPage.diffbetweenBillsAndQBO();
 		Assert.assertEquals(act, ext);
 	}
@@ -1364,17 +1369,6 @@ public class CompaniesSteps {
 	public void user_should_be_able_to_see_the_Updatedfranchise_in_the_royalty_difference_page()
 			throws InterruptedException {
 		companiesPage.getFranchiseStatus();
-	}
-
-	@And("User should be enter the fields for change franchise in the Royalty Difference page")
-	public void user_should_be_enter_the_fields_for_change_franchise_in_the_royalty_difference_page(
-			io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
-		List<Map<String, String>> royaltyDifferenceInfo = dataTable.asMaps();
-		String franchiseName = royaltyDifferenceInfo.get(0).get("franchisenumber");
-		String rDiffQBO = royaltyDifferenceInfo.get(0).get("QBO");
-		String royaltyDiffAmount = royaltyDifferenceInfo.get(0).get("servpronet");
-		companiesPage.changeFranciseFields(franchiseName, rDiffQBO, royaltyDiffAmount);
-		Thread.sleep(1000);
 	}
 
 	@And("user should be select year from year dropdown in the dashboard Royalty Difference page of the company")
@@ -1511,7 +1505,7 @@ public class CompaniesSteps {
 
 	@Then("contact should be displayed on company detail section{string}")
 	public void contact_should_be_displayed_on_company_detail_section(String ext) throws InterruptedException {
-		String act = companiesPage.getContactStatus();
+		String act = companiesPage.getContactStatusSnapshot();
 		Assert.assertEquals(act, ext);
 	}
 
@@ -1551,10 +1545,11 @@ public class CompaniesSteps {
 		List<Map<String, String>> contactInfo = dataTable.asMaps();
 		String fName = contactInfo.get(0).get("firstname");
 		String lName = contactInfo.get(0).get("lastname");
+		String title = contactInfo.get(0).get("title");
 		String email = contactInfo.get(0).get("email");
 		String pn = contactInfo.get(0).get("phonenumber");
 		String c = contactInfo.get(0).get("company");
-		companiesPage.enterContactInfoForCompaniesContactSection(fName, lName, email, pn, c);
+		companiesPage.enterContactInfoForCompaniesContactSection(fName, lName, title, email, pn, c);
 		Thread.sleep(1000);
 
 	}
@@ -1620,19 +1615,13 @@ public class CompaniesSteps {
 	public void user_should_be_able_update_staff_details(DataTable dataTable) throws InterruptedException {
 		List<Map<String, String>> staffInfo = dataTable.asMaps();
 		String t = staffInfo.get(0).get("title");
-		String date = staffInfo.get(0).get("date");
-		companiesPage.editStaffDetails(t, date);
+		companiesPage.editStaffDetails(t);
 	}
 
 	@Then("updated staff member details should be displayed on staff detail section{string}")
 	public void updated_staff_member_details_should_be_displayed_on_staff_detail_section_admin_on_track(String ext) {
 		String act = companiesPage.getUpdatedStaffMemberStatus();
 		Assert.assertEquals(act, ext);
-	}
-
-	@When("user should be able to change staff details{string}")
-	public void user_should_be_able_to_change_staff_details_final_check(String name) {
-		companiesPage.changeStaffMemeberName(name);
 	}
 
 	@And("user able to delete staff member details")
@@ -1646,12 +1635,13 @@ public class CompaniesSteps {
 	}
 
 	@And("user should be enter all fields of notes popup")
-	public void user_should_be_enter_all_fields_of_notes_popup_automate_notes(DataTable dataTable) throws InterruptedException {
-		
+	public void user_should_be_enter_all_fields_of_notes_popup_automate_notes(DataTable dataTable)
+			throws InterruptedException {
+
 		List<Map<String, String>> staffInfo = dataTable.asMaps();
 		String subject = staffInfo.get(0).get("subject");
 		String notes = staffInfo.get(0).get("notes");
-		companiesPage.addNotesDetails(subject,notes);
+		companiesPage.addNotesDetails(subject, notes);
 	}
 
 	@Then("notes should be displayed in the notes section{string}")
@@ -1882,7 +1872,8 @@ public class CompaniesSteps {
 	}
 
 	@And("user should be add coachings in the notes of Task tab")
-	public void user_should_be_add_coachings_in_the_notes_of_task_tab(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+	public void user_should_be_add_coachings_in_the_notes_of_task_tab(io.cucumber.datatable.DataTable dataTable)
+			throws InterruptedException {
 		List<Map<String, String>> notesInfo = dataTable.asMaps();
 		String assign = notesInfo.get(0).get("assign");
 		String sub = notesInfo.get(0).get("subnotes");
@@ -1923,7 +1914,8 @@ public class CompaniesSteps {
 	}
 
 	@Then("User should be able to see completed task in the task page{string}")
-	public void user_should_be_able_to_see_completed_task_in_the_task_page_task01(String ext) throws InterruptedException {
+	public void user_should_be_able_to_see_completed_task_in_the_task_page_task01(String ext)
+			throws InterruptedException {
 		String act = companiesPage.getCompletedTaskStatus();
 		Assert.assertEquals(act, ext);
 	}
@@ -1992,15 +1984,16 @@ public class CompaniesSteps {
 			throws InterruptedException {
 		companiesPage.clickOnDeleteBtnOfTemplate();
 	}
-	
+
 	@When("user should be click on Add tasks button at recurring tab in the tasks page")
-	public void user_should_be_click_on_add_tasks_button_at_recurring_tab_in_the_tasks_page() throws InterruptedException {
+	public void user_should_be_click_on_add_tasks_button_at_recurring_tab_in_the_tasks_page()
+			throws InterruptedException {
 		companiesPage.clickAddBtnTaskRecurringTab();
 	}
 
-	
 	@When("user should be able to create task at task recurring in the tasks page")
-	public void user_should_be_able_to_create_task_at_task_recurring_in_the_tasks_page(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+	public void user_should_be_able_to_create_task_at_task_recurring_in_the_tasks_page(
+			io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
 		List<Map<String, String>> TaskInfo = dataTable.asMaps();
 		String tt = TaskInfo.get(0).get("task template");
 		String name = TaskInfo.get(0).get("name");
@@ -2012,19 +2005,21 @@ public class CompaniesSteps {
 
 		companiesPage.createRecurringTask(tt, name, assign, company, taskrepeat, date);
 	}
+
 	@Then("user should be see the task at task recurring tab in the tasks page{string}")
 	public void user_should_be_see_the_task_at_task_recurring_tab_in_the_tasks_page_task12(String ext) {
-	    String act= companiesPage.getRecurringTAskStatus();
-	    Assert.assertEquals(act, ext);
+		String act = companiesPage.getRecurringTAskStatus();
+		Assert.assertEquals(act, ext);
 	}
-	
+
 	@When("user should be click on edit button on task recurring tab")
 	public void user_should_be_click_on_edit_button_on_task_recurring_tab() throws InterruptedException {
-	  companiesPage.clickEditBtnTaskRecurringTab();
+		companiesPage.clickEditBtnTaskRecurringTab();
 	}
-	
+
 	@When("user should be able to update task at task recurring in the tasks page")
-	public void user_should_be_able_to_update_task_at_task_recurring_in_the_tasks_page(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+	public void user_should_be_able_to_update_task_at_task_recurring_in_the_tasks_page(
+			io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
 		List<Map<String, String>> TaskInfo = dataTable.asMaps();
 		String name = TaskInfo.get(0).get("name");
 		String assign = TaskInfo.get(0).get("assign");
@@ -2034,66 +2029,69 @@ public class CompaniesSteps {
 
 	@Then("user should be see the Update task at task recurring tab in the tasks page{string}")
 	public void user_should_be_see_the_update_task_at_task_recurring_tab_in_the_tasks_page_task20(String ext) {
-	    String act = companiesPage.getUpdateRecurringTAskStatus();
-	    Assert.assertEquals(act, ext);
+		String act = companiesPage.getUpdateRecurringTAskStatus();
+		Assert.assertEquals(act, ext);
 	}
 
 	@When("user should be able to click on client link on a task")
 	public void user_should_be_able_to_click_on_client_link_on_a_task() {
-	   companiesPage.clickOnClientatTask();
+		companiesPage.clickOnClientatTask();
 	}
 
 	@Then("user should be able to see company details on detail tab{string}")
 	public void user_should_be_able_to_see_company_details_on_detail_tab_audi23automate(String ext) {
-	    String act = companiesPage.getCompanyDetailsStatus();
-	    Assert.assertEquals(act, ext);
+		String act = companiesPage.getCompanyDetailsStatus();
+		Assert.assertEquals(act, ext);
 	}
-	
-	
+
 	@When("user should be able to click on assignee link on a task")
 	public void user_should_be_able_to_click_on_assignee_link_on_a_task() {
-	   companiesPage.clickOnasignee();
+		companiesPage.clickOnasignee();
 	}
 
 	@Then("user should be able to see user details on detail tab{string}")
 	public void user_should_be_able_to_see_user_details_on_detail_tab_final_check(String ext) {
-	   String act = companiesPage.getUserStatus();
-	   Assert.assertEquals(act, ext);
+		String act = companiesPage.getUserStatus();
+		Assert.assertEquals(act, ext);
 	}
 
 	@Then("user should be should recurring task widget count{string}")
 	public void user_should_be_should_recurring_task_widget_count(String ext) {
-	    String act = companiesPage.getRecurringTaskWidget();
-	    Assert.assertEquals(act, ext);
+		String act = companiesPage.getRecurringTaskWidget();
+		Assert.assertEquals(act, ext);
 	}
-	
+
 	@When("user should be able to click on task of the company at tasks reoccurring page Task20")
-	public void user_should_be_able_to_click_on_task_of_the_company_at_tasks_reoccurring_page_task() throws InterruptedException {
-	   companiesPage.clickonTask();
+	public void user_should_be_able_to_click_on_task_of_the_company_at_tasks_reoccurring_page_task()
+			throws InterruptedException {
+		companiesPage.clickonTask();
 	}
 
 	@When("User should be able to update fields at recurring tab in the  company task tab for task tab")
-	public void user_should_be_able_to_update_fields_at_recurring_tab_in_the_company_task_tab_for_task_tab(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
-		
-			List<Map<String, String>> taskInfo = dataTable.asMaps();
-			String taskName = taskInfo.get(0).get("taskname");
-			String template = taskInfo.get(0).get("template");
+	public void user_should_be_able_to_update_fields_at_recurring_tab_in_the_company_task_tab_for_task_tab(
+			io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
 
-			String date = taskInfo.get(0).get("date");
+		List<Map<String, String>> taskInfo = dataTable.asMaps();
+		String taskName = taskInfo.get(0).get("taskname");
+		String template = taskInfo.get(0).get("template");
 
-			companiesPage.UpdateFieldsInAddTaskPopup(taskName, template, date);
+		String date = taskInfo.get(0).get("date");
+
+		companiesPage.UpdateFieldsInAddTaskPopup(taskName, template, date);
 
 	}
 
 	@Then("user should be able to see the task recurring tab in the  company task tab for task tab{string}")
-	public void user_should_be_able_to_see_the_task_recurring_tab_in_the_company_task_tab_for_task_tab_task21(String ext) {
-	   String act = companiesPage.getRecurringUpdateTAskStatus();
-	   Assert.assertEquals(act,ext);
+	public void user_should_be_able_to_see_the_task_recurring_tab_in_the_company_task_tab_for_task_tab_task21(
+			String ext) {
+		String act = companiesPage.getRecurringUpdateTAskStatus();
+		Assert.assertEquals(act, ext);
 	}
 
 	@When("user should be click on delete btn in task recurring tab in the tasks page")
-	public void user_should_be_click_on_delete_btn_in_task_recurring_tab_in_the_tasks_page() throws InterruptedException {
-	    companiesPage.deleteTaskReccuringTasks();
+	public void user_should_be_click_on_delete_btn_in_task_recurring_tab_in_the_tasks_page()
+			throws InterruptedException {
+		companiesPage.deleteTaskReccuringTasks();
 	}
 	//////////// Notes Tab//////////////////////////
 
@@ -2142,7 +2140,8 @@ public class CompaniesSteps {
 	}
 
 	@And("user should be able to create notes in the company notes page")
-	public void user_should_be_able_to_create_notes_in_the_company_notes_page(DataTable dataTable) throws InterruptedException {
+	public void user_should_be_able_to_create_notes_in_the_company_notes_page(DataTable dataTable)
+			throws InterruptedException {
 		List<Map<String, String>> notesInfo = dataTable.asMaps();
 		String assign = notesInfo.get(0).get("assign");
 		String sub = notesInfo.get(0).get("subject");
@@ -2311,18 +2310,271 @@ public class CompaniesSteps {
 	public void user_should_be_able_to_delete_document_in_the_folder_of_document_page() throws InterruptedException {
 		companiesPage.deleteDocument();
 	}
-	
+
 	@When("user should click on delete button at the QA Automation Template Page to delete the template for the compnay task")
-	public void user_should_click_on_delete_button_at_the_qa_automation_template_page_to_delete_the_template_for_the_compnay_task() throws InterruptedException {
-	  companiesPage.clickOnDeleteBtnOfTemplate();
+	public void user_should_click_on_delete_button_at_the_qa_automation_template_page_to_delete_the_template_for_the_compnay_task()
+			throws InterruptedException {
+		companiesPage.clickOnDeleteBtnOfTemplate();
 	}
 
-	@Then("user should able to delete QA Automation Template Successfully  for the compnay task{string}")
-	public void user_should_able_to_delete_qa_automation_template_successfully_for_the_compnay_task_task_template_was_deleted_successfully(String ext) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	@When("user should be able to click on expand button of the month")
+	public void user_should_be_able_to_click_on_expand_button_of_the_month() {
+		companiesPage.clickOnEXpandButton();
 	}
 
+	@And("user should be able to delete the franchise")
+	public void user_should_be_able_to_delete_the_franchise() throws InterruptedException {
+		companiesPage.deleteFranchise();
+	}
 
+	@Then("user should be able to see the validation message after deleting the franchise{string}")
+	public void user_should_be_able_to_see_the_validation_message_after_deleting_the_franchise_franchise_was_deleted_successfully(
+			String ext) {
+		String act = companiesPage.getFranchiseDeleteSuccessfully();
+		Assert.assertEquals(act, ext);
+	}
+
+	@When("user should be able to reply the notes in the company notes page")
+	public void user_should_be_able_to_reply_the_notes_in_the_company_notes_page() {
+		companiesPage.replyToNotes();
+	}
+
+	@Then("user should be able to see the reply of the notes{string}")
+	public void user_should_be_able_to_see_the_reply_of_the_notes_testing_notes(String ext)
+			throws InterruptedException {
+		String act = companiesPage.getReplyNotesStatus();
+		Assert.assertEquals(act, ext);
+	}
+
+	@And("user should be able to edit reply the notes in the company notes page")
+	public void user_should_be_able_to_edit_reply_the_notes_in_the_company_notes_page() throws InterruptedException {
+		companiesPage.editReplyNotes();
+	}
+
+	@Then("user should be able to see the edit reply of the notes{string}")
+	public void user_should_be_able_to_see_the_edit_reply_of_the_notes_testing_notes(String ext)
+			throws InterruptedException {
+		String act = companiesPage.getEditReplyNotesStatus();
+		Assert.assertEquals(act, ext);
+	}
+
+	@And("user should be able to delete reply the notes in the company notes page")
+	public void user_should_be_able_to_delete_reply_the_notes_in_the_company_notes_page() throws InterruptedException {
+		companiesPage.deleteReplyNotes();
+	}
+
+	@Then("user should be able to delete reply successfully of the notes{string}")
+	public void user_should_be_able_to_delete_reply_successfully_of_the_notes_reply_was_deleted_successfully(
+			String ext) {
+		String act = companiesPage.validateDeleteReply();
+		Assert.assertEquals(act, ext);
+	}
+
+	@And("user should be able to click on coaching tab company notes tab")
+	public void user_should_be_able_to_click_on_coaching_tab_company_notes_tab() {
+		companiesPage.replyNotesCoachingTab();
+	}
+
+	@And("user should be able to reply the notes of coaching tab in the company notes page")
+	public void user_should_be_able_to_reply_the_notes_of_coaching_tab_in_the_company_notes_page() {
+		companiesPage.replyToNotesCoaching();
+	}
+
+	@Then("user should be able to see the reply on coaching tab of the notes{string}")
+	public void user_should_be_able_to_see_the_reply_on_coaching_tab_of_the_notes_testing_notes(String ext)
+			throws InterruptedException {
+		String act = companiesPage.getReplyNotesStatusCoaching();
+		Assert.assertEquals(act, ext);
+	}
+
+	@And("user should be able to edit reply the notes Coaching in the company notes page")
+	public void user_should_be_able_to_edit_reply_the_notes_coaching_in_the_company_notes_page()
+			throws InterruptedException {
+		companiesPage.editReplyNotesCoaching();
+	}
+
+	@Then("user should be able to see the edit reply of the notes Coaching{string}")
+	public void user_should_be_able_to_see_the_edit_reply_of_the_notes_coaching_testing_notes(String ext)
+			throws InterruptedException {
+		String act = companiesPage.getEditReplyNotesStatusCoaching();
+		Assert.assertEquals(act, ext);
+	}
+
+	@When("user should be able to delete reply the notes coaching in the company notes page")
+	public void user_should_be_able_to_delete_reply_the_notes_coaching_in_the_company_notes_page()
+			throws InterruptedException {
+		companiesPage.deleteReplyNotesCoaching();
+	}
+
+	@Then("user should be able to delete reply successfully of the notes coaching{string}")
+	public void user_should_be_able_to_delete_reply_successfully_of_the_notes_coaching_reply_was_deleted_successfully(
+			String ext) {
+		String act = companiesPage.validateDeleteReplyCoaching();
+		Assert.assertEquals(act, ext);
+	}
+
+	@And("user should be click on logo in sidebar")
+	public void user_should_be_click_on_logo_in_sidebar() throws InterruptedException {
+		companiesPage.clickOnLogo();
+	}
+
+	@Then("user should be navigate to companies list page{string}")
+	public void user_should_be_navigate_to_companies_list_page_https_beta_cisin_com_companies(String ext)
+			throws InterruptedException {
+		String act = companiesPage.companiesListPageURL();
+		Assert.assertEquals(act, ext);
+	}
+
+	@When("user should be click on profile in sidebar")
+	public void user_should_be_click_on_profile_in_sidebar() throws InterruptedException {
+		companiesPage.clickOnProfileSideBar();
+	}
+
+	@Then("user should be able to navigate to user profile{string}")
+	public void user_should_be_able_to_navigate_to_user_profile(String ext) {
+		String act = companiesPage.getProfileStatus();
+		Assert.assertEquals(act, ext);
+	}
+
+	@And("user should be able to click on Settings for the company page")
+	public void user_should_be_able_to_click_on_settings_for_the_company_page() {
+		companiesPage.clickSettingTab();
+	}
+
+	@And("user should be able to click on add title button in contact title widget for the company page")
+	public void user_should_be_able_to_click_on_add_title_button_in_contact_title_widget_for_the_company_page() {
+		companiesPage.clickonAddTitleContactTitleWidget();
+	}
+
+	@And("user should enter the title in add title popup of contact title widget for the company page{string}")
+	public void user_should_enter_the_title_in_add_title_popup_of_contact_title_widget_for_the_company_page_automate_contact_title(
+			String title) {
+		companiesPage.enterTitleContactTitleWidget(title);
+	}
+
+	@Then("user should be able to see the title on contact title widget for the company page{string}")
+	public void user_should_be_able_to_see_the_title_on_contact_title_widget_for_the_company_page_automate_contact_title(
+			String ext) {
+		String act = companiesPage.getAddTitleStatusContactTitleWidget();
+		Assert.assertEquals(act, ext);
+	}
+
+	@And("user should be able to click on new report button in report widget for the company")
+	public void user_should_be_able_to_click_on_new_report_button_in_report_widget_for_the_company() {
+		companiesPage.clickReportBtn();
+	}
+
+	@When("user should enter the title in add report popup of report widget for the compnay{string}")
+	public void user_should_enter_the_title_in_add_report_popup_of_report_widget_for_the_compnay_automate_report(
+			String report) {
+		companiesPage.enterReportFields(report);
+	}
+
+	@Then("user should be able to see the title on report widget for the company{string}")
+	public void user_should_be_able_to_see_the_title_on_report_widget_for_the_company_automate_report(String ext) {
+		String act = companiesPage.getAddReportStatus();
+		Assert.assertEquals(act, ext);
+	}
+
+	@When("User should be able to delete title in contact title widget for the company")
+	public void user_should_be_able_to_delete_title_in_contact_title_widget_for_the_company()
+			throws InterruptedException {
+		companiesPage.deleteTitleContactTitleWidget();
+	}
+
+	@Then("user should be able to delete contact title successfully in the contact title widget for the company{string}")
+	public void user_should_be_able_to_delete_contact_title_successfully_in_the_contact_title_widget_for_the_company_title_was_successfully_deleted(
+			String ext) {
+		String act = companiesPage.deleteTitleSuccessfullyContactTitleWidget();
+		Assert.assertEquals(act, ext);
+	}
+
+	@When("User should be able to delete report for report widget for the company page")
+	public void user_should_be_able_to_delete_report_for_report_widget_for_the_company_page()
+			throws InterruptedException {
+		companiesPage.deleteReport();
+	}
+
+	@Then("user should be able to delete report successfully for the company{string}")
+	public void user_should_be_able_to_delete_report_successfully_for_the_company_report_was_successfully_deleted(
+			String ext) {
+		String act = companiesPage.deleteReportSuccessfully();
+		Assert.assertEquals(act, ext);
+	}
+
+	@When("user should be able to click on add title button in staff title widget for the company")
+	public void user_should_be_able_to_click_on_add_title_button_in_staff_title_widget_for_the_company() {
+		companiesPage.clickonAddTitleStaffTitleWidget();
+	}
+
+	@When("user should enter the title in add title popup of staff title widget for the company{string}")
+	public void user_should_enter_the_title_in_add_title_popup_of_staff_title_widget_for_the_company_automate_admin(
+			String title) {
+		companiesPage.enterTitleStaffTitleWidget(title);
+	}
+
+	@Then("user should be able to see the title on staff title widget for the company{string}")
+	public void user_should_be_able_to_see_the_title_on_staff_title_widget_for_the_company_automate_admin(String ext) {
+		String act = companiesPage.getAddTitleStatusStaffTitleWidget();
+		Assert.assertEquals(act, ext);
+	}
+
+	@When("user should be click on user link on sidebar for the company")
+	public void user_should_be_click_on_user_link_on_sidebar_for_the_company() {
+		companiesPage.clickOnUserLink();
+	}
+
+	@And("user should be click on add user button in the user page for the company")
+	public void user_should_be_click_on_add_user_button_in_the_user_page_for_the_company() {
+		companiesPage.clickOnAddUserButton();
+	}
+
+	@And("user should be enter fields for adding user in the user page for the company")
+	public void user_should_be_enter_fields_for_adding_user_in_the_user_page_for_the_company(
+			io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+		List<Map<String, String>> usersInfo = dataTable.asMaps();
+		String fn = usersInfo.get(0).get("fullname");
+		String t = usersInfo.get(0).get("title");
+		String date = usersInfo.get(0).get("bdate");
+		String role = usersInfo.get(0).get("role");
+		String email = usersInfo.get(0).get("email");
+		String sdate = usersInfo.get(0).get("sdate");
+		companiesPage.enterFieldsForUsers(fn, t, date, role, email, sdate);
+	}
+
+	@Then("user should be able to see the user in the user page for the compnay{string}")
+	public void user_should_be_able_to_see_the_user_in_the_user_page_for_the_compnay_autmate_test_admin(String ext) {
+		String act = companiesPage.getAddUserStatus();
+		Assert.assertEquals(act, ext);
+	}
+
+	@When("user should be able to select user in the user for the company{string}")
+	public void user_should_be_able_to_select_user_in_the_user_for_the_company(String user)
+			throws InterruptedException {
+		companiesPage.selectUser(user);
+	}
+
+	@When("user should be click on edit button in the user page for the company")
+	public void user_should_be_click_on_edit_button_in_the_user_page_for_the_company() throws InterruptedException {
+		companiesPage.clickEditbutton();
+	}
+
+	@When("user should be delete the user in the user page for the company")
+	public void user_should_be_delete_the_user_in_the_user_page_for_the_company() throws InterruptedException {
+		companiesPage.clickDeleteButtonUser();
+	}
+
+	@When("User should be able to delete title in staff title widget for the company")
+	public void user_should_be_able_to_delete_title_in_staff_title_widget_for_the_company()
+			throws InterruptedException {
+		companiesPage.deleteTitleStaffTitleWidget();
+	}
+
+	@Then("user should be able to delete contact title successfully in the staff title widget for the company{string}")
+	public void user_should_be_able_to_delete_contact_title_successfully_in_the_staff_title_widget_for_the_company_title_was_successfully_deleted(
+			String ext) {
+		String act = companiesPage.deleteTitleSuccessfullyStaffTitleWidget();
+		Assert.assertEquals(act, ext);
+	}
 
 }
