@@ -387,7 +387,8 @@ public class CompaniesPage {
 		Thread.sleep(1000);
 	}
 
-	public String getInvalidCredTextCompnayName() {
+	public String getInvalidCredTextCompnayName() throws InterruptedException {
+		Thread.sleep(1000);
 		String str = driver.findElement(cnErrorMsg).getText();
 		return str;
 	}
@@ -1553,6 +1554,7 @@ public void change_Account (String accName) throws InterruptedException {
 		WebElement amount = driver.findElement(By.xpath("//input[@id='restrict_amount']"));
 		amount.sendKeys(amt);
 		driver.findElement(By.xpath("//*[@id=\"contact_modal_body\"]/form/div[5]/input")).click();
+		Thread.sleep(1000);
 		}
 		catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -1600,6 +1602,7 @@ public void change_Account (String accName) throws InterruptedException {
 		amount.clear();
 		amount.sendKeys(amt);
 		driver.findElement(By.xpath("//*[@id=\"contact_modal_body\"]/form/div[5]/input")).click();
+		Thread.sleep(1000);
 		}
 		catch (InterruptedException e) {
 			// TODO Auto-generated catch block

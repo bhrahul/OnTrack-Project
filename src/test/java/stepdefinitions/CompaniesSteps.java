@@ -228,7 +228,7 @@ public class CompaniesSteps {
 	}
 
 	@Then("User should see an validation message on company name field {string}")
-	public void user_should_see_an_validation_message(String errMsg) {
+	public void user_should_see_an_validation_message(String errMsg) throws InterruptedException {
 		String actErrMsg = companiesPage.getInvalidCredTextCompnayName();
 		Assert.assertEquals(actErrMsg, errMsg);
 	}
