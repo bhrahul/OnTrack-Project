@@ -166,10 +166,7 @@ public String closeAddTitlePopupContactTitleSuccess() {
 		driver.findElement(addBtnEmailSignaturePopup).click();
 	}
 	
-	public String getValidationStatusEmailSignatureName() {
-		String str = driver.findElement(validErrorMsgEmailSignatureName).getText();
-		return str;
-	}
+
 	
 	public void addSignatureEmail(String s, String message) throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;

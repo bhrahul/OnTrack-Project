@@ -63,11 +63,13 @@ public class UsersPage {
 		driver.findElement(UsersTabLink).click();
 	}
 	
-	public void clickAddUserBtn() {
+	public void clickAddUserBtn() throws InterruptedException {
 		driver.findElement(By.xpath("//a[contains(.,'Add User')]")).click();
-	}
+		Thread.sleep(2000);
+		}
 
-	public String usersPageURL() {
+	public String usersPageURL() throws InterruptedException {
+		Thread.sleep(2000);
 		String str = driver.getCurrentUrl();
 		return str;
 	}

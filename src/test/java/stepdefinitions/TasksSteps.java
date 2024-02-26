@@ -90,6 +90,25 @@ public class TasksSteps {
 		Assert.assertEquals(act, ext);
 	}
 	
+	
+	@When("user should be able to create next week task in the tasks page for the task page")
+	public void user_should_be_able_to_create_next_week_task_in_the_tasks_page_for_the_task_page(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+		List<Map<String, String>> TaskInfo = dataTable.asMaps();
+		String tt = TaskInfo.get(0).get("task template");
+		String name = TaskInfo.get(0).get("name");
+		String assign = TaskInfo.get(0).get("assign");
+
+		String company = TaskInfo.get(0).get("company");
+		String taskrepeat = TaskInfo.get(0).get("taskrepeat");
+		String date = TaskInfo.get(0).get("date");
+
+		tasksPage.createNextWeekAndLaterTask(tt, name, assign, company, taskrepeat, date);
+	}
+
+
+
+	
+	
 	@Then("user should be see the task in the tasks page for the next week task page{string}")
 	public void user_should_be_see_the_task_in_the_tasks_page_for_the_next_week_task_page_feb_task12(String ext) throws InterruptedException {
 		String act = tasksPage.viewTaskNextweek();

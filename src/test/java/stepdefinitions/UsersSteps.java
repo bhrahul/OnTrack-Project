@@ -38,12 +38,12 @@ public class UsersSteps {
 	}
 	
 	@And("user should be click on add user button in the user page")
-	public void user_should_be_click_on_add_user_button_in_the_user_page() {
+	public void user_should_be_click_on_add_user_button_in_the_user_page() throws InterruptedException {
 	   usersPage.clickAddUserBtn();
 	}
 
 	@Then("{string} user should be on Users page url")
-	public void user_should_be_on_users_page_url(String acUrl) {
+	public void user_should_be_on_users_page_url(String acUrl) throws InterruptedException {
 		String expUrl = usersPage.usersPageURL();
 		Assert.assertEquals(expUrl, acUrl);
 	}

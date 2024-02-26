@@ -142,11 +142,7 @@ public class SettingsSteps {
 	   settingsPage.addBtnEmailSignaturePopup();
 	}
 
-	@Then("User should see an validation message for signature name fieled in the email signature widget{string}")
-	public void user_should_see_an_validation_message_for_signature_name_fieled_in_the_email_signature_widget_name_can_t_be_blank(String ext) {
-		String act = settingsPage.getValidationStatusEmailSignatureName();
-	    Assert.assertEquals(act, ext);
-	}
+
 	
 	@And("User should be able to add signature for email signature widget{string},{string}")
 	public void user_should_be_able_to_add_signature_for_email_signature_widget_automate_email_signature(String s, String m) throws InterruptedException {

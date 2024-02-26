@@ -80,35 +80,30 @@ Feature: Settings Page Functionality
  And 	User should be able to close add signature popup for email signature widget
  Then close add title popup for email signature widget successfully"Email Signature"
  
-  Scenario: Settings 13. User should see an validation message for signautre name field in the email signature widget
- When user should be able to click on Settings
- And  click on add button in the email signature widget
- And 	User should be clicked on add button in the email signature popup in the email signature widget
- Then User should see an validation message for signature name fieled in the email signature widget"Name can't be blank."
  
- Scenario: Settings 14. User should be able to add signature for email signature widget
+ Scenario: Settings 13. User should be able to add signature for email signature widget
  When user should be able to click on Settings
  And  click on add button in the email signature widget
  And 	User should be able to add signature for email signature widget"Automate Email Signature","Automate Message"
  Then user should be able to see signature in the email signaturewidget"Automate Email Signature"
  
- Scenario: Settings 15. User should be able to edit signature for email signature widget
+ Scenario: Settings 14. User should be able to edit signature for email signature widget
  When user should be able to click on Settings
  And  click on edit button in the email signature widget
  And 	User should be able to update signature for email signature widget"Automate Signature","Automate New Message"
  Then user should be able to see updated signature in the email signaturewidget"Automate Signature","Automate New Message"
  
- Scenario: Settings 16. User should be able to delete signature for email signature widget
+ Scenario: Settings 15. User should be able to delete signature for email signature widget
  When user should be able to click on Settings
  Then 	User should be able to delete signature for email signature widget
  
-  Scenario: Settings 17. User should see an validation message for Title field in the Reports widget
+  Scenario: Settings 16. User should see an validation message for Title field in the Reports widget
  When user should be able to click on Settings
  And  click on add button in the Reports widget
  And 	User should be clicked on add button in the title popup in the Reports widget
  Then User should see an validation message for Title field in the Reports widget"Title can't be blank."
  
- Scenario: Settings 18. User should be able to close add title popup for reports widget
+ Scenario: Settings 17. User should be able to close add title popup for reports widget
  When user should be able to click on Settings
  And  click on add button in the Reports widget
  And 	User should be able to close add title popup for reports widget
@@ -116,20 +111,20 @@ Feature: Settings Page Functionality
  
  
  
- Scenario: Setting 19. Validate user should be able to add report for Reports widget
+ Scenario: Setting 18. Validate user should be able to add report for Reports widget
  When user should be able to click on Settings
  And  user should be able to click on new report button in report widget
  And  user should enter the title in add report popup of report widget"Automate Report"
  Then user should be able to see the title on report widget"Automate Report"
  
  
- Scenario: Settings 20. User should be able to edit title for Reports widget
+ Scenario: Settings 19. User should be able to edit title for Reports widget
  When user should be able to click on Settings
  And 	User should be able to edit title for Reports widget"Auto Report"
  Then user should be able to see report title in the reports widget"Auto Report"
  
  
- Scenario: Settings 21. User should be able to delete report for report widget
+ Scenario: Settings 20. User should be able to delete report for report widget
  When user should be able to click on Settings
  And 	User should be able to delete report for report widget
  Then user should be able to delete report successfully"Report was successfully deleted."

@@ -393,7 +393,8 @@ public class CompaniesPage {
 		return str;
 	}
 
-	public String getInvalidCredTextPhoneNumber() {
+	public String getInvalidCredTextPhoneNumber() throws InterruptedException {
+		Thread.sleep(1000);
 		String str = driver.findElement(pnErrorMsg).getText();
 		return str;
 	}
@@ -1237,7 +1238,6 @@ public void change_Account (String accName) throws InterruptedException {
 	public String getUpdateTransactionStatus() throws InterruptedException {
 		
 		Thread.sleep(2000);
-		driver.navigate().refresh();
 		return driver.findElement(By.xpath("//span[contains(text(),'(02/21/2024)')]")).getText();
 	}
 	

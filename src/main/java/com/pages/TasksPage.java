@@ -465,7 +465,7 @@ public class TasksPage {
 		Select taskrepeat= new Select(driver.findElement(By.xpath("//select[@id='repeat_task']")));
 		taskrepeat.selectByIndex(1);
 		driver.findElement(By.xpath("//div[@class='form-control daily-weekly-repeat']")).click();
-		driver.findElement(By.xpath("//input[@value='Friday']")).click();
+		driver.findElement(By.xpath("//input[@value='Monday']")).click();
 		driver.findElement(By.xpath("//div[@class='form-control daily-weekly-repeat']")).click();
 		driver.findElement(By.xpath("//input[@value='Add']")).click();
 		Thread.sleep(1000);
@@ -475,6 +475,46 @@ public class TasksPage {
 			e.printStackTrace();
 			}
 	}
+	
+	
+
+
+public void createNextWeekAndLaterTask(String task, String name,  String assign, String company, String repitation, String date) throws InterruptedException {
+	try {
+
+	
+	WebElement taskTemplate = driver.findElement(By.xpath("//select[@id='task_task_template_id']"));
+	Thread.sleep(2000);
+	Select tt = new Select(taskTemplate);
+	tt.selectByVisibleText(task);
+	driver.findElement(By.xpath("//input[@id='task_task_name']")).sendKeys(name);
+	Select assignee = new Select(driver.findElement(By.xpath("//select[@id='assigned-to-select']")));
+	assignee.selectByVisibleText(assign);
+	Select client = new Select(driver.findElement(By.xpath("//select[@id='client-to-select']")));
+	client.selectByVisibleText(company);
+	driver.findElement(By.xpath("//h5[@id='newCompanyTaskModalLabel']")).click();
+	driver.findElement(By.xpath("//input[@placeholder='Start Date'][2]")).click();
+	List<WebElement> selectDate = driver.findElements(By.xpath("//span[@aria-label='" + date + "']"));
+	for (WebElement webElement : selectDate) {
+		if (webElement.isDisplayed()) {
+		
+			webElement.click();
+		} 
+	}
+	
+	Select taskrepeat= new Select(driver.findElement(By.xpath("//select[@id='repeat_task']")));
+	taskrepeat.selectByIndex(1);
+	driver.findElement(By.xpath("//div[@class='form-control daily-weekly-repeat']")).click();
+	driver.findElement(By.xpath("//input[@value='Monday']")).click();
+	driver.findElement(By.xpath("//div[@class='form-control daily-weekly-repeat']")).click();
+	driver.findElement(By.xpath("//input[@value='Add']")).click();
+	Thread.sleep(1000);
+	}
+	catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		}
+}
 	
 	public String viewTask() {
 		return driver.findElement(By.xpath("//a[contains(text(),'Task12')]")).getText();

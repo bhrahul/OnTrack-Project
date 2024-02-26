@@ -232,23 +232,23 @@ Feature: Tasks Page Functionality
     
     
     
-   	Scenario: Tasks 27. user should be able to create task in the compnay task page
+   	Scenario: Tasks 29. user should be able to create task in the compnay task page
  	 When user should be able to select company in the company page for the task page
  	 And  user should be on tasks page for the task page
  	 And  user should be click on Add tasks button in the tasks page for the task page
  	 And user should be able to create task in the tasks page for the task page
   |task template         |name  |assign     |company       |taskrepeat|date|
-  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 23, 2024|
+  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 26, 2024|
   Then user should be see the task in the tasks page for the task page"Task12"
   
     
-    Scenario: Tasks 28. user should be able to see users today task at My task tab
+    Scenario: Tasks 30. user should be able to see users today task at My task tab
     When user should be click on Tasks at sidebar menu
     And user should be click on my task tab
     And user should be able to select assign user at my task tab"Automate Test Admin"
     Then user should be able to see users today task count at My task tab"1"
     
-    Scenario: Tasks 29. user should be able to see users today task count after the delete task at My task tab
+    Scenario: Tasks 31. user should be able to see users today task count after the delete task at My task tab
    When user should be able to select company in the company page for the task page
  	 And  user should be on tasks page for the task page
    And  user should be click on delete btn tasks button in the tasks for the task page
@@ -257,25 +257,25 @@ Feature: Tasks Page Functionality
    And user should be able to select assign user at my task tab"Automate Test Admin"
    Then user should be able to see users today task count after the delete task at My task tab"0"
    
- Scenario: Tasks 30. user should be able to create week task in the compnay task page
+ Scenario: Tasks 32. user should be able to create week task in the compnay task page
  	 When user should be able to select company in the company page for the task page
  	 And  user should be on tasks page for the task page
  	 And  user should be click on Add tasks button in the tasks page for the task page
  	 And user should be able to create task in the tasks page for the task page
   |task template         |name  |assign     |company       |taskrepeat|date|
-  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 15, 2024|
+  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 26, 2024|
   Then user should be see the task in the tasks page for the week task page"Task12"
     
     
     
     
-    Scenario: Tasks 31. user should be able to see users week task at My task tab
+    Scenario: Tasks 33. user should be able to see users week task at My task tab
     When user should be click on Tasks at sidebar menu
     And user should be click on my task tab
     And user should be able to select assign user at my task tab"Automate Test Admin"
     Then user should be able to see users week task count at My task tab"1"
     
-    Scenario: Tasks 32. user should be able to see users week task count after the delete task at My task tab
+    Scenario: Tasks 34. user should be able to see users week task count after the delete task at My task tab
    When user should be able to select company in the company page for the task page
  	 And  user should be on tasks page for the task page
    And  user should be click on delete btn tasks button in the tasks for the task page
@@ -284,25 +284,25 @@ Feature: Tasks Page Functionality
    And user should be able to select assign user at my task tab"Automate Test Admin"
    Then user should be able to see users week task count after the delete task at My task tab"0"
    
-   Scenario: Tasks 33. user should be able to create Next week task in the compnay task page
+   Scenario: Tasks 35. user should be able to create Next week task in the compnay task page
  	 When user should be able to select company in the company page for the task page
  	 And  user should be on tasks page for the task page
  	 And  user should be click on Add tasks button in the tasks page for the task page
- 	 And user should be able to create task in the tasks page for the task page
+ 	 And user should be able to create next week task in the tasks page for the task page
   |task template         |name  |assign     |company       |taskrepeat|date|
-  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 25, 2024|
+  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 29, 2024|
   Then user should be see the task in the tasks page for the next week task page"Task12"
     
     
     
     
-    Scenario: Tasks 34. user should be able to see users next week task at My task tab
+    Scenario: Tasks 36. user should be able to see users next week task at My task tab
     When user should be click on Tasks at sidebar menu
     And user should be click on my task tab
     And user should be able to select assign user at my task tab"Automate Test Admin"
-    Then user should be able to see users next week task count at My task tab"0"
+    Then user should be able to see users next week task count at My task tab"1"
     
-    Scenario: Tasks 35. user should be able to see users next week task count after the delete task at My task tab
+    Scenario: Tasks 37. user should be able to see users next week task count after the delete task at My task tab
    When user should be able to select company in the company page for the task page
  	 And  user should be on tasks page for the task page
    And  user should be click on delete btn tasks button in the tasks for the task page
@@ -312,7 +312,7 @@ Feature: Tasks Page Functionality
    Then user should be able to see users next week task count after the delete task at My task tab"0"
    
    
-   Scenario: Tasks 36. user should be able to create later week task in the compnay task page
+   Scenario: Tasks 38. user should be able to create later week task in the compnay task page
  	 When user should be able to select company in the company page for the task page
  	 And  user should be on tasks page for the task page
  	 And  user should be click on Add tasks button in the tasks page for the task page
@@ -324,13 +324,13 @@ Feature: Tasks Page Functionality
     
     
     
-    Scenario: Tasks 37. user should be able to see users later week task at My task tab
+    Scenario: Tasks 39. user should be able to see users later week task at My task tab
     When user should be click on Tasks at sidebar menu
     And user should be click on my task tab
     And user should be able to select assign user at my task tab"Automate Test Admin"
     Then user should be able to see users later week task count at My task tab"0"
     
-    Scenario: Tasks 38. user should be able to see users later week task count after the delete task at My task tab
+    Scenario: Tasks 40. user should be able to see users later week task count after the delete task at My task tab
    When user should be able to select company in the company page for the task page
  	 And  user should be on tasks page for the task page
    And  user should be click on delete btn tasks button in the tasks for the task page
@@ -339,20 +339,20 @@ Feature: Tasks Page Functionality
    And user should be able to select assign user at my task tab"Automate Test Admin"
    Then user should be able to see users later week task count after the delete task at My task tab"0"
    
-		Scenario: Tasks 39. Validate that user is able to Delete the template from delete button which is inside the template
+		Scenario: Tasks 41. Validate that user is able to Delete the template from delete button which is inside the template
     When user should be click on Tasks at sidebar menu
     And user should be click on tasks template tab
     And user should click on QA Automation Template link
     And user should click on delete button at the QA Automation Template Page to delete the template
     Then user should able to delete QA Automation Template Successfully"Task Template was deleted successfully."
    
-   Scenario: Tasks 40. user should be able to delete user in the user page for task
+   Scenario: Tasks 42. user should be able to delete user in the user page for task
   When user should be click on user link on sidebar for the task
   And user should be able to select user in the user for the task"Automate Test Admin"
   And user should be click on edit button in the user page for the task
   And user should be delete the user in the user page for the task
   
-  Scenario: Tasks 41. User should be able to delete title for staff title widget for the task
+  Scenario: Tasks 43. User should be able to delete title for staff title widget for the task
  When user should be able to click on Settings for the task
  And 	User should be able to delete title in staff title widget for the task
  Then user should be able to delete contact title successfully in the staff title widget for the task"Title was successfully deleted."

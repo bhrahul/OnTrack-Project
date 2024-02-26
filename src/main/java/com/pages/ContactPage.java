@@ -47,7 +47,7 @@ public class ContactPage {
 	}
 
 	public String ContactPageURL() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 
 		String str = driver.getCurrentUrl();
 		return str;
