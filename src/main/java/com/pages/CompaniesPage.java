@@ -426,7 +426,8 @@ public class CompaniesPage {
 		return str;
 	}
 
-	public String getInvalidCredTextStartDate() {
+	public String getInvalidCredTextStartDate() throws InterruptedException {
+		Thread.sleep(2000);
 		String str = driver.findElement(sdErrorMsg).getText();
 		return str;
 	}
@@ -1359,6 +1360,7 @@ public void change_Account (String accName) throws InterruptedException {
 		amount.clear();
 		amount.sendKeys(amt);
 		driver.findElement(By.xpath("//*[@id=\"contact_modal_body\"]/form/div[5]/input")).click();
+		Thread.sleep(2000);
 		}
 		catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -1368,7 +1370,8 @@ public void change_Account (String accName) throws InterruptedException {
 	
 	public String getUpdatedTransactionPaymentDeposited() throws InterruptedException
 	{
-		Thread.sleep(1000);
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[contains(text(),'Transaction')]")).click();
 		return driver.findElement(By.xpath("//span[contains(text(),'Janvi(ICICI3000)')]")).getText();
 	}
 	
@@ -1487,8 +1490,10 @@ public void change_Account (String accName) throws InterruptedException {
 
 	}
 	
-	public String getUpdatedTransactionPaymentRecived()
+	public String getUpdatedTransactionPaymentRecived() throws InterruptedException
 	{
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[contains(text(),'Transaction')]")).click();
 		return driver.findElement(By.xpath("//span[contains(text(),'Janvi(ICICI3000)')]")).getText();
 	}
 	

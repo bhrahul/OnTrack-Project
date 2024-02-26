@@ -262,12 +262,13 @@ public String closeAddTitlePopupContactTitleSuccess() {
 	driver.findElement(reportTitle).sendKeys(t);
 	driver.findElement(udatebtnTitlePopup).click();
 	driver.navigate().refresh();
-	WebDriverWait w = new WebDriverWait(driver,Duration.ofSeconds(20));
-    w.until(ExpectedConditions .visibilityOfElementLocated(getReportStatus));		
+		
     
 	}
 	
-	public String getReportsStatus() {
+	public String getReportsStatus() throws InterruptedException {
+		
+		Thread.sleep(2000);
 		String str = driver.findElement(getReportStatus).getText();
 		return str;
 		}

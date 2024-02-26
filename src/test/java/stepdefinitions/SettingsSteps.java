@@ -212,7 +212,7 @@ public class SettingsSteps {
 	}
 
 	@Then("user should be able to see report title in the reports widget{string}")
-	public void user_should_be_able_to_see_report_title_in_the_reports_widget_automate_report(String ext) {
+	public void user_should_be_able_to_see_report_title_in_the_reports_widget_automate_report(String ext) throws InterruptedException {
 		String act = settingsPage.getReportsStatus();
 	    Assert.assertEquals(act, ext);
 	}

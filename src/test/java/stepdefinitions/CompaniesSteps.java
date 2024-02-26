@@ -270,7 +270,7 @@ public class CompaniesSteps {
 	}
 
 	@Then("User should see an validation message on start date {string}")
-	public void user_should_see_an_validation_message_on_start_date(String errMsg) {
+	public void user_should_see_an_validation_message_on_start_date(String errMsg) throws InterruptedException {
 		String actErrMsg = companiesPage.getInvalidCredTextStartDate();
 		Assert.assertEquals(actErrMsg, errMsg);
 	}
@@ -1058,7 +1058,7 @@ public class CompaniesSteps {
 	}
 
 	@Then("user should be able to see updated record of the Payment Received but not Deposited widget{string}")
-	public void user_should_be_able_to_see_updated_record_of_the_payment_received_but_not_deposited_widget(String ext) {
+	public void user_should_be_able_to_see_updated_record_of_the_payment_received_but_not_deposited_widget(String ext) throws InterruptedException {
 		String act = companiesPage.getUpdatedTransactionPaymentRecived();
 		Assert.assertEquals(act, ext);
 	}
