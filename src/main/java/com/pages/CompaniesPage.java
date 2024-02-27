@@ -421,7 +421,7 @@ public class CompaniesPage {
 	}
 
 	public String getInvalidCredTextZipCode() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		String str = driver.findElement(zipcodeErrorMsg).getText();
 		return str;
 	}
@@ -2317,7 +2317,9 @@ public void addLoginsDetails(String cln, String ws, String cu, String p, String 
 	l.selectByIndex(0);
 	WebElement name = driver.findElement(By.xpath("//input[@id='company_login_name']"));
 	name.sendKeys(cln);
+	Thread.sleep(1000);
 	WebElement lw = driver.findElement(By.xpath("//input[@id='company_login_website']"));
+	Thread.sleep(1000);
 	lw.sendKeys(ws);
 	
 	WebElement userid= driver.findElement(By.xpath("//input[@id='company_login_user']"));
@@ -2340,7 +2342,7 @@ public void addLoginsDetails(String cln, String ws, String cu, String p, String 
 
 }
 public String getNameStatus() throws InterruptedException {
-	
+	Thread.sleep(1000);
 return driver.findElement(By.xpath("//span[contains(.,'Admin@ontrack.com')]")).getText();
 
 	}
@@ -2494,9 +2496,10 @@ public void deleteSecurityQuesiAddLoginsPopup() {
 	}
 	
 	public String viewTask() throws InterruptedException {
-		Thread.sleep(2000);
+		driver.findElement(By.xpath("//ul[@id='tabs-nav']//a[contains(.,'Tasks')]")).click();
+		Thread.sleep(1000);
 		driver.findElement(By.xpath("//a[contains(text(),'Open')]")).click();
-		return driver.findElement(By.xpath("//a[contains(text(),'Feb 26 | Task12')]")).getText();
+		return driver.findElement(By.xpath("//a[contains(text(),'Mar 4 | Task12')]")).getText();
 	}
 	
 	public void clickOnTask() throws InterruptedException {
@@ -2585,7 +2588,7 @@ public void deleteSecurityQuesiAddLoginsPopup() {
 		driver.navigate().refresh();
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//a[contains(text(),'Completed')]")).click();
-		return driver.findElement(By.xpath("//a[contains(text(),'Feb 26 | Task12')]")).getText();
+		return driver.findElement(By.xpath("//a[contains(text(),'Mar 4 | Task12')]")).getText();
 	}
 	
 	public void editBtnTaskComplete() {

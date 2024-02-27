@@ -218,7 +218,7 @@ Feature: Companies Page Functionality
   Then User should see the Company Name "Test Company"
   
     
-######################################COMPANIES>>DASHBOARD>>STATISTICs##########################################
+####################################COMPANIES>>DASHBOARD>>STATISTICs##########################################
 
 	Scenario: 41. user should be on Statistics tab in the company
 	When user should be able to select company in the company page
@@ -399,7 +399,7 @@ Feature: Companies Page Functionality
   And  user should be able to delete Loan payment record
   
   
- ########## COMPANIES>>DASHBOARD>>DAILY RECONCILED##########################################
+ ######## COMPANIES>>DASHBOARD>>DAILY RECONCILED##########################################
   
   Scenario: 69. user should be able to redirect to  Daily Reconciled page of compnay dashboard
    When user should be able to select company in the company page
@@ -472,8 +472,7 @@ Feature: Companies Page Functionality
   When user should be able to select company in the company page
   And user should be clicked on Daily Reconciled Tab
   And user should be able to delete the account in the daily reconciled page
-  
-#    COMPANIES>>DASHBOARD>>TRANSACTIONS##########################################
+  #######################################COMPANIES>>DASHBOARD>>TRANSACTIONS##########################################
   
  Scenario: 80. user should be able to redirect to  Transaction page of compnay dashboard
    When user should be able to select company in the company page
@@ -660,7 +659,7 @@ Feature: Companies Page Functionality
   When  user should be able to select company in the company page
   Then  user should be able to see the count of unkown transactions after delete transaction in statistics page"0"
   
-##########COMPANIES>>DASHBOARD>>Bills.con &QBO##########################################
+########COMPANIES>>DASHBOARD>>Bills.con &QBO##########################################
   
   Scenario: 108. user should be able to redirect to  Bills.com page of compnay dashboard
    When user should be able to select company in the company page
@@ -732,7 +731,7 @@ Feature: Companies Page Functionality
   And user should be enter the amount in QBO calculate widget."100"
   Then user should be able to see the difference between bills.com and QBO"$ 100.00"
   
-#######################################COMPANIES>>DASHBOARD>>ROYALTY DIFFERENCE##########################################
+#####################################COMPANIES>>DASHBOARD>>ROYALTY DIFFERENCE##########################################
   
    Scenario: 118. user should be able to redirect to  Royalty Difference page of compnay dashboard
    When user should be able to select company in the company page
@@ -793,7 +792,7 @@ Feature: Companies Page Functionality
   
   
   
-  ################COMPANIES>>DETAILS##########################################
+  ##############COMPANIES>>DETAILS##########################################
   
 
 
@@ -1002,7 +1001,7 @@ Feature: Companies Page Functionality
   
   
   
-###################COMPANIES LOGINS###################################
+#################COMPANIES LOGINS###################################
   Scenario: 233. user should be on the logins page
   When  user should be able to select company in the company page
   And  user should be on logins page
@@ -1057,7 +1056,7 @@ Feature: Companies Page Functionality
 
   
   
-#   COMPANIES TASKS###################################
+#######################################COMPANIES TASKS###################################
   Scenario: 240. user should be on the Tasks page
   When user should be able to select company in the company page
   And  user should be on tasks page
@@ -1107,8 +1106,8 @@ Feature: Companies Page Functionality
  	 And  user should be click on Add tasks button in the tasks page
  	 And user should be able to create task in the tasks page
   |task template         |name  |assign     |company       |taskrepeat|date|
-  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 20, 2024|
-  Then user should be see the task in the tasks page"Feb 26 | Task12"
+  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 27, 2024|
+  Then user should be see the task in the tasks page"Mar 4 | Task12"
   
   Scenario: 247. user should be on task page
   When user should be able to select company in the company page
@@ -1176,7 +1175,7 @@ Feature: Companies Page Functionality
   And  user should be on tasks page 
   And  user should be able to click on task in the tasks page
   And  user should be able to complete task
-  Then User should be able to see completed task in the task page"Feb 26 | Task12"
+  Then User should be able to see completed task in the task page"Mar 4 | Task12"
 	
 	Scenario: 256. User should be delete task at complete task in the tasks page
   When user should be able to select company in the company page
@@ -1191,8 +1190,8 @@ Scenario: 257. user should be able to create task in the compnay task page
  	 And  user should be click on Add tasks button in the tasks page
  	 And user should be able to create task in the tasks page
   |task template         |name  |assign     |company       |taskrepeat|date|
-  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 20, 2024|
-  Then user should be see the task in the tasks page"Feb 26 | Task12"
+  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 27, 2024|
+  Then user should be see the task in the tasks page"Mar 4 | Task12"
   
   
   
@@ -1222,7 +1221,7 @@ Scenario: 257. user should be able to create task in the compnay task page
  	 And  user should be click on Add tasks button at recurring tab in the tasks page
  	 And user should be able to create task at task recurring in the tasks page
   |task template         |name  |assign     |company       |taskrepeat|date|
-  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 20, 2024|
+  |Qa automation template|Task12|Automate Test Admin|Test Company|1|March 4, 2024|
   Then user should be see the task at task recurring tab in the tasks page"Task12"
   
   
@@ -1232,7 +1231,7 @@ Scenario: 257. user should be able to create task in the compnay task page
  	 And user should be click on edit button on task recurring tab
  	 And user should be able to update task at task recurring in the tasks page
   |name  |assign|taskrepeat|date|
-  |Task20|Automate Test Admin|1|February 20, 2024|
+  |Task20|Automate Test Admin|1|March 4, 2024|
   Then user should be see the Update task at task recurring tab in the tasks page"Task20"
   
   Scenario: 264. user should be able to create task in the tasks page
@@ -1268,7 +1267,7 @@ Scenario: 257. user should be able to create task in the compnay task page
   
   
   
- ###################################  COMPANIES NOTES###################################
+ #################################  COMPANIES NOTES###################################
   
   
   Scenario: 269. validate user should be on company notes page
@@ -1401,7 +1400,7 @@ Scenario: 257. user should be able to create task in the compnay task page
  
   
   
-  #####################COMPANIES>>DOCUMENTS TAB################################
+  ###################COMPANIES>>DOCUMENTS TAB################################
   Scenario: 288. user should be on the document page
   When user should be able to select company in the company page
   And  user should be able to click on document page
