@@ -102,7 +102,7 @@ public class UsersPage {
 	
 	public String getUpdateEmailStatus() throws InterruptedException {
 		
-		return driver.findElement(By.xpath("//span[contains(text(),'admin7758@mailinator.com')]")).getText();
+		return driver.findElement(By.xpath("//span[contains(text(),'admin77@mailinator.com')]")).getText();
 	}
 
 	public void searchUser(String user) throws InterruptedException {
@@ -462,7 +462,8 @@ public class UsersPage {
 		 return driver.findElement(By.xpath("//span[contains(.,'Company was successfully deleted.')]")).getText();
 	 }
 		 
-	 public void clickOnUserse() {
+	 public void clickOnUserse() throws InterruptedException {
+		 Thread.sleep(1000);
 		 driver.findElement(By.xpath("//p[contains(text(),'Automate Test Admin')]")).click();
 		 
 	 }
@@ -499,7 +500,7 @@ public class UsersPage {
 		}
 		
 		public String getStaffMemeberStatus() {
-			return driver.findElement(By.xpath("//a[contains(text(),'Arjay McCann')]")).getText();
+			return driver.findElement(By.xpath("//a[contains(text(),'Test admin')]")).getText();
 					
 		}
 		public void clickTasksTemplateTab() {

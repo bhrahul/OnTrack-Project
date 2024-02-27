@@ -59,7 +59,7 @@ public class UsersSteps {
 	}
 	
 	@And("user should be click on Automate Test Admin user")
-	public void user_should_be_click_on_final_check_user() {
+	public void user_should_be_click_on_final_check_user() throws InterruptedException {
 	  usersPage.clickOnUserse();
 	}
 

@@ -163,7 +163,7 @@ Feature: Tasks Page Functionality
     And user should be able to click on add task button in the tasks reoccuring page
     And user should be enter all fields of add task popup
       |task template| taskname|assign|client| repeattask |date|
-      |Qa automation template| Important Work |Arjay McCann|Test Company|         1 |February 29, 2024|
+      |Qa automation template| Important Work |Test admin|Test Company|         1 |February 29, 2024|
     Then user should see the task in the company of tasks reoccuring page"Important Work"
    
 
@@ -189,12 +189,12 @@ Feature: Tasks Page Functionality
     And user should be able to click on add task button in the tasks reoccuring page
     And user should be enter all fields of add task popup for filter
       |task template| taskname|assign|client| repeattask |date|
-      |Qa automation template| Important Work |Arjay McCann|Test Company|         1 |February 29, 2024|
+      |Qa automation template| Important Work |Test admin|Test Company|         1 |February 29, 2024|
     And user should be able to click on task of the company at tasks reoccurring page Important Task
     And user should be able to clcik on task reoccurring tab at company task tab
     And User should be able to search task by filter at recurring tab in the  company task tab
     | taskname|assign|
-    | Important Work  |Arjay McCann|
+    | Important Work  |Test admin|
     Then user should be able to see the filtered task in the task of the company at tasks reoccurring page
 
   Scenario: Tasks 25. User should be able to edit fields at recurring tab in the  company task tab
@@ -238,7 +238,7 @@ Feature: Tasks Page Functionality
  	 And  user should be click on Add tasks button in the tasks page for the task page
  	 And user should be able to create task in the tasks page for the task page
   |task template         |name  |assign     |company       |taskrepeat|date|
-  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 26, 2024|
+  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 27, 2024|
   Then user should be see the task in the tasks page for the task page"Task12"
   
     
@@ -263,7 +263,7 @@ Feature: Tasks Page Functionality
  	 And  user should be click on Add tasks button in the tasks page for the task page
  	 And user should be able to create task in the tasks page for the task page
   |task template         |name  |assign     |company       |taskrepeat|date|
-  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 26, 2024|
+  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 27, 2024|
   Then user should be see the task in the tasks page for the week task page"Task12"
     
     

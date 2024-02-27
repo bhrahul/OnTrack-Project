@@ -8,7 +8,7 @@ Feature: Users Page Functionality
 
   Scenario: Users 1. validate that user is on Users page url
     When user should be click on Users at sidebar menu
-    Then "https://beta.cisin.com:4991/user_roles/23" user should be on Users page url
+    Then "https://beta.cisin.com:4991/user_roles/67" user should be on Users page url
     
     Scenario: users 2. Validate user should be able to add title for staff title widget for the user
  When user should be able to click on Settings for the user
@@ -31,20 +31,20 @@ And user should be click on add user button in the user page
     And user click on edit button
     And user clear the filed and enter the updates values in the fields
       |  Email                    |
-      |  admin7758@mailinator.com |
+      |  admin77@mailinator.com |
     And user click on update button at edit user popup
-    Then user should be able to see update email"admin7758@mailinator.com"
+    Then user should be able to see update email"admin77@mailinator.com"
   
   Scenario: users 5. user is able to create company in the user contact page 
   And user should be click on Users at sidebar menu
-  And user able to search the user "Arjay McCann"
+  And user able to search the user "Test admin"
   And user is able to add company in the user contact page"Test Company"
   Then user should be able to see the company in the user contact page"Test Company"
   
   Scenario: users 6. user should be able to see the staff member in the details tab of the company
   When user should be able to select company in the company page for the user
   And  user should be clicked on Details Tab for the user
-  Then staff member details should be displayed on staff detail section for the user"Arjay McCann"
+  Then staff member details should be displayed on staff detail section for the user"Test admin"
   
   
   
@@ -67,7 +67,7 @@ And user should be click on add user button in the user page
     And user should be able to click on add task button in the tasks reoccuring page for the user page
     And user should be enter all fields of add task popup for the user page
     |task template| taskname|assign|client| repeattask |date|
-      |QA Automation Template| Important Work |Arjay McCann|Test Company|         1 |February 29, 2024|
+      |QA Automation Template| Important Work |Test admin|Test Company|         1 |February 29, 2024|
     Then user should see the task in the company of tasks reoccuring page for the page"Important Work"
     
   
@@ -104,7 +104,7 @@ And user should be click on add user button in the user page
    
    	Scenario: users 13. user should be able to delete company in the user page
   When user should be click on Users at sidebar menu
-  And user able to search the user "Arjay McCann"
+  And user able to search the user "Test admin"
   And user should be able to delete company in the user page
   
   

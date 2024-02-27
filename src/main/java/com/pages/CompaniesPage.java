@@ -2315,11 +2315,12 @@ public void addLoginsDetails(String cln, String ws, String cu, String p, String 
 	WebElement label = driver.findElement(By.xpath("//select[@id='company_login_label']"));
 	Select l = new Select(label);
 	l.selectByIndex(0);
+	Thread.sleep(1000);
 	WebElement name = driver.findElement(By.xpath("//input[@id='company_login_name']"));
 	name.sendKeys(cln);
-	Thread.sleep(1000);
+	Thread.sleep(2000);
 	WebElement lw = driver.findElement(By.xpath("//input[@id='company_login_website']"));
-	Thread.sleep(1000);
+	
 	lw.sendKeys(ws);
 	
 	WebElement userid= driver.findElement(By.xpath("//input[@id='company_login_user']"));
@@ -3204,7 +3205,7 @@ public void deleteTaskReccuringTasks() throws InterruptedException {
 	}
 	
 	public String getProfileStatus() {
-		return driver.findElement(By.xpath("//div[@class='con-col-p']//span[contains(.,'Arjay McCann')]")).getText();
+		return driver.findElement(By.xpath("//div[@class='con-col-p']//span[contains(.,'Test admin')]")).getText();
 	}
 	
 	public void clickSettingTab() {
