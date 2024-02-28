@@ -466,7 +466,7 @@ public class TasksPage {
 		Select taskrepeat= new Select(driver.findElement(By.xpath("//select[@id='repeat_task']")));
 		taskrepeat.selectByIndex(1);
 		driver.findElement(By.xpath("//div[@class='form-control daily-weekly-repeat']")).click();
-		driver.findElement(By.xpath("//input[@value='Wednesday']")).click();
+		driver.findElement(By.xpath("//input[@value='Thursday']")).click();
 		driver.findElement(By.xpath("//div[@class='form-control daily-weekly-repeat']")).click();
 		driver.findElement(By.xpath("//input[@value='Add']")).click();
 		Thread.sleep(1000);

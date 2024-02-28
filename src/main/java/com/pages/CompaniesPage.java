@@ -1505,7 +1505,7 @@ public void change_Account (String accName) throws InterruptedException {
 	
 	public String getUpdatedTransactionPaymentRecived() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		driver.navigate().refresh();
 		driver.findElement(By.xpath("//a[contains(text(),'Transaction')]")).click();
 		Thread.sleep(2000);
 		return driver.findElement(By.xpath("//span[contains(text(),'Janvi(ICICI3000)')]")).getText();
@@ -1845,6 +1845,7 @@ public void change_Account (String accName) throws InterruptedException {
 	public boolean getaddFranchiseStatus() throws InterruptedException {
 		Thread.sleep(1000);
 		driver.findElement(royaltyDifferenceExpand).click();
+		Thread.sleep(2000);
 		return driver.findElement(By.xpath("//span[contains(text(),'2586')]")).isDisplayed();
 	}
 	
@@ -1870,8 +1871,9 @@ public void change_Account (String accName) throws InterruptedException {
 	
 	public boolean getFranchiseStatus() throws InterruptedException {
 		driver.navigate().refresh();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		driver.findElement(royaltyDifferenceExpand).click();
+		Thread.sleep(2000);
 		return driver.findElement(By.xpath("//span[contains(text(),'1234')]")).isDisplayed();
 	}
 	
@@ -1887,8 +1889,9 @@ public void change_Account (String accName) throws InterruptedException {
 	
 	public boolean getFranchiseStatusAfterSearch() throws InterruptedException {
 		driver.navigate().refresh();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		driver.findElement(royaltyDifferenceExpand).click();
+		Thread.sleep(2000);
 		return driver.findElement(By.xpath("//span[contains(text(),'1234')]")).isDisplayed();
 	}
 	

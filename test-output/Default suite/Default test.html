@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>314/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>25/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Feb 28 18:58:32 IST 2024</td>
+<td>Started on:</td><td>Thu Feb 29 01:28:47 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>4040 seconds (4040005 ms)</td>
+<tr><td>Total time:</td><td>401 seconds (401426 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,16 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Settings 10. User should be able to edit title for staff title widget", "Settings Page Functionality"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[contains(text(),&apos;Auto Admin&apos;)]&quot;}
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "65. User should be able to create loan payment Record", "Companies Page Functionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;Ravi&apos;)]&quot;}
   (Session info: chrome=122.0.6261.95)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [66c9ae89c89f676adc688179bcb8be4c, findElement {using=xpath, value=//td[contains(text(),&apos;Auto Admin&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\cis\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50586}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50586/devtoo..., se:cdpVersion: 122.0.6261.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 66c9ae89c89f676adc688179bcb8be4c
+Command: [9cdd65311ad8594fd11539760df7011f, findElement {using=xpath, value=//span[contains(text(),&apos;Ravi&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\cis\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51211}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51211/devtoo..., se:cdpVersion: 122.0.6261.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9cdd65311ad8594fd11539760df7011f
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -101,19 +101,19 @@ Session ID: 66c9ae89c89f676adc688179bcb8be4c
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at com.pages.SettingsPage.getStaffTitleStatus(SettingsPage.java:140)
-	at stepdefinitions.SettingsSteps.user_should_be_able_to_see_staff_title_in_the_staff_title_widget(SettingsSteps.java:115)
-	at ✽.user should be able to see staff title in the staff title widget&quot;Auto Admin&quot;(file:///E:/Rahul%20Bhalla%20CIS/OntrackProjectBDD/OnTrack_BDD/src/test/resources/com/features/Settings.feature:66)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1903878500", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1903878500'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[contains(text(),&apos;Auto Admin&apos;)]&quot;}
+	at com.pages.CompaniesPage.getLoanPaymentRecordStatus(CompaniesPage.java:1053)
+	at stepdefinitions.CompaniesSteps.user_should_be_able_to_see_the_loan_payment(CompaniesSteps.java:706)
+	at ✽.user should be able to see the loan payment&quot;Ravi&quot;(file:///E:/Rahul%20Bhalla%20CIS/OntrackProjectBDD/OnTrack_BDD/src/test/resources/com/features/Companies.feature:379)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1100208717", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1100208717'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;Ravi&apos;)]&quot;}
   (Session info: chrome=122.0.6261.95)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [66c9ae89c89f676adc688179bcb8be4c, findElement {using=xpath, value=//td[contains(text(),&apos;Auto Admin&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\cis\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50586}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50586/devtoo..., se:cdpVersion: 122.0.6261.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 66c9ae89c89f676adc688179bcb8be4c
+Command: [9cdd65311ad8594fd11539760df7011f, findElement {using=xpath, value=//span[contains(text(),&apos;Ravi&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\cis\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51211}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51211/devtoo..., se:cdpVersion: 122.0.6261.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9cdd65311ad8594fd11539760df7011f
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -130,11 +130,103 @@ Session ID: 66c9ae89c89f676adc688179bcb8be4c
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at com.pages.SettingsPage.getStaffTitleStatus(SettingsPage.java:140)
-	at stepdefinitions.SettingsSteps.user_should_be_able_to_see_staff_title_in_the_staff_title_widget(SettingsSteps.java:115)
-	at ✽.user should be able to see staff title in the staff title widget&quot;Auto Admin&quot;(file:///E:/Rahul%20Bhalla%20CIS/OntrackProjectBDD/OnTrack_BDD/src/test/resources/com/features/Settings.feature:66)
+	at com.pages.CompaniesPage.getLoanPaymentRecordStatus(CompaniesPage.java:1053)
+	at stepdefinitions.CompaniesSteps.user_should_be_able_to_see_the_loan_payment(CompaniesSteps.java:706)
+	at ✽.user should be able to see the loan payment&quot;Ravi&quot;(file:///E:/Rahul%20Bhalla%20CIS/OntrackProjectBDD/OnTrack_BDD/src/test/resources/com/features/Companies.feature:379)
 </pre></div></td>
-<td>38</td>
+<td>35</td>
+<td>testrunners.TestRunner@41e68d87</td></tr>
+<tr>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "66. User should be able to edit loan payment Record", "Companies Page Functionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;tab-1&quot;]/div/div[2]/div[4]/div[2]/table/tbody/tr/td[4]/a&quot;}
+  (Session info: chrome=122.0.6261.95)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1f5d0a3651dd48f0ce8b3fdaa6f3dd80, findElement {using=xpath, value=//*[@id=&quot;tab-1&quot;]/div/div[2]/div[4]/div[2]/table/tbody/tr/td[4]/a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\cis\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51271}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51271/devtoo..., se:cdpVersion: 122.0.6261.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1f5d0a3651dd48f0ce8b3fdaa6f3dd80
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at com.pages.CompaniesPage.clickEditButtonLoanPayment(CompaniesPage.java:1057)
+	at stepdefinitions.CompaniesSteps.user_should_be_clicked_on_edit_button_of_new_loan_payment(CompaniesSteps.java:712)
+	at ✽.user should be clicked on edit button of New Loan Payment(file:///E:/Rahul%20Bhalla%20CIS/OntrackProjectBDD/OnTrack_BDD/src/test/resources/com/features/Companies.feature:384)
+</pre></div><a href='#' onClick='toggleBox("stack-trace104678309", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace104678309'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;tab-1&quot;]/div/div[2]/div[4]/div[2]/table/tbody/tr/td[4]/a&quot;}
+  (Session info: chrome=122.0.6261.95)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1f5d0a3651dd48f0ce8b3fdaa6f3dd80, findElement {using=xpath, value=//*[@id=&quot;tab-1&quot;]/div/div[2]/div[4]/div[2]/table/tbody/tr/td[4]/a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\cis\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51271}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51271/devtoo..., se:cdpVersion: 122.0.6261.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1f5d0a3651dd48f0ce8b3fdaa6f3dd80
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at com.pages.CompaniesPage.clickEditButtonLoanPayment(CompaniesPage.java:1057)
+	at stepdefinitions.CompaniesSteps.user_should_be_clicked_on_edit_button_of_new_loan_payment(CompaniesSteps.java:712)
+	at ✽.user should be clicked on edit button of New Loan Payment(file:///E:/Rahul%20Bhalla%20CIS/OntrackProjectBDD/OnTrack_BDD/src/test/resources/com/features/Companies.feature:384)
+</pre></div></td>
+<td>29</td>
+<td>testrunners.TestRunner@41e68d87</td></tr>
+<tr>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "67. user should be able to delete Loan Payment record", "Companies Page Functionality"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //*[@id=&quot;tab-1&quot;]/div/div[2]/div[4]/div[2]/table/tbody/tr/td[5]/a
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at com.pages.CompaniesPage.deleteLoanPaymentRecord(CompaniesPage.java:1093)
+	at stepdefinitions.CompaniesSteps.user_should_be_able_to_delete_loan_payment_record(CompaniesSteps.java:734)
+	at ✽.user should be able to delete Loan payment record(file:///E:/Rahul%20Bhalla%20CIS/OntrackProjectBDD/OnTrack_BDD/src/test/resources/com/features/Companies.feature:392)
+</pre></div><a href='#' onClick='toggleBox("stack-trace516523336", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace516523336'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //*[@id=&quot;tab-1&quot;]/div/div[2]/div[4]/div[2]/table/tbody/tr/td[5]/a
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at com.pages.CompaniesPage.deleteLoanPaymentRecord(CompaniesPage.java:1093)
+	at stepdefinitions.CompaniesSteps.user_should_be_able_to_delete_loan_payment_record(CompaniesSteps.java:734)
+	at ✽.user should be able to delete Loan payment record(file:///E:/Rahul%20Bhalla%20CIS/OntrackProjectBDD/OnTrack_BDD/src/test/resources/com/features/Companies.feature:392)
+</pre></div></td>
+<td>14</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -145,1574 +237,129 @@ Session ID: 66c9ae89c89f676adc688179bcb8be4c
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "1. Companies page title", "Companies Page Functionality"</td>
-<td></td>
-<td>9</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "2. Companies link should be displayed in the company page", "Companies Page Functionality"</td>
-<td></td>
-<td>8</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "3. Tasks link should be displayed in the company page", "Companies Page Functionality"</td>
-<td></td>
-<td>8</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "4. Email link should be displayed in the company page", "Companies Page Functionality"</td>
-<td></td>
-<td>9</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "5. Users link should be displayed in the company page", "Companies Page Functionality"</td>
-<td></td>
-<td>8</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "6. Logout button should be displayed in the company page", "Companies Page Functionality"</td>
-<td></td>
-<td>8</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "7. Setting link should be displayed in the company page", "Companies Page Functionality"</td>
-<td></td>
-<td>8</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "8. Profile link should be displayed in the company page", "Companies Page Functionality"</td>
-<td></td>
-<td>8</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "9. Comapnies tab should be displayed in the company page", "Companies Page Functionality"</td>
-<td></td>
-<td>8</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "10. Contact tab should be displayed in the company page", "Companies Page Functionality"</td>
-<td></td>
-<td>9</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "11. SearchBox should be displayed in the company page", "Companies Page Functionality"</td>
-<td></td>
-<td>8</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "12. Add Contact button should be displayed in the company page", "Companies Page Functionality"</td>
-<td></td>
-<td>8</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "13. Add Contact title should be displayed in the add contact popup", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "40. user should be on Statistics tab in the company", "Companies Page Functionality"</td>
 <td></td>
 <td>10</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "14. Add company button should be displayed in the add contact popup", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "41. Royalty & Fidesic widget should be displayed", "Companies Page Functionality"</td>
 <td></td>
-<td>10</td>
+<td>9</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "15. Add contact button should be displayed in the add contact popup", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "42. Add button should be displayed", "Companies Page Functionality"</td>
 <td></td>
-<td>10</td>
+<td>9</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "16. Reset button should be displayed in the add contact popup", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "17. user should be able to close Add contact popup  successfully in the company page", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "18. User should be able to add contact popup close successfully by click on close Icon", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "19 User should be clicked on Add Contact button in the page", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "20. User should be able to create the Company in the add company popup", "Companies Page Functionality"</td>
-<td></td>
-<td>18</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "21. user should be able to close the add company popup successfully", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "22. User should see an validation message on company name field the add company popup", "Companies Page Functionality"</td>
-<td></td>
-<td>16</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "23. User should see an validation message on phone number field in the add company popup", "Companies Page Functionality"</td>
-<td></td>
-<td>16</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "24. User should see an validation message on address field in the add company popup", "Companies Page Functionality"</td>
-<td></td>
-<td>16</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "25. User should see an validation message on city field in the add company popup", "Companies Page Functionality"</td>
-<td></td>
-<td>17</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "26. User should see an validation message on state field in the add company popup", "Companies Page Functionality"</td>
-<td></td>
-<td>17</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "27. User should see an validation message on zipcode field in the add company popup", "Companies Page Functionality"</td>
-<td></td>
-<td>17</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "28. User should see an validation message on report time field in the add company popup", "Companies Page Functionality"</td>
-<td></td>
-<td>16</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "29. User should be searched a company in the company page", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "30. User should be update company name in the edit item popup", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "43. Create Royalty & Fidesic record title should be displayed on PopUp", "Companies Page Functionality"</td>
 <td></td>
 <td>15</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "32. User should be able to see Add Contact popup title in the add contact popup", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "33. User should see an validation message for First Name", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "34. User should see an validation message for Last Name", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "35. User should see an validation message for Title Name", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "36. User should see an validation message for Company Name", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "37. Validate user should be able to add title for contact title widget for the company page", "Companies Page Functionality"</td>
-<td></td>
-<td>9</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "38. User should be able create contact", "Companies Page Functionality"</td>
-<td></td>
-<td>17</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "39. user should be able to filtered company in the company page", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "40. User should be able to select company from company list", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "41. user should be on Statistics tab in the company", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "42. Royalty & Fidesic widget should be displayed", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "43. Add button should be displayed", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "44. Create Royalty & Fidesic record title should be displayed on PopUp", "Companies Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "45. add button should be displayed on Royalty & Fidesic PopUp", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "46. close button should be displayed on Royalty & Fidesic PopUp", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "47. Licence number error message should be displayed on Royalty & Fidesic PopUp", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "48. user should be able to Create Royalty & Fidesic record", "Companies Page Functionality"</td>
-<td></td>
-<td>18</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "49. user should be able to update Royalty & Fidesic record", "Companies Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "50. user should be able to delete Royalty & Fidesic record", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "51. user should be able to close Check Off List PopUp", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "52. User should see an validation message for Name", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "53. User should see an validation message for Date", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "54. User should be able to create Check Off List Record", "Companies Page Functionality"</td>
-<td></td>
-<td>17</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "55. user should be able to update Check Off List record", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "56. user should be able to delete check off list record", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "57. user should be able to close Reconciled Date PopUp", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "58. User should see an validation message for Account Name", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "59. User should be able to create Reconciled Dates record", "Companies Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "60. User should be able to Edit Reconciled Dates record", "Companies Page Functionality"</td>
-<td></td>
-<td>17</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "61. user should be able to delete Reconciled Date record", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "62.  user should be able to close New Loan Payment PopUp", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "63. User should see an validation message for Loan Name", "Companies Page Functionality"</td>
-<td></td>
-<td>9</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "64. User should see an validation message for Payment Date", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "65. User should see an validation message for Amount", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "66. User should be able to create loan payment Record", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "67. User should be able to edit loan payment Record", "Companies Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "68. user should be able to delete Loan Payment record", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "69. user should be able to redirect to  Daily Reconciled page of compnay dashboard", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "70. user should be see the error message on Add Account PopUp", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "44. add button should be displayed on Royalty & Fidesic PopUp", "Companies Page Functionality"</td>
 <td></td>
 <td>12</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "71. User should be able to add account name at Daily Reconciled page", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "72. User should be able to edit account name at Daily Reconciled page", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "45. close button should be displayed on Royalty & Fidesic PopUp", "Companies Page Functionality"</td>
 <td></td>
 <td>13</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "73. user should be able to add New Payment in the account at daily reconciled page", "Companies Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "74. User should be able to see the count of Unclreared Transactions in statistics page", "Companies Page Functionality"</td>
-<td></td>
-<td>9</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "75. user should be able to close New Payment popup in the account at daily reconciled page", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "76. user should be able to update New Payment in the account at daily reconciled page", "Companies Page Functionality"</td>
-<td></td>
-<td>17</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "77. user should be able to delete the payment in the account at daily reconciled page", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "78. User should be able to see the count of Unclreared Transactions in statistics page", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "79. user should be able to delete the account in the daily reconciled page", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "46. Licence number error message should be displayed on Royalty & Fidesic PopUp", "Companies Page Functionality"</td>
 <td></td>
 <td>12</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "80. user should be able to redirect to  Transaction page of compnay dashboard", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "81. user should be able to close the Add Transaction of Payment Deposited but not Received", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "82. User should see an validation message for vendor Name", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "83. User should see an validation message for date", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "84. User should see an validation message for amount", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "85. User should be able to create Payment Deposited but not Received Record", "Companies Page Functionality"</td>
-<td></td>
-<td>17</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "86. User should be able to see the count of Payment Not Received in statistics page", "Companies Page Functionality"</td>
-<td></td>
-<td>9</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "87. User should be able to edit Payment Deposited but not Received Record", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "47. user should be able to Create Royalty & Fidesic record", "Companies Page Functionality"</td>
 <td></td>
 <td>19</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "88. user should be able to delete  Payment Deposited record", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "89. User should be able to see the count of Payment Not Received in statistics page", "Companies Page Functionality"</td>
-<td></td>
-<td>9</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "90. user should be able to close the Add Transaction of Payment Received but not Deposited", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "91. User should see an validation message for vendor Name of Payment Received but not Deposited widget", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "92. User should see an validation message for date of Payment Received but not Deposited widget", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "93. User should see an validation message for amount", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "94. User should be able to create Payment Received but not Deposited widget", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "95. User should be able to see the count of Payment Not yet deposited in statistics page", "Companies Page Functionality"</td>
-<td></td>
-<td>9</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "96. User should be able to edit Payment Received but not Deposited widget", "Companies Page Functionality"</td>
-<td></td>
-<td>16</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "97. user should be able to delete  Payment Received  record", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "98. User should be able to see the count of Payment Not yet deposited in statistics page", "Companies Page Functionality"</td>
-<td></td>
-<td>9</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "99. user should be able to close the Add Transaction of Unknown Transactions", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "100. User should see an validation message for vendor Name of Unknown Transactions widget", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "101. User should see an validation message for date of Unknown Transactions widget", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "102. User should see an validation message for amount", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "103. User should be able to create Unknown Transactions widget", "Companies Page Functionality"</td>
-<td></td>
-<td>16</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "104. User should be able to see the count of unkown transactions in statistics page", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "105. User should be able to edit Unknown Transactions widget", "Companies Page Functionality"</td>
-<td></td>
-<td>16</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "106. user should be able to delete Unknown Transactions widget record", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "107. User should be able to see the count of unkown transactions in statistics page", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "108. user should be able to redirect to  Bills.com page of compnay dashboard", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "109. User should see an validation message for vendor Name", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "110. User should see an validation message for vendor Name", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "111. User should be able to create transaction in the Bills in Bills.com that are not sync in QBO widget", "Companies Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "112. user should be able to delete Bills in Bills.com that are not sync in QBO widget widget record", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "113. User should see an validation message for vendor Name", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "114. User should see an validation message for vendor Name", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "115. User should be able to create transaction in the Bills in Bills.com that are not outstanding in Bills.com widget", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "116. user should be able to delete Bills.com that are not outstanding in Bills.com widget record", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "117. user should be calculate difference between bills.com and QBO", "Companies Page Functionality"</td>
-<td></td>
-<td>23</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "118. user should be able to redirect to  Royalty Difference page of compnay dashboard", "Companies Page Functionality"</td>
-<td></td>
-<td>9</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "119. user should be able to see add franchise popup in Royalty Difference page", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "200. Error message should be displayed for franchise name in Royalty Difference PopUp", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "201. user should be able to clicked on close button in Royalty Difference PopUp", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "202. user should be able to Add franchise in Royalty Difference", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "48. user should be able to update Royalty & Fidesic record", "Companies Page Functionality"</td>
 <td></td>
 <td>14</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "203. user should be able to edit franchise in Royalty Difference", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "204. user should be able to search franchise according to  year from year dropdown", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "205. validate user should be able to delete franchise in royalty difference tab", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "206. user should be able to click Details Tab", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "49. user should be able to delete Royalty & Fidesic record", "Companies Page Functionality"</td>
 <td></td>
 <td>10</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "207. user should be able to update company details", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "50. user should be able to close Check Off List PopUp", "Companies Page Functionality"</td>
 <td></td>
-<td>12</td>
+<td>13</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "208. user should be able to close the edit item popUp", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "209. user should be able to add links", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "51. User should see an validation message for Name", "Companies Page Functionality"</td>
 <td></td>
 <td>11</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "210. user should be able see error on links popup", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "211. user should be able to click on close button links popup", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "212. user should be able to edit links Details", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "213. user should be able to delete links", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "214. user should be able delete company contact details", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "215. user should be able to add companies contact", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "216. Validate user should be able to add report for Reports widget for the company", "Companies Page Functionality"</td>
-<td></td>
-<td>8</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "217. user should be able add company details", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "218. user should be able close contact detailpopup", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "219. user should be able update company detail", "Companies Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "220. user should be able delete company detail", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "221. user should be able to update companies contact", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "222. user should be able delete company contact details", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "223. User should be able to delete title for contact title widget for the company", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "224. User should be able to delete report for report widget", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "225. User should be able to add title for staff title widget", "Companies Page Functionality"</td>
-<td></td>
-<td>9</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "226. user should be able to add user in the user page for the company", "Companies Page Functionality"</td>
-<td></td>
-<td>16</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "227. user should be able add staff member", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "228. user should be able edit staff member", "Companies Page Functionality"</td>
-<td></td>
-<td>21</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "229. user should be able delete staff member details", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "52. User should see an validation message for Date", "Companies Page Functionality"</td>
 <td></td>
 <td>11</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "230. user should be able to add notes", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "231. user should be able to edit notes", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "232. user should be able delete notes", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "233. user should be on the logins page", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "234. user should be get errormsg on website field", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "235. user should be get errormsg on userid field", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "236. user should be able to add logins", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "53. User should be able to create Check Off List Record", "Companies Page Functionality"</td>
 <td></td>
 <td>18</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "237. user should be able to update logins details", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "238. user should be able to delete security ques in the logins details", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "239. user should be able delete logins", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "240. user should be on the Tasks page", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "241. user should be get errormsg on task name field at add task popup", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "242. user should be get errormsg on asigned to field at add task popup", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "243. user should be get errormsg on client field at add task popup", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "244. user should be get errormsg on start date field in the add task popup", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "245. user should be able to create task template in the tasks page", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "246. user should be able to create task in the compnay task page", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "54. user should be able to update Check Off List record", "Companies Page Functionality"</td>
 <td></td>
 <td>17</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "247. user should be on task page", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "55. user should be able to delete check off list record", "Companies Page Functionality"</td>
 <td></td>
-<td>14</td>
+<td>11</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "248. validate user should be able to see company details on detail tab", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "249. validate user should be able to see user details on detail tab", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "250. user should be able to add staff member for the notes in the Task tab", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "251. user should be able to add notes in the task tab", "Companies Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "252. user should be able to add coachings in the notes of Task tab", "Companies Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "253. user should be able to add sections in the task page", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "254. User should be create subtask of task in the task page", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "255. User should be able to see completed task in the task page", "Companies Page Functionality"</td>
-<td></td>
-<td>19</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "256. User should be delete task at complete task in the tasks page", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "257. user should be able to create task in the compnay task page", "Companies Page Functionality"</td>
-<td></td>
-<td>17</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "258. user should be able to create task in the tasks page", "Companies Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "56. user should be able to close Reconciled Date PopUp", "Companies Page Functionality"</td>
 <td></td>
 <td>10</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "259. User should be delete task in the tasks page", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "260. user should be able to create task in the tasks page", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "261. User should be delete task in task recurring tab in the tasks page", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "262. user should be able to create task in the compnay task page", "Companies Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "263. user should be able to update task in the compnay task page", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "264. user should be able to create task in the tasks page", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "265. User should be able to update fields at recurring tab in the  company task tab", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "266. User should be delete task in task recurring tab in the tasks page", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "267. user should be able to create task in the tasks page", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "268. Validate that user is able to Delete the template from delete button which is inside the template for the company task", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "269. validate user should be on company notes page", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "270. validate user should be able to see the add notes popup", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "271. validate user should be able to close the add notes popup", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "272. user should be able to see the error on Assign To field at  add notes popup", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "273. user should be able to create notes in the company notes page", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "274. validate user should be able to reply the notes in the company notes page", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "275. validate user should be able to edit reply notes in the company notes page", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "276. validate user should be able to delete reply notes in the company notes page", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "277. user should be able to create Coaching notes in the company notes page", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "278. user should be able to see the coaching notes at company notes page", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "279. validate user should be able to reply the notes of coaching tab in the company notes page", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "280. validate user should be able to edit reply notes coaching in the company notes page", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "281. validate user should be able to delete reply notes in the company notes page", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "282. user should be able to search notes at company notes page", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "283. user should be able to search notes by filter at company notes page", "Companies Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "284. user should be able to reset filter at company notes page", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "285. user should be able delete staff member details", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "286. user should be able to delete user in the user page for company", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "287. User should be able to delete title for staff title widget for the company", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "288. user should be on the document page", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "289. user should be able to create folder in the document", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "290. user should able to edit folder name in the document page", "Companies Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "291. User should be able to validate document name at upload documents popup in the folder of document page", "Companies Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "292. User should be able to upload document in the folder of document page", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "293. User should be able to search document in the folder of document page", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "294. User should be able to edit document in the folder of document page", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "295. User should be able to delete document in the folder of document page", "Companies Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "296. Validate user should be able to click on logo in sidebar and navigates to companies list page", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "297. Validate user should be able to click on profile in sidebar and navigates to user profile", "Companies Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 1. Contact page tab is clickable", "Contact Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 2. Admin Email is displayed", "Contact Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Conatct 3. Add Contact Button should be displayed", "Contact Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Conatct 4. Searchbox should be displayed", "Contact Page Functionality"</td>
-<td></td>
-<td>22</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 5. Edit Button should be displayed", "Contact Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 6. Contact list should be displayed", "Contact Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Conatct 7. Contact list should be displayed", "Contact Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 8. User details should be displayed", "Contact Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 9. Upload photo Button should be displayed", "Contact Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 10. user should be able to close add contact popup.", "Contact Page Functionality"</td>
-<td></td>
-<td>16</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 11. User should see an validation message for First Name", "Contact Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 12. User should see an validation message for Last Name", "Contact Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 13. User should see an validation message for Title Name", "Contact Page Functionality"</td>
-<td></td>
-<td>16</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 14. User should see an validation message for Company Name", "Contact Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "15. Validate user should be able to add title for contact title widget fot he contact", "Contact Page Functionality"</td>
-<td></td>
-<td>7</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 16. validate user should be able to add contact in the contact page", "Contact Page Functionality"</td>
-<td></td>
-<td>18</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 17. validate user should be able to search contact", "Contact Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 18. user should be able to edit contact at add contact popup.", "Contact Page Functionality"</td>
-<td></td>
-<td>22</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 19. user should be able to delete contact", "Contact Page Functionality"</td>
-<td></td>
-<td>17</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact 20. User should be able to delete title for contact title widget for the contact", "Contact Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "57. User should see an validation message for Account Name", "Companies Page Functionality"</td>
 <td></td>
 <td>9</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "1.  Check login successfully with valid credentials", "Login Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "58. User should be able to create Reconciled Dates record", "Companies Page Functionality"</td>
 <td></td>
-<td>6</td>
+<td>14</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "2. Check Forget Your Password Link is being displayed", "Login Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "59. User should be able to Edit Reconciled Dates record", "Companies Page Functionality"</td>
 <td></td>
-<td>6</td>
+<td>16</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Settings 1. user should be on settings page", "Settings Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "60. user should be able to delete Reconciled Date record", "Companies Page Functionality"</td>
 <td></td>
-<td>6</td>
+<td>11</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Settings 2. User should see an validation message for Title fieled in the contact title widget", "Settings Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "61.  user should be able to close New Loan Payment PopUp", "Companies Page Functionality"</td>
 <td></td>
-<td>6</td>
+<td>10</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Settings 3. User should be able to close add title popup for contact title widget", "Settings Page Functionality"</td>
-<td></td>
-<td>6</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Setting 4. Validate user should be able to add title for contact title widget", "Settings Page Functionality"</td>
-<td></td>
-<td>6</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Settings 5. User should be able to edit title for contact title widget", "Settings Page Functionality"</td>
-<td></td>
-<td>6</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Settings 6. User should be able to delete title for contact title widget", "Settings Page Functionality"</td>
-<td></td>
-<td>7</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Settings 7. User should see an validation message for Title fieled in the staff title widget", "Settings Page Functionality"</td>
-<td></td>
-<td>6</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Settings 8. User should be able to close add title popup for staff title widget", "Settings Page Functionality"</td>
-<td></td>
-<td>6</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Setting 9. Validate user should be able to add title for staff title widget", "Settings Page Functionality"</td>
-<td></td>
-<td>6</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Settings 11. User should be able to delete title for staff title widget", "Settings Page Functionality"</td>
-<td></td>
-<td>7</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Settings 16. User should see an validation message for Title field in the Reports widget", "Settings Page Functionality"</td>
-<td></td>
-<td>7</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Settings 17. User should be able to close add title popup for reports widget", "Settings Page Functionality"</td>
-<td></td>
-<td>7</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Setting 18. Validate user should be able to add report for Reports widget", "Settings Page Functionality"</td>
-<td></td>
-<td>6</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Settings 19. User should be able to edit title for Reports widget", "Settings Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "62. User should see an validation message for Loan Name", "Companies Page Functionality"</td>
 <td></td>
 <td>9</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Settings 20. User should be able to delete report for report widget", "Settings Page Functionality"</td>
-<td></td>
-<td>6</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 1. validate at user is on Tasks page url", "Tasks Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 2. Validate that user is on Template page of Task Module", "Tasks Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Task 3. Validate that user is able to Create Template at Template page of task module", "Tasks Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 4. Validate that user is able to create the section inside the template", "Tasks Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 5. user should be able to add sub task in the task page", "Tasks Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 6. user should be edit subtask of the task in the task page", "Tasks Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 7. user should be delete subtask of the task in the task page", "Tasks Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 8. user should be able to update section in the task page", "Tasks Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 9. user should be able to delete section in the task page", "Tasks Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 10. Validate that user is able to Delete the template from delete button which is inside the template", "Tasks Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 11. validate at user is on tasks reocurring page", "Tasks Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 12. user should be able to see add task popup in the tasks reoccuring page", "Tasks Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 13. User should see an validation message on task name field at the add task popup", "Tasks Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 14. User should see an validation message on Asigned To field at the add task popup", "Tasks Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 15. User should see an validation message on client field at the add task popup", "Tasks Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 16. User should see an validation message on start date field at the add task popup", "Tasks Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 17. User should be able to close  add task popup in the tasks reocurring page", "Tasks Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 18. user should be able to see the company in the task reocurring tab after adding company in the user at the user page.", "Tasks Page Functionality"</td>
-<td></td>
-<td>17</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 19. User should be able to search company in the tasks reocurring page", "Tasks Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 20. Validate that user is able to Create Template at Template page of task module", "Tasks Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 21. User should be able to create task in the tasks reocurring page", "Tasks Page Functionality"</td>
-<td></td>
-<td>19</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 22. User should be able to redirect to recurring tab in the  company task tab", "Tasks Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 23. User should be able to update fields at recurring tab in the  company task tab", "Tasks Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 24. User should be able to search task by filter at recurring tab in the  company task tab", "Tasks Page Functionality"</td>
-<td></td>
-<td>23</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 25. User should be able to edit fields at recurring tab in the  company task tab", "Tasks Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 26. User should be able to delete task at recurring tab in the  company task tab", "Tasks Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 27. Validate user should be able to add title for staff title widget for the task", "Tasks Page Functionality"</td>
-<td></td>
-<td>8</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 28. user should be able to add user in the user page for the task", "Tasks Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 29. user should be able to create task in the compnay task page", "Tasks Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 30. user should be able to see users today task at My task tab", "Tasks Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 31. user should be able to see users today task count after the delete task at My task tab", "Tasks Page Functionality"</td>
-<td></td>
-<td>16</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 32. user should be able to create week task in the compnay task page", "Tasks Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 33. user should be able to see users week task at My task tab", "Tasks Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 34. user should be able to see users week task count after the delete task at My task tab", "Tasks Page Functionality"</td>
-<td></td>
-<td>17</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 35. user should be able to create Next week task in the compnay task page", "Tasks Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 36. user should be able to see users next week task at My task tab", "Tasks Page Functionality"</td>
-<td></td>
-<td>14</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 37. user should be able to see users next week task count after the delete task at My task tab", "Tasks Page Functionality"</td>
-<td></td>
-<td>17</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 38. user should be able to create later week task in the compnay task page", "Tasks Page Functionality"</td>
-<td></td>
-<td>16</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 39. user should be able to see users later week task at My task tab", "Tasks Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 40. user should be able to see users later week task count after the delete task at My task tab", "Tasks Page Functionality"</td>
-<td></td>
-<td>16</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 41. Validate that user is able to Delete the template from delete button which is inside the template", "Tasks Page Functionality"</td>
-<td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 42. user should be able to delete user in the user page for task", "Tasks Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Tasks 43. User should be able to delete title for staff title widget for the task", "Tasks Page Functionality"</td>
-<td></td>
-<td>8</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Users 1. validate that user is on Users page url", "Users Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 2. Validate user should be able to add title for staff title widget for the user", "Users Page Functionality"</td>
-<td></td>
-<td>5</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 3. user should be able to add user in the user page", "Users Page Functionality"</td>
-<td></td>
-<td>17</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 4. Validate that user is able to edit the Users info Succesfully", "Users Page Functionality"</td>
-<td></td>
-<td>17</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 5. user is able to create company in the user contact page", "Users Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 6. user should be able to see the staff member in the details tab of the company", "Users Page Functionality"</td>
-<td></td>
-<td>6</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 7. Validate that user is able to Create Template at Template page of task module for the user", "Users Page Functionality"</td>
-<td></td>
-<td>7</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 8. User should be able to create task in the tasks reocurring page for the user page", "Users Page Functionality"</td>
-<td></td>
-<td>15</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 9. user should be able to see the Recurring task in the user page.", "Users Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "63. User should see an validation message for Payment Date", "Companies Page Functionality"</td>
 <td></td>
 <td>9</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 <tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 10. User should be able to update fields at recurring tab in the  company task tab for the users", "Users Page Functionality"</td>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "64. User should see an validation message for Amount", "Companies Page Functionality"</td>
 <td></td>
-<td>12</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 11. User should be able to edit fields at recurring tab in the  company task tab for the users", "Users Page Functionality"</td>
-<td></td>
-<td>10</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 12. User should be able to delete task at recurring tab in the  company task tab for the users", "Users Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 13. user should be able to delete company in the user page", "Users Page Functionality"</td>
-<td></td>
-<td>13</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users  14. user should be able to delete user in the user page for task", "Users Page Functionality"</td>
-<td></td>
-<td>11</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 15. User should be able to delete title for staff title widget for the user", "Users Page Functionality"</td>
-<td></td>
-<td>7</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 16. Validate that user is able to Delete the template from delete button which is inside the template for the user", "Users Page Functionality"</td>
-<td></td>
-<td>8</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 17. user should be able to delete the company in the company page", "Users Page Functionality"</td>
-<td></td>
-<td>7</td>
-<td>testrunners.TestRunner@41e68d87</td></tr>
-<tr>
-<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users 18. vlaidate user should be logout the application", "Users Page Functionality"</td>
-<td></td>
-<td>7</td>
+<td>9</td>
 <td>testrunners.TestRunner@41e68d87</td></tr>
 </table><p>
 </body>

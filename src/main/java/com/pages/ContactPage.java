@@ -150,6 +150,8 @@ public class ContactPage {
 
 	public String getContactStataus() throws InterruptedException {
 		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[contains(.,'Contact')]")).click();
+		Thread.sleep(2000);
 		return driver.findElement(By.xpath("//p[contains(text(),'Test Contact')]")).getText();
 	}
 

@@ -238,7 +238,7 @@ Feature: Tasks Page Functionality
  	 And  user should be click on Add tasks button in the tasks page for the task page
  	 And user should be able to create task in the tasks page for the task page
   |task template         |name  |assign     |company       |taskrepeat|date|
-  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 28, 2024|
+  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 29, 2024|
   Then user should be see the task in the tasks page for the task page"Task12"
   
     
@@ -263,7 +263,7 @@ Feature: Tasks Page Functionality
  	 And  user should be click on Add tasks button in the tasks page for the task page
  	 And user should be able to create task in the tasks page for the task page
   |task template         |name  |assign     |company       |taskrepeat|date|
-  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 28, 2024|
+  |Qa automation template|Task12|Automate Test Admin|Test Company|1|February 29, 2024|
   Then user should be see the task in the tasks page for the week task page"Task12"
     
     

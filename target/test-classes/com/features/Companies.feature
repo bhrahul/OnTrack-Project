@@ -147,28 +147,28 @@ Feature: Companies Page Functionality
   	
  
 
-  Scenario: 32. User should be able to see Add Contact popup title in the add contact popup
+  Scenario: 31. User should be able to see Add Contact popup title in the add contact popup
   When user should be clicked on AddContact button in the company page
   And User should be clicked on Add contact button of company
   Then  User should be able to see Add Contact popup title in the add contact popup
   
   
   
-  Scenario: 33. User should see an validation message for First Name
+  Scenario: 32. User should see an validation message for First Name
   When user should be clicked on AddContact button in the company page
   And User should be clicked on Add contact button of company
   And User should be clicked on add button in the add contact popup of the company
   Then  User should see an validation message for First Name"First name can't be blank."
   
   
-  Scenario: 34. User should see an validation message for Last Name
+  Scenario: 33. User should see an validation message for Last Name
    When user should be clicked on AddContact button in the company page
   And User should be clicked on Add contact button of company
   And User should be clicked on add button in the add contact popup of the company
   Then  User should see an validation message for Last Name"Last name can't be blank."
   
   
-  Scenario: 35. User should see an validation message for Title Name
+  Scenario: 34. User should see an validation message for Title Name
   When user should be clicked on AddContact button in the company page
   And User should be clicked on Add contact button of company
   And User should be clicked on add button in the add contact popup of the company
@@ -176,7 +176,7 @@ Feature: Companies Page Functionality
   
 
   
-  Scenario: 36. User should see an validation message for Company Name
+  Scenario: 35. User should see an validation message for Company Name
   When user should be clicked on AddContact button in the company page
   And User should be clicked on Add contact button of company
   And User should be clicked on add button in the add contact popup of the company
@@ -184,14 +184,14 @@ Feature: Companies Page Functionality
   
   
   
-  Scenario: 37. Validate user should be able to add title for contact title widget for the company page
+  Scenario: 36. Validate user should be able to add title for contact title widget for the company page
  When user should be able to click on Settings for the company page
  And  user should be able to click on add title button in contact title widget for the company page
  And  user should enter the title in add title popup of contact title widget for the company page"Automate Admin"
  Then user should be able to see the title on contact title widget for the company page"Automate Admin"
   
   
-  Scenario: 38. User should be able create contact
+  Scenario: 37. User should be able create contact
   When user should be clicked on AddContact button in the company page
   And User should be clicked on Add contact button of company
   And User should be enter the fields for the contact
@@ -200,54 +200,54 @@ Feature: Companies Page Functionality
   Then user should be see the contact name in the company list page"Test Contact"
   
   
-  Scenario: 39. user should be able to filtered company in the company page
+  Scenario: 38. user should be able to filtered company in the company page
   When user should be filtered company in the company page
   |company|contact|
   |Test Company|Test Contact|
   Then user should be able to see the company which is filtered"Test Company"
   
-  Scenario: 40. User should be able to select company from company list
+  Scenario: 39. User should be able to select company from company list
   When user should be able to select company in the company page
   Then User should see the Company Name "Test Company"
   
     
-#############################COMPANIES>>DASHBOARD>>STATISTICs##########################################
+###########################COMPANIES>>DASHBOARD>>STATISTICs##########################################
 
-	Scenario: 41. user should be on Statistics tab in the company
+	Scenario: 40. user should be on Statistics tab in the company
 	When user should be able to select company in the company page
 	Then user should be on Statistics tab in the company"Statistics"
 	
-  Scenario: 42. Royalty & Fidesic widget should be displayed
+  Scenario: 41. Royalty & Fidesic widget should be displayed
   When user should be able to select company in the company page
   Then "Royalty & Fidesic" widget should be displayed
   
-  Scenario: 43. Add button should be displayed
+  Scenario: 42. Add button should be displayed
   When user should be able to select company in the company page
   Then Add button should be displayed
   
-  Scenario: 44. Create Royalty & Fidesic record title should be displayed on PopUp
+  Scenario: 43. Create Royalty & Fidesic record title should be displayed on PopUp
   When  user should be able to select company in the company page
   And  user should be clicked on add button of Royalty & Fidesic record
   Then "Create Royalty & Fidesic record" title should be displayed
   
-  Scenario: 45. add button should be displayed on Royalty & Fidesic PopUp
+  Scenario: 44. add button should be displayed on Royalty & Fidesic PopUp
   When  user should be able to select company in the company page
   And  user should be clicked on add button of Royalty & Fidesic record
   Then  add button should be displayed on Royalty & Fidesic PopUp
   
-  Scenario: 46. close button should be displayed on Royalty & Fidesic PopUp
+  Scenario: 45. close button should be displayed on Royalty & Fidesic PopUp
   When  user should be able to select company in the company page
   And  user should be clicked on add button of Royalty & Fidesic record
   Then  close button should be displayed on Royalty & Fidesic PopUp
   
   
-  Scenario: 47. Licence number error message should be displayed on Royalty & Fidesic PopUp
+  Scenario: 46. Licence number error message should be displayed on Royalty & Fidesic PopUp
   When  user should be able to select company in the company page
   And  user should be clicked on add button of Royalty & Fidesic record
   And  user should be clicked add button on Royalty & Fidesic PopUp
   Then user should be able to see the licence error message"License number can't be blank.License number is not a number"
   
-  Scenario: 48. user should be able to Create Royalty & Fidesic record
+  Scenario: 47. user should be able to Create Royalty & Fidesic record
   When  user should be able to select company in the company page
   And  user should be clicked on add button of Royalty & Fidesic record
   And  user should be able to enter all the fields of Royalty & Fidesic record
@@ -255,7 +255,7 @@ Feature: Companies Page Functionality
   |12345|February 20, 2024|February 20, 2024|February 20, 2024|February 20, 2024|
   Then Royalty & Fidesic record should be displayed on Royalty & Fidesic widget
   
-  Scenario: 49. user should be able to update Royalty & Fidesic record
+  Scenario: 48. user should be able to update Royalty & Fidesic record
   When  user should be able to select company in the company page
   And  user should be clicked on edit button
   And  user should be able to update Royalty & Fidesic record
@@ -263,29 +263,29 @@ Feature: Companies Page Functionality
   |45689|February 21, 2024|February 21, 2024|February 21, 2024|February 21, 2024|
   Then user should be able to see the update Royalty & Fidesic record
   
-  Scenario: 50. user should be able to delete Royalty & Fidesic record
+  Scenario: 49. user should be able to delete Royalty & Fidesic record
   When  user should be able to select company in the company page
   And  user should be able to delete Royalty & Fidesic record
   
-  Scenario: 51. user should be able to close Check Off List PopUp
+  Scenario: 50. user should be able to close Check Off List PopUp
   When  user should be able to select company in the company page
   And  user should be clicked on add button of check of list
   And  user should be able to close Check Off List PopUp
   Then user should be close check off list popup successfully
   
-  Scenario: 52. User should see an validation message for Name
+  Scenario: 51. User should see an validation message for Name
   When  user should be able to select company in the company page
   And  user should be clicked on add button of check of list
   And  user shoudl be clicked on add button of check of list popup
   Then User should see an validation message for Name"Name can't be blank."
   
-  Scenario: 53. User should see an validation message for Date
+  Scenario: 52. User should see an validation message for Date
   When  user should be able to select company in the company page
   And  user should be clicked on add button of check of list
   And  user shoudl be clicked on add button of check of list popup
   Then User should see an validation message for Date"Date can't be blank."
   
-  Scenario: 54. User should be able to create Check Off List Record
+  Scenario: 53. User should be able to create Check Off List Record
   When  user should be able to select company in the company page
   And  user should be clicked on add button of check of list
   And user should be able to enter all the fields of Check Off List
@@ -293,7 +293,7 @@ Feature: Companies Page Functionality
  	|Ravi|February 20, 2024|
   Then user should be able to see the check off list"Ravi"
   
-  Scenario: 55. user should be able to update Check Off List record
+  Scenario: 54. user should be able to update Check Off List record
   When  user should be able to select company in the company page
   And  user should be clicked on edit button of Check Off List
   And  user should be able to update Check Off List record
@@ -301,14 +301,14 @@ Feature: Companies Page Functionality
   |Janvi|February 21, 2024|
   Then user should be able to see the update Check Off Listc record"Janvi"
   
-  Scenario: 56. user should be able to delete check off list record
+  Scenario: 55. user should be able to delete check off list record
   When  user should be able to select company in the company page
   And  user should be able to delete check off list record
   
   
   
    
-  Scenario: 57. user should be able to close Reconciled Date PopUp
+  Scenario: 56. user should be able to close Reconciled Date PopUp
   When  user should be able to select company in the company page
   And  user should be clicked on add button of Reconciled Date
   And  user should be able to close Reconciled Date PopUp
@@ -316,7 +316,7 @@ Feature: Companies Page Functionality
   
   
   
-     Scenario: 58. User should see an validation message for Account Name
+     Scenario: 57. User should see an validation message for Account Name
   When  user should be able to select company in the company page
   And  user should be clicked on add button of Reconciled Date
   And  user shoudl be clicked on add button of Reconciled Date popup
@@ -325,7 +325,7 @@ Feature: Companies Page Functionality
   
   
   
-  Scenario: 59. User should be able to create Reconciled Dates record
+  Scenario: 58. User should be able to create Reconciled Dates record
   When  user should be able to select company in the company page
  	And  user should be clicked on add button of Reconciled Date
   And  User should be able to create Reconciled Dates record
@@ -334,7 +334,7 @@ Feature: Companies Page Functionality
   Then user should be able to see the Reconciled Dates record"ICICI0000456123"
   
   
-   Scenario: 60. User should be able to Edit Reconciled Dates record
+   Scenario: 59. User should be able to Edit Reconciled Dates record
   When  user should be able to select company in the company page
  	And  user should be clicked on edit button of Reconciled Date
   And  User should be able to edit Reconciled Dates record
@@ -342,35 +342,35 @@ Feature: Companies Page Functionality
   |ICICI0000356214|February 21, 2024|February 21, 2024|
   Then user should be able to see the update Reconciled Dates record"ICICI0000356214"
   
-   Scenario: 61. user should be able to delete Reconciled Date record
+   Scenario: 60. user should be able to delete Reconciled Date record
   When  user should be able to select company in the company page
   And  user should be able to delete Reconciled Date record
   
-  Scenario: 62.  user should be able to close New Loan Payment PopUp
+  Scenario: 61.  user should be able to close New Loan Payment PopUp
   When  user should be able to select company in the company page
   And  user should be clicked on add button of New Loan Payment
   And  user should be able to close New Loan Payment PopUp
   Then user should be close New Loan Payment popup successfully
   
-     Scenario: 63. User should see an validation message for Loan Name
+     Scenario: 62. User should see an validation message for Loan Name
   When  user should be able to select company in the company page
   And  user should be clicked on add button of New Loan Payment
   And  user should be clicked on add button of New Loan Payment popup
   Then User should see an validation message for Loan Name"Loan name can't be blank."
   
-   	Scenario: 64. User should see an validation message for Payment Date
+   	Scenario: 63. User should see an validation message for Payment Date
   When  user should be able to select company in the company page
   And  user should be clicked on add button of New Loan Payment
   And  user should be clicked on add button of New Loan Payment popup
   Then User should see an validation message for Payment Date"Payment date can't be blank."
   
-   	Scenario: 65. User should see an validation message for Amount
+   	Scenario: 64. User should see an validation message for Amount
   When  user should be able to select company in the company page
   And  user should be clicked on add button of New Loan Payment
   And  user should be clicked on add button of New Loan Payment popup
   Then User should see an validation message for Amount"Amount can't be blank."
   
-   Scenario: 66. User should be able to create loan payment Record
+   Scenario: 65. User should be able to create loan payment Record
   When  user should be able to select company in the company page
   And  user should be clicked on add button of New Loan Payment
   And user should be able to enter all the fields of new loan payment
@@ -379,7 +379,7 @@ Feature: Companies Page Functionality
   Then user should be able to see the loan payment
  
  
-   Scenario: 67. User should be able to edit loan payment Record
+   Scenario: 66. User should be able to edit loan payment Record
   When  user should be able to select company in the company page
   And  user should be clicked on edit button of New Loan Payment
   And user should be able to edit all the fields of new loan payment
@@ -387,26 +387,26 @@ Feature: Companies Page Functionality
   |Janvi|February 21, 2024|20000|
   Then user should be able to see the edit loan payment
   
-   Scenario: 68. user should be able to delete Loan Payment record
+   Scenario: 67. user should be able to delete Loan Payment record
   When  user should be able to select company in the company page
   And  user should be able to delete Loan payment record
   
   
- # COMPANIES>>DASHBOARD>>DAILY RECONCILED##########################################
+###################################COMPANIES>>DASHBOARD>>DAILY RECONCILED##########################################
   
-  Scenario: 69. user should be able to redirect to  Daily Reconciled page of compnay dashboard
+  Scenario: 68. user should be able to redirect to  Daily Reconciled page of compnay dashboard
    When user should be able to select company in the company page
 	And user should be clicked on Daily Reconciled Tab
   Then user should be on daily reconciled page of company page"Daily Reconciled"
   
-  Scenario: 70. user should be see the error message on Add Account PopUp
+  Scenario: 69. user should be see the error message on Add Account PopUp
   When user should be able to select company in the company page
   And user should be clicked on Daily Reconciled Tab
   And user should be clicked on add account button in the Daily Reconciled Tab
   And user should be able to click add button on Add Account PopUp
   Then "Name can't be blank." Error message should be displayed
   
-   Scenario: 71. User should be able to add account name at Daily Reconciled page
+   Scenario: 70. User should be able to add account name at Daily Reconciled page
   When user should be able to select company in the company page
   And user should be clicked on Daily Reconciled Tab
   And user should be clicked on add account button in the Daily Reconciled Tab
@@ -465,7 +465,7 @@ Feature: Companies Page Functionality
   When user should be able to select company in the company page
   And user should be clicked on Daily Reconciled Tab
   And user should be able to delete the account in the daily reconciled page
-  ################################COMPANIES>>DASHBOARD>>TRANSACTIONS##########################################
+  #############################COMPANIES>>DASHBOARD>>TRANSACTIONS##########################################
   
  Scenario: 80. user should be able to redirect to  Transaction page of compnay dashboard
    When user should be able to select company in the company page
@@ -652,7 +652,7 @@ Feature: Companies Page Functionality
   When  user should be able to select company in the company page
   Then  user should be able to see the count of unkown transactions after delete transaction in statistics page"0"
   
-####################COMPANIES>>DASHBOARD>>Bills.con &QBO##########################################
+#################COMPANIES>>DASHBOARD>>Bills.con &QBO##########################################
   
   Scenario: 108. user should be able to redirect to  Bills.com page of compnay dashboard
    When user should be able to select company in the company page
@@ -724,7 +724,7 @@ Feature: Companies Page Functionality
   And user should be enter the amount in QBO calculate widget."100"
   Then user should be able to see the difference between bills.com and QBO"$ 100.00"
   
-##############################COMPANIES>>DASHBOARD>>ROYALTY DIFFERENCE##########################################
+###########################COMPANIES>>DASHBOARD>>ROYALTY DIFFERENCE##########################################
   
    Scenario: 118. user should be able to redirect to  Royalty Difference page of compnay dashboard
    When user should be able to select company in the company page
@@ -785,7 +785,7 @@ Feature: Companies Page Functionality
   
   
   
-  #######COMPANIES>>DETAILS##########################################
+  #####COMPANIES>>DETAILS##########################################
   
 
 
@@ -994,7 +994,7 @@ Feature: Companies Page Functionality
   
   
   
-##########COMPANIES LOGINS###################################
+########COMPANIES LOGINS###################################
   Scenario: 233. user should be on the logins page
   When  user should be able to select company in the company page
   And  user should be on logins page
@@ -1049,7 +1049,7 @@ Feature: Companies Page Functionality
 
   
   
-################################COMPANIES TASKS###################################
+##############################COMPANIES TASKS###################################
   Scenario: 240. user should be on the Tasks page
   When user should be able to select company in the company page
   And  user should be on tasks page
@@ -1260,7 +1260,7 @@ Scenario: 257. user should be able to create task in the compnay task page
   
   
   
- ##########################COMPANIES NOTES###################################
+ ########################COMPANIES NOTES###################################
   
   
   Scenario: 269. validate user should be on company notes page
@@ -1393,7 +1393,7 @@ Scenario: 257. user should be able to create task in the compnay task page
  
   
   
-  ############COMPANIES>>DOCUMENTS TAB################################
+  ##########COMPANIES>>DOCUMENTS TAB################################
   Scenario: 288. user should be on the document page
   When user should be able to select company in the company page
   And  user should be able to click on document page
