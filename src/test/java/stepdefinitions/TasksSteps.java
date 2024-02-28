@@ -386,7 +386,7 @@ public class TasksSteps {
 	}
 
 	@Then("user should be able to see the filtered task in the task of the company at tasks reoccurring page")
-	public void user_should_be_able_to_see_the_filtered_task_in_the_task_of_the_company_at_tasks_reoccurring_page() {
+	public void user_should_be_able_to_see_the_filtered_task_in_the_task_of_the_company_at_tasks_reoccurring_page() throws InterruptedException {
 		tasksPage.getFilteredTaskStatus();
 	}
 

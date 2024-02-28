@@ -106,7 +106,7 @@ public class SettingsSteps {
 	}
 	
 	@And("User should be able to edit title for staff title widget{string}")
-	public void user_should_be_able_to_edit_title_for_staff_title_widget(String t) {
+	public void user_should_be_able_to_edit_title_for_staff_title_widget(String t) throws InterruptedException {
 	    settingsPage.editTitleStaffTitle(t);
 	}
 

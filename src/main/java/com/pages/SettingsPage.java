@@ -125,8 +125,8 @@ public String closeAddTitlePopupContactTitleSuccess() {
 		
 	}
 
-	public void editTitleStaffTitle(String t) {
-
+	public void editTitleStaffTitle(String t) throws InterruptedException {
+		Thread.sleep(1000);
 	driver.findElement(editBtnStaffTitle).click();
 	driver.findElement(title).clear();
 	driver.findElement(title).sendKeys(t);

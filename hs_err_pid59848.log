@@ -1,0 +1,227 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 134217728 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3613), pid=59848, tid=57204
+#
+# JRE version:  (17.0.9+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.9+9, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages cucumber.api.cli.Main E:/Rahul Bhalla CIS/OntrackProjectBDD/OnTrack_BDD/src/test/resources/com/features/Users.feature --glue classpath: --plugin pretty --monochrome
+
+Host: Intel(R) Core(TM) i5-4570T CPU @ 2.90GHz, 4 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.2546)
+Time: Wed Feb 28 15:21:19 2024 India Standard Time elapsed time: 0.068549 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000022e5cdd79c0):  JavaThread "Unknown thread" [_thread_in_vm, id=57204, stack(0x000000eba4100000,0x000000eba4200000)]
+
+Stack: [0x000000eba4100000,0x000000eba4200000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67cf49]
+V  [jvm.dll+0x83478a]
+V  [jvm.dll+0x83624e]
+V  [jvm.dll+0x8368b3]
+V  [jvm.dll+0x247f1f]
+V  [jvm.dll+0x679d69]
+V  [jvm.dll+0x66e6ba]
+V  [jvm.dll+0x307e5b]
+V  [jvm.dll+0x30f306]
+V  [jvm.dll+0x35f0ce]
+V  [jvm.dll+0x35f2ff]
+V  [jvm.dll+0x2dea58]
+V  [jvm.dll+0x2df9c4]
+V  [jvm.dll+0x806031]
+V  [jvm.dll+0x36cf31]
+V  [jvm.dll+0x7e4aac]
+V  [jvm.dll+0x3f07af]
+V  [jvm.dll+0x3f23e1]
+C  [jli.dll+0x528f]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17614]
+C  [ntdll.dll+0x526a1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff9714eee98, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000022e5ce32500 GCTaskThread "GC Thread#0" [stack: 0x000000eba4200000,0x000000eba4300000] [id=50620]
+  0x0000022e5ce43190 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000eba4300000,0x000000eba4400000] [id=60096]
+  0x0000022e5ce44490 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000eba4400000,0x000000eba4500000] [id=53000]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff970caf497]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000022e5cdd3fa0] Heap_lock - owner thread: 0x0000022e5cdd79c0
+
+Heap address: 0x0000000081600000, size: 2026 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000081600000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff971096c79]
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.040 Loaded shared library C:\Users\cis\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\jre\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff62acf0000 - 0x00007ff62acfe000 	C:\Users\cis\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\jre\bin\javaw.exe
+0x00007ff9acc30000 - 0x00007ff9ace28000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff9aaff0000 - 0x00007ff9ab0af000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff9aa430000 - 0x00007ff9aa702000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff9aa920000 - 0x00007ff9aaa20000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff99bcc0000 - 0x00007ff99bcd7000 	C:\Users\cis\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\jre\bin\jli.dll
+0x00007ff9ab220000 - 0x00007ff9ab3c1000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff9aac40000 - 0x00007ff9aac62000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff9aae40000 - 0x00007ff9aae6b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff9aa710000 - 0x00007ff9aa81f000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff9aa390000 - 0x00007ff9aa42d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff99bce0000 - 0x00007ff99bcfb000 	C:\Users\cis\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\jre\bin\VCRUNTIME140.dll
+0x00007ff998040000 - 0x00007ff9982da000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff9aac70000 - 0x00007ff9aad0e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff9acb90000 - 0x00007ff9acbc2000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff9a7bd0000 - 0x00007ff9a7bdc000 	C:\Users\cis\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\jre\bin\vcruntime140_1.dll
+0x00007ff98cd50000 - 0x00007ff98cddd000 	C:\Users\cis\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\jre\bin\msvcp140.dll
+0x00007ff9709c0000 - 0x00007ff971621000 	C:\Users\cis\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\jre\bin\server\jvm.dll
+0x00007ff9ab170000 - 0x00007ff9ab21e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff9ac800000 - 0x00007ff9ac89c000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff9aad10000 - 0x00007ff9aae35000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff9aa0e0000 - 0x00007ff9aa12b000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007ff991e30000 - 0x00007ff991e39000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff9abf70000 - 0x00007ff9abfdb000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff99bd70000 - 0x00007ff99bd97000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff99d9e0000 - 0x00007ff99d9ea000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff9aa0c0000 - 0x00007ff9aa0d2000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ff9a8200000 - 0x00007ff9a8212000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff9a2040000 - 0x00007ff9a204a000 	C:\Users\cis\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\jre\bin\jimage.dll
+0x00007ff998380000 - 0x00007ff998564000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff997f60000 - 0x00007ff997f95000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff9aabb0000 - 0x00007ff9aac32000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff98c210000 - 0x00007ff98c235000 	C:\Users\cis\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\jre\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\cis\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\jre\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Users\cis\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\jre\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: cucumber.api.cli.Main E:/Rahul Bhalla CIS/OntrackProjectBDD/OnTrack_BDD/src/test/resources/com/features/Users.feature --glue classpath: --plugin pretty --monochrome
+java_class_path (initial): E:\Rahul Bhalla CIS\OntrackProjectBDD\OnTrack_BDD\target\classes;E:\Rahul Bhalla CIS\OntrackProjectBDD\OnTrack_BDD\target\test-classes;C:\Users\cis\.m2\repository\io\cucumber\cucumber-java\7.14.0\cucumber-java-7.14.0.jar;C:\Users\cis\.m2\repository\io\cucumber\cucumber-core\7.14.0\cucumber-core-7.14.0.jar;C:\Users\cis\.m2\repository\io\cucumber\cucumber-gherkin\7.14.0\cucumber-gherkin-7.14.0.jar;C:\Users\cis\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.14.0\cucumber-gherkin-messages-7.14.0.jar;C:\Users\cis\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;C:\Users\cis\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\cis\.m2\repository\io\cucumber\tag-expressions\5.0.6\tag-expressions-5.0.6.jar;C:\Users\cis\.m2\repository\io\cucumber\cucumber-expressions\16.1.2\cucumber-expressions-16.1.2.jar;C:\Users\cis\.m2\repository\io\cucumber\datatable\7.14.0\datatable-7.14.0.jar;C:\Users\cis\.m2\repository\io\cucumber\cucumber-plugin\7.14.0\cucumber-plugin-7.14.0.jar;C:\Users\cis\.m2\repository\io\cucumber\docstring\7.14.0\docstring-7.14.0.jar;C:\Users\cis\.m2\repository\io\cucumber\html-formatter\20.4.0\html-formatter-20.4.0.jar;C:\Users\cis\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\cis\.m2\repository\io\cucumber\ci-environment\9.2.0\ci-environment-9.2.0.jar;C:\Users\cis\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\cis\.m2\repository\tech\grasshopper\extent-pdf-report\2.5.1\extent-pdf-report-2.5.1.jar;C:\Users\cis\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.8.1\cucumber-pdf-report-2.8.1.jar;C:\Users\cis\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\cis\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\cis\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\cis\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.j
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2124414976                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 2124414976                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-17
+PATH=C:/Users/cis/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858/jre/bin/server;C:/Users/cis/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858/jre/bin;C:\Python311\Scripts\pip;C:\Users\cis\AppData\Roaming\nvm;C:\Users\cis\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs;C:\Windows\System32;C:\Users\cis\.dotnet;C:\Program Files\dotnet\;C:\Program Files\PowerShell\7\;C:\Program Files\Java\jre-1.8\bin;C:\Program Files\Java\jdk-17\bin;C:\Program Files\apache-maven-3.9.6\bin;C:\Program Files\allure-2.27.0\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\cis\AppData\Local\Microsoft\WindowsApps;C:\Users\cis\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\cis\AppData\Roaming\nvm;C:\Python311;C:\Python311\Scripts\pip;C:\Users\cis\AppData\Roaming\npm;C:\Users\cis\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Windows\System32;C:\Users\cis\.dotnet\tools;C:\Users\cis\AppData\Local\GitHubDesktop\bin;;C:\Users\cis\Desktop;
+USERNAME=cis
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+TMP=C:\Users\cis\AppData\Local\Temp
+TEMP=C:\Users\cis\AppData\Local\Temp
+
+
+
+Periodic native trim disabled
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.2546)
+OS uptime: 2 days 0:59 hours
+
+CPU: total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 60 stepping 3 microcode 0x27, cx8, cmov, fxsr, ht, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, fma, vzeroupper, clflush
+Processor Information for all 4 processors :
+  Max Mhz: 2901, Current Mhz: 2901, Mhz Limit: 2901
+
+Memory: 4k page, system-wide physical 8098M (640M free)
+TotalPageFile size 23935M (AvailPageFile size 50M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 51M, peak: 179M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.9+9) for windows-amd64 JRE (17.0.9+9), built on Oct 26 2023 14:01:42 by "admin" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.

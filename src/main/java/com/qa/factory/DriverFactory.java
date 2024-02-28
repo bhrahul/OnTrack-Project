@@ -24,14 +24,14 @@ public class DriverFactory {
 		
 		if(browser.equalsIgnoreCase("chrome")) {
 	/////HeadlessMode Chrome/////////////////
-			
+//			
 //			ChromeOptions options = new ChromeOptions();
 //			options.addArguments("--headless");
 //			DesiredCapabilities cap = new DesiredCapabilities();
 //			cap.setCapability(ChromeOptions.CAPABILITY, options);
 //			options.merge(cap);
 //			tlDriver.set(new ChromeDriver(options));
-			
+//			
 			
 			tlDriver.set(new ChromeDriver());
 		}

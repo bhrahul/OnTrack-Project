@@ -125,26 +125,19 @@ Feature: Companies Page Functionality
   And User should be clicked on Add Company button in the add contact popup of the company page
   And click on add button in the add company popup
   Then User should see an validation message on zipcode "Zip code can't be blank."
-  
-  Scenario: 28. User should see an validation message on start date field in the add company popup
-  When user should be clicked on AddContact button in the company page
-  And User should be clicked on Add Company button in the add contact popup of the company page
-  And click on add button in the add company popup
-  Then User should see an validation message on start date "Start date can't be blank."
-  
-  
-  Scenario: 29. User should see an validation message on report time field in the add company popup
+ 
+  Scenario: 28. User should see an validation message on report time field in the add company popup
   When user should be clicked on AddContact button in the company page
   And User should be clicked on Add Company button in the add contact popup of the company page
   And click on add button in the add company popup
   Then User should see an validation message on report time "Report time can't be blank."
   
-  Scenario: 30. User should be searched a company in the company page
+  Scenario: 29. User should be searched a company in the company page
   		When  User should be searched a company "TestCompany" in the company page
   		And  User click on search button in the company page
 	  	Then User should be searched a company in the company page
   		
-  Scenario: 31. User should be update company name in the edit item popup
+  Scenario: 30. User should be update company name in the edit item popup
   	When  User should be searched a company "TestCompany" in the company page
   	And   User click on search button in the company page
   	And   User should be click on edit button in the company page
@@ -218,7 +211,7 @@ Feature: Companies Page Functionality
   Then User should see the Company Name "Test Company"
   
     
-###################################COMPANIES>>DASHBOARD>>STATISTICs##########################################
+#############################COMPANIES>>DASHBOARD>>STATISTICs##########################################
 
 	Scenario: 41. user should be on Statistics tab in the company
 	When user should be able to select company in the company page
@@ -399,7 +392,7 @@ Feature: Companies Page Functionality
   And  user should be able to delete Loan payment record
   
   
- ####### COMPANIES>>DASHBOARD>>DAILY RECONCILED##########################################
+ # COMPANIES>>DASHBOARD>>DAILY RECONCILED##########################################
   
   Scenario: 69. user should be able to redirect to  Daily Reconciled page of compnay dashboard
    When user should be able to select company in the company page
@@ -472,7 +465,7 @@ Feature: Companies Page Functionality
   When user should be able to select company in the company page
   And user should be clicked on Daily Reconciled Tab
   And user should be able to delete the account in the daily reconciled page
-  ######################################COMPANIES>>DASHBOARD>>TRANSACTIONS##########################################
+  ################################COMPANIES>>DASHBOARD>>TRANSACTIONS##########################################
   
  Scenario: 80. user should be able to redirect to  Transaction page of compnay dashboard
    When user should be able to select company in the company page
@@ -659,7 +652,7 @@ Feature: Companies Page Functionality
   When  user should be able to select company in the company page
   Then  user should be able to see the count of unkown transactions after delete transaction in statistics page"0"
   
-#######COMPANIES>>DASHBOARD>>Bills.con &QBO##########################################
+####################COMPANIES>>DASHBOARD>>Bills.con &QBO##########################################
   
   Scenario: 108. user should be able to redirect to  Bills.com page of compnay dashboard
    When user should be able to select company in the company page
@@ -731,7 +724,7 @@ Feature: Companies Page Functionality
   And user should be enter the amount in QBO calculate widget."100"
   Then user should be able to see the difference between bills.com and QBO"$ 100.00"
   
-####################################COMPANIES>>DASHBOARD>>ROYALTY DIFFERENCE##########################################
+##############################COMPANIES>>DASHBOARD>>ROYALTY DIFFERENCE##########################################
   
    Scenario: 118. user should be able to redirect to  Royalty Difference page of compnay dashboard
    When user should be able to select company in the company page
@@ -792,7 +785,7 @@ Feature: Companies Page Functionality
   
   
   
-  #############COMPANIES>>DETAILS##########################################
+  #######COMPANIES>>DETAILS##########################################
   
 
 
@@ -1001,7 +994,7 @@ Feature: Companies Page Functionality
   
   
   
-################COMPANIES LOGINS###################################
+##########COMPANIES LOGINS###################################
   Scenario: 233. user should be on the logins page
   When  user should be able to select company in the company page
   And  user should be on logins page
@@ -1056,7 +1049,7 @@ Feature: Companies Page Functionality
 
   
   
-######################################COMPANIES TASKS###################################
+################################COMPANIES TASKS###################################
   Scenario: 240. user should be on the Tasks page
   When user should be able to select company in the company page
   And  user should be on tasks page
@@ -1267,7 +1260,7 @@ Scenario: 257. user should be able to create task in the compnay task page
   
   
   
- ################################COMPANIES NOTES###################################
+ ##########################COMPANIES NOTES###################################
   
   
   Scenario: 269. validate user should be on company notes page
@@ -1400,7 +1393,7 @@ Scenario: 257. user should be able to create task in the compnay task page
  
   
   
-  ##################COMPANIES>>DOCUMENTS TAB################################
+  ############COMPANIES>>DOCUMENTS TAB################################
   Scenario: 288. user should be on the document page
   When user should be able to select company in the company page
   And  user should be able to click on document page

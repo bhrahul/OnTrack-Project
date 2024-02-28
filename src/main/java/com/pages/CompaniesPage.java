@@ -48,7 +48,6 @@ public class CompaniesPage {
 	private By cityErrorMsg = By.xpath("//span[contains(text(),\"City can't be blank.\")]");
 	private By stateErrorMsg = By.xpath("//span[contains(text(),\"State can't be blank.\")]");
 	private By zipcodeErrorMsg = By.xpath("//div[contains(text(),\"Zip code can't be blank.\")]");
-	private By sdErrorMsg = By.xpath("//span[contains(text(),\"Start date can't be blank.\")]");
 	private By rtErrorMsg = By.xpath("//span[contains(text(),\"Report time can't be blank.\")]");
 	private By clickSearch = By.xpath("//i[@class='fa-solid fa-search']");
 	private By clickEditButton = By.xpath("//*[@id=\"myTable\"]/tbody/tr/td[7]/a[1]");
@@ -102,7 +101,7 @@ public class CompaniesPage {
 	private By licenceNumber = By.xpath("//input[@id='royal_fidesic_license_number']");
 
 	////////////////////////Statistics>>CheckOffList Locators////////////////////////////////////////////////
-	private By addCheckList = By.xpath("/html/body/div/div[2]/div/div[2]/div/div[2]/div/div/div[2]/div[2]/div[1]/div[2]/a");
+	private By addCheckList = By.xpath("//div[@class='dashboard-box cb-two  large-box mb-4']//a[contains(.,'+ Add')]");
 	private By addCheckListPopUp = By.xpath("//*[@id=\"submit_button\"]/input");
 	
 	private By nameChekListErrorMSg = By.xpath("//span[contains(text(),\"Name can't be blank.\")]");
@@ -249,7 +248,8 @@ public class CompaniesPage {
 		return driver.findElement(addContactBtnPopUp).isDisplayed();
 	}
 
-	public boolean getResetBtnStatus() {
+	public boolean getResetBtnStatus() throws InterruptedException {
+		Thread.sleep(2000);
 		return driver.findElement(resetBtn).isDisplayed();
 	}
 
@@ -259,7 +259,8 @@ public class CompaniesPage {
 	
 	}
 	
-	public String addContactPopupCloseSuccessfully() {
+	public String addContactPopupCloseSuccessfully() throws InterruptedException {
+		Thread.sleep(2000);
 		String str = driver.findElement(closeAddContactPopup).getText();
 		return str;
 	}
@@ -320,7 +321,10 @@ public class CompaniesPage {
 
 	}
 
-	public String companyNameCompaniesList() {
+	public String companyNameCompaniesList() throws InterruptedException {
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//ul[@id='tabs-nav']//a[contains(.,'Companies')]")).click();
+		Thread.sleep(2000);
 		String str = driver.findElement(companyNameCompaniesList).getText();
 		return str;
 	}
@@ -388,7 +392,7 @@ public class CompaniesPage {
 	}
 
 	public String getInvalidCredTextCompnayName() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		String str = driver.findElement(cnErrorMsg).getText();
 		return str;
 	}
@@ -405,17 +409,19 @@ public class CompaniesPage {
 	}
 
 	public String getInvalidCredTextAddress() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		String str = driver.findElement(adErrorMsg).getText();
 		return str;
 	}
 
-	public String getInvalidCredTextCity() {
+	public String getInvalidCredTextCity() throws InterruptedException {
+		Thread.sleep(2000);
 		String str = driver.findElement(cityErrorMsg).getText();
 		return str;
 	}
 
-	public String getInvalidCredTextState() {
+	public String getInvalidCredTextState() throws InterruptedException {
+		Thread.sleep(2000);
 		String str = driver.findElement(stateErrorMsg).getText();
 		return str;
 	}
@@ -426,13 +432,10 @@ public class CompaniesPage {
 		return str;
 	}
 
-	public String getInvalidCredTextStartDate() throws InterruptedException {
-		Thread.sleep(2000);
-		String str = driver.findElement(sdErrorMsg).getText();
-		return str;
-	}
+	
 
-	public String getInvalidCredTextReportingTime() {
+	public String getInvalidCredTextReportingTime() throws InterruptedException {
+		Thread.sleep(2000);
 		String str = driver.findElement(rtErrorMsg).getText();
 		return str;
 	}
@@ -572,7 +575,8 @@ public class CompaniesPage {
 		addButton.click();
 	}
 
-	public String getRoyaltyAndFidesicTitleStatus() {
+	public String getRoyaltyAndFidesicTitleStatus() throws InterruptedException {
+		Thread.sleep(2000);
 		String str = driver.findElement(royaltyandFidesicPopupTitle).getText();
 		return str;
 	}
@@ -752,7 +756,8 @@ public class CompaniesPage {
 	/////////////////////companies>>Dashboard>>Statistics>>Check off list widget
 
 	
-	public void addBtnCheckOFList() {
+	public void addBtnCheckOFList() throws InterruptedException {
+		Thread.sleep(2000);
 		WebElement addBtn = driver.findElement(addCheckList);
 		addBtn.click();
 	}
@@ -1045,6 +1050,7 @@ public class CompaniesPage {
 	
 	public boolean getLoanPaymentRecordStatus() throws InterruptedException {
 		Thread.sleep(1000);
+		driver.findElement(By.xpath("//a[contains(text(),'Statistics')]")).click();
 		return driver.findElement(By.xpath("//span[contains(text(),'Ravi')]")).isDisplayed();
 	}
 		
@@ -1190,7 +1196,9 @@ public void change_Account (String accName) throws InterruptedException {
 			}
 	}
 	
-	public String  getTransactionStatus() {
+	public String  getTransactionStatus() throws InterruptedException {
+		driver.findElement(By.xpath("//a[contains(text(),'Daily Reconciled')]")).click();
+		Thread.sleep(2000);
 		return driver.findElement(By.xpath("//span[contains(text(),'(02/20/2024)')]")).getText();
 	}
 	
@@ -1237,7 +1245,8 @@ public void change_Account (String accName) throws InterruptedException {
 		}
 	
 	public String getUpdateTransactionStatus() throws InterruptedException {
-		
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[contains(text(),'Daily Reconciled')]")).click();
 		Thread.sleep(2000);
 		return driver.findElement(By.xpath("//span[contains(text(),'(02/21/2024)')]")).getText();
 	}
@@ -1324,8 +1333,11 @@ public void change_Account (String accName) throws InterruptedException {
 			}
 	}
 	
-	public String getTransactionPaymentDeposited()
+	public String getTransactionPaymentDeposited() throws InterruptedException
 	{
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[contains(text(),'Transaction')]")).click();
+		Thread.sleep(2000);
 		return driver.findElement(By.xpath("//span[contains(text(),'Ravi(ICICI10000)')]")).getText();
 	}
 	
@@ -1346,6 +1358,7 @@ public void change_Account (String accName) throws InterruptedException {
 		vendorName.sendKeys(vn);
 		WebElement bankAccount = driver.findElement(By.xpath("//input[@id='transaction_invoice_id']"));
 		bankAccount.clear();
+		Thread.sleep(2000);
 		bankAccount.sendKeys(ba);
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//input[@placeholder='Date'][2]")).click();
@@ -1494,6 +1507,7 @@ public void change_Account (String accName) throws InterruptedException {
 	{
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[contains(text(),'Transaction')]")).click();
+		Thread.sleep(2000);
 		return driver.findElement(By.xpath("//span[contains(text(),'Janvi(ICICI3000)')]")).getText();
 	}
 	
@@ -1509,9 +1523,10 @@ public void change_Account (String accName) throws InterruptedException {
 		driver.findElement(By.xpath("//*[@id=\"tab-3\"]/div/div/div[3]/div[1]/div[2]/a")).click();
 	}
 	
-	public boolean closeAddTransactionPopupUnknownTransactions()
+	public boolean closeAddTransactionPopupUnknownTransactions() throws InterruptedException
 	{
-		driver.findElement(By.xpath("//*[@id=\"contact_modal_body\"]/form/div[5]/button")).click();
+		driver.findElement(By.xpath("//button[contains(text(),'Close')]")).click();
+		Thread.sleep(2000);
 		return driver.findElement(By.xpath("//h6[contains(text(),'Unknown Transactions')]")).isDisplayed();
 	}
 	
@@ -1615,8 +1630,9 @@ public void change_Account (String accName) throws InterruptedException {
 			}
 	}
 	
-	public String getUpdatedTransactionUnknownTransactions()
+	public String getUpdatedTransactionUnknownTransactions() throws InterruptedException
 	{
+		Thread.sleep(2000);
 		return driver.findElement(By.xpath("//span[contains(text(),'Janvi(ICICI3000)')]")).getText();
 	}
 	
@@ -1679,8 +1695,9 @@ public void change_Account (String accName) throws InterruptedException {
 	}
 	
 	
-	public String getTransactionBillsinBillscomthatarenotsyncinQBO()
+	public String getTransactionBillsinBillscomthatarenotsyncinQBO() throws InterruptedException
 	{
+		Thread.sleep(2000);
 		return driver.findElement(By.xpath("//span[contains(text(),'Ravi')]")).getText();
 	}
 	

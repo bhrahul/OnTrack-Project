@@ -106,7 +106,7 @@ public class CompaniesSteps {
 	}
 
 	@Then("Reset button should be displayed in the add contact popup")
-	public void reset_button_should_be_displayed_on_pop_up() {
+	public void reset_button_should_be_displayed_on_pop_up() throws InterruptedException {
 		Assert.assertTrue(companiesPage.getResetBtnStatus());
 
 	}
@@ -117,7 +117,7 @@ public class CompaniesSteps {
 	}
 
 	@Then("Add contact popup close successfully in the company page")
-	public void add_contact_popup_close_successfully() {
+	public void add_contact_popup_close_successfully() throws InterruptedException {
 		companiesPage.addContactPopupCloseSuccessfully();
 	}
 
@@ -127,7 +127,7 @@ public class CompaniesSteps {
 	}
 
 	@Then("add contact popup close successfully by click on close Icon in the company page")
-	public void add_contact_popup_close_successfully_by_click_on_close_icon() {
+	public void add_contact_popup_close_successfully_by_click_on_close_icon() throws InterruptedException {
 		companiesPage.addContactPopupCloseSuccessfully();
 	}
 
@@ -158,7 +158,7 @@ public class CompaniesSteps {
 	}
 
 	@Then("User should be able to see the company from company list{string}")
-	public void user_should_be_able_to_see_the_company_from_company_list_amdocs(String actCn) {
+	public void user_should_be_able_to_see_the_company_from_company_list_amdocs(String actCn) throws InterruptedException {
 		String expCn = companiesPage.companyNameCompaniesList();
 		Assert.assertEquals(expCn, actCn);
 	}
@@ -225,6 +225,7 @@ public class CompaniesSteps {
 	@And("click on add button in the add company popup")
 	public void click_on_add_button() throws InterruptedException {
 		companiesPage.clickOnAddButtonPopup();
+		Thread.sleep(2000);
 	}
 
 	@Then("User should see an validation message on company name field {string}")
@@ -252,13 +253,13 @@ public class CompaniesSteps {
 	}
 
 	@Then("User should see an validation message on city {string}")
-	public void user_should_see_an_validation_message_on_city(String errMsg) {
+	public void user_should_see_an_validation_message_on_city(String errMsg) throws InterruptedException {
 		String actErrMsg = companiesPage.getInvalidCredTextCity();
 		Assert.assertEquals(actErrMsg, errMsg);
 	}
 
 	@Then("User should see an validation message on state {string}")
-	public void user_should_see_an_validation_message_on_state(String errMsg) {
+	public void user_should_see_an_validation_message_on_state(String errMsg) throws InterruptedException {
 		String actErrMsg = companiesPage.getInvalidCredTextState();
 		Assert.assertEquals(actErrMsg, errMsg);
 	}
@@ -269,14 +270,9 @@ public class CompaniesSteps {
 		Assert.assertEquals(actErrMsg, errMsg);
 	}
 
-	@Then("User should see an validation message on start date {string}")
-	public void user_should_see_an_validation_message_on_start_date(String errMsg) throws InterruptedException {
-		String actErrMsg = companiesPage.getInvalidCredTextStartDate();
-		Assert.assertEquals(actErrMsg, errMsg);
-	}
 
 	@Then("User should see an validation message on report time {string}")
-	public void user_should_see_an_validation_message_on_report_time(String errMsg) {
+	public void user_should_see_an_validation_message_on_report_time(String errMsg) throws InterruptedException {
 		String actErrMsg = companiesPage.getInvalidCredTextReportingTime();
 		Assert.assertEquals(actErrMsg, errMsg);
 	}
@@ -437,7 +433,7 @@ public class CompaniesSteps {
 	}
 
 	@Then("{string} title should be displayed")
-	public void title_should_be_displayed(String Raf) {
+	public void title_should_be_displayed(String Raf) throws InterruptedException {
 		String actRaf = companiesPage.getRoyaltyAndFidesicTitleStatus();
 		Assert.assertEquals(actRaf, Raf);
 	}
@@ -514,7 +510,7 @@ public class CompaniesSteps {
 	///////////////////// companies>>Dashboard>>Statistics>>Check off list widget
 
 	@And("user should be clicked on add button of check of list")
-	public void user_should_be_clicked_on_add_button_of_check_of_list() {
+	public void user_should_be_clicked_on_add_button_of_check_of_list() throws InterruptedException {
 		companiesPage.addBtnCheckOFList();
 	}
 
@@ -818,7 +814,7 @@ public class CompaniesSteps {
 	}
 
 	@Then("user should be able to see the Transaction at the account in the daily reconciled page{string}")
-	public void user_should_be_able_to_see_the_transaction_at_the_account_in_the_daily_reconciled_page(String ext) {
+	public void user_should_be_able_to_see_the_transaction_at_the_account_in_the_daily_reconciled_page(String ext) throws InterruptedException {
 		String act = companiesPage.getTransactionStatus();
 		Assert.assertEquals(act, ext);
 	}
@@ -933,7 +929,7 @@ public class CompaniesSteps {
 	}
 
 	@Then("user should be able to see record of the Payment Deposited but not Received widget{string}")
-	public void user_should_be_able_to_see_record_of_the_payment_deposited_but_not_received_widget(String ext) {
+	public void user_should_be_able_to_see_record_of_the_payment_deposited_but_not_received_widget(String ext) throws InterruptedException {
 		String act = companiesPage.getTransactionPaymentDeposited();
 		Assert.assertEquals(act, ext);
 	}
@@ -1081,7 +1077,7 @@ public class CompaniesSteps {
 	}
 
 	@Then("user should be able to close the Add Transaction of Unknown Transactions successfully")
-	public void user_should_be_able_to_close_the_add_transaction_of_unknown_transactions_successfully() {
+	public void user_should_be_able_to_close_the_add_transaction_of_unknown_transactions_successfully() throws InterruptedException {
 		companiesPage.closeAddTransactionPopupUnknownTransactions();
 	}
 
@@ -1153,7 +1149,7 @@ public class CompaniesSteps {
 	}
 
 	@Then("user should be able to see updated record of the Unknown Transactions widget{string}")
-	public void user_should_be_able_to_see_updated_record_of_the_unknown_transactions_widget(String ext) {
+	public void user_should_be_able_to_see_updated_record_of_the_unknown_transactions_widget(String ext) throws InterruptedException {
 		String act = companiesPage.getUpdatedTransactionUnknownTransactions();
 		Assert.assertEquals(act, ext);
 	}
@@ -1217,7 +1213,7 @@ public class CompaniesSteps {
 
 	@Then("user should be able to see record of the Bills in Bills.com that are not sync in QBO widget{string}")
 	public void user_should_be_able_to_see_record_of_the_bills_in_bills_com_that_are_not_sync_in_qbo_widget(
-			String ext) {
+			String ext) throws InterruptedException {
 		String act = companiesPage.getTransactionBillsinBillscomthatarenotsyncinQBO();
 		Assert.assertEquals(act, ext);
 	}

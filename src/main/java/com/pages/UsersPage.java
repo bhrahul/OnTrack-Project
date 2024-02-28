@@ -175,7 +175,7 @@ public class UsersPage {
 	}
 	
 	public String getCompanyStatus() {
-		return driver.findElement(By.xpath("//div[@class='com-ft']//p")).getText();
+		return driver.findElement(By.xpath("//a[contains(text(),'Test Company')]")).getText();
 	}
 	
 	public void DeleteCompany() throws InterruptedException {
@@ -276,7 +276,7 @@ public class UsersPage {
 	     }
 	     
 	  public void clickOnUser() {
-		  driver.findElement(By.xpath("//p[contains(text(),'Arjay McCann')]")).click();
+		  driver.findElement(By.xpath("//p[contains(text(),'Test admin')]")).click();
 	  }
 	  
 	  public void clickOnCollapseBtn() throws InterruptedException {
@@ -297,7 +297,7 @@ public class UsersPage {
 	  
 	  public String getTaskRecurringStatus() {
 		  driver.navigate().refresh();
-		  return driver.findElement(By.xpath("//*[@id=\"tab1\"]/div[3]/div[2]/div[3]/div[3]/div[2]/div/a")).getText();
+		  return driver.findElement(By.xpath("//a[contains(.,'Important Work')]")).getText();
 		  
 	  }
 	  
