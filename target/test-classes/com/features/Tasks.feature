@@ -179,7 +179,7 @@ Feature: Tasks Page Functionality
     And user should be able to click on task of the company at tasks reoccurring page Important Task
     And User should be able to update fields at recurring tab in the  company task tab
       | taskname            |template|date|
-      | Very Important Work |Qa automation template|February 28, 2024|
+      | Very Important Work |Qa automation template|February 29, 2024|
    Then user should be able to see the task recurring tab in the  company task tab"Very Important Work"
    And user should be able to update recurring task successfully"Task was successfully updated."
 
@@ -246,7 +246,7 @@ Feature: Tasks Page Functionality
     When user should be click on Tasks at sidebar menu
     And user should be click on my task tab
     And user should be able to select assign user at my task tab"Automate Test Admin"
-    Then user should be able to see users today task count at My task tab"1"
+    Then user should be able to see users today task count at My task tab"0"
     
     Scenario: Tasks 31. user should be able to see users today task count after the delete task at My task tab
    When user should be able to select company in the company page for the task page

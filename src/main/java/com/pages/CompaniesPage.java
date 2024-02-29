@@ -1505,8 +1505,8 @@ public void change_Account (String accName) throws InterruptedException {
 	
 	public String getUpdatedTransactionPaymentRecived() throws InterruptedException
 	{
+		Thread.sleep(2000);
 		driver.navigate().refresh();
-		driver.findElement(By.xpath("//a[contains(text(),'Transaction')]")).click();
 		Thread.sleep(2000);
 		return driver.findElement(By.xpath("//span[contains(text(),'Janvi(ICICI3000)')]")).getText();
 	}
