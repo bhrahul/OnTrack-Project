@@ -74,29 +74,29 @@ Feature: Settings Page Functionality
 
 
  
- #Scenario: Settings 12. User should be able to close add signature popup for email signature widget
- #When user should be able to click on Settings
- #And  click on add button in the email signature widget
- #And 	User should be able to close add signature popup for email signature widget
- #Then close add title popup for email signature widget successfully"Email Signature"
- #
- #
- #Scenario: Settings 13. User should be able to add signature for email signature widget
- #When user should be able to click on Settings
- #And  click on add button in the email signature widget
- #And 	User should be able to add signature for email signature widget"Automate Email Signature","Automate Message"
- #Then user should be able to see signature in the email signaturewidget"Automate Email Signature"
- #
- #Scenario: Settings 14. User should be able to edit signature for email signature widget
- #When user should be able to click on Settings
- #And  click on edit button in the email signature widget
- #And 	User should be able to update signature for email signature widget"Automate Signature","Automate New Message"
- #Then user should be able to see updated signature in the email signaturewidget"Automate Signature","Automate New Message"
- #
- #Scenario: Settings 15. User should be able to delete signature for email signature widget
- #When user should be able to click on Settings
- #Then 	User should be able to delete signature for email signature widget
- #
+ Scenario: Settings 12. User should be able to close add signature popup for email signature widget
+ When user should be able to click on Settings
+ And  click on add button in the email signature widget
+ And 	User should be able to close add signature popup for email signature widget
+ Then close add title popup for email signature widget successfully"Email Signature"
+ 
+ 
+ Scenario: Settings 13. User should be able to add signature for email signature widget
+ When user should be able to click on Settings
+ And  click on add button in the email signature widget
+ And 	User should be able to add signature for email signature widget"Automate Email Signature","Automate Message"
+ Then user should be able to see signature in the email signaturewidget"Automate Email Signature"
+ 
+ Scenario: Settings 14. User should be able to edit signature for email signature widget
+ When user should be able to click on Settings
+ And  click on edit button in the email signature widget
+ And 	User should be able to update signature for email signature widget"Automate Signature","Automate New Message"
+ Then user should be able to see updated signature in the email signaturewidget"Automate Signature","Automate New Message"
+ 
+ Scenario: Settings 15. User should be able to delete signature for email signature widget
+ When user should be able to click on Settings
+ Then 	User should be able to delete signature for email signature widget
+ 
   Scenario: Settings 16. User should see an validation message for Title field in the Reports widget
  When user should be able to click on Settings
  And  click on add button in the Reports widget
