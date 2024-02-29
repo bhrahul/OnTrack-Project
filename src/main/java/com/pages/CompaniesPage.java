@@ -1246,7 +1246,7 @@ public void change_Account (String accName) throws InterruptedException {
 	
 	public String getUpdateTransactionStatus() throws InterruptedException {
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//a[contains(text(),'Daily Reconciled')]")).click();
+		driver.navigate().refresh();
 		Thread.sleep(2000);
 		return driver.findElement(By.xpath("//span[contains(text(),'(02/21/2024)')]")).getText();
 	}

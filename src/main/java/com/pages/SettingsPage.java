@@ -267,7 +267,8 @@ public String closeAddTitlePopupContactTitleSuccess() {
 	}
 	
 	public String getReportsStatus() throws InterruptedException {
-		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0, 5000)");
 		Thread.sleep(2000);
 		String str = driver.findElement(getReportStatus).getText();
 		return str;
